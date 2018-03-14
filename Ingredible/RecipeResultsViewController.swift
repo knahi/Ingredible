@@ -1,29 +1,31 @@
 //
-//  IngredientFormViewController.swift
+//  RecipeResultsViewController.swift
 //  Ingredible
 //
-//  Created by Kayla Nahi on 3/14/18.
+//  Created by Chloe Johnson on 3/14/18.
 //  Copyright © 2018 Ingredible. All rights reserved.
 //
 
 import UIKit
 
-class IngredientFormViewController: UIViewController {
+class RecipeResultsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    
-    // Back button to tab bar controller
-    @IBAction func backButton(_ segue: UITabBarController) {
-        
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
-    // Button to recipe results view controller
-    @IBAction func getRecipesButton(_ sender: Any) {
-        performSegue(withIdentifier: "ingredientsToRecipes", sender: self)
+    // Temporary back button
+    // Takes you back to home screen
+    @IBAction func backButton(_ sender: Any) {
+        performSegue(withIdentifier: "backToIngredients", sender: self)
+        
     }
     
     /*

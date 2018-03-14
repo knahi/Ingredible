@@ -13,6 +13,7 @@
 		EF0BFE0B20532CEE00725EF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF0BFE0A20532CEE00725EF5 /* Assets.xcassets */; };
 		EF0BFE0E20532CEE00725EF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF0BFE0C20532CEE00725EF5 /* LaunchScreen.storyboard */; };
 		EF76E82C2059ADA20033A4EF /* IngredientFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF76E82B2059ADA20033A4EF /* IngredientFormViewController.swift */; };
+		F73596242059BB67007A55DD /* RecipeResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73596232059BB67007A55DD /* RecipeResultsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		EF0BFE0D20532CEE00725EF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF0BFE0F20532CEE00725EF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF76E82B2059ADA20033A4EF /* IngredientFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientFormViewController.swift; sourceTree = "<group>"; };
+		F73596232059BB67007A55DD /* RecipeResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeResultsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				EF0BFE0320532CEE00725EF5 /* AppDelegate.swift */,
 				EF0BFE0520532CEE00725EF5 /* ViewController.swift */,
 				EF0BFE0720532CEE00725EF5 /* Main.storyboard */,
+				F73596232059BB67007A55DD /* RecipeResultsViewController.swift */,
 				EF76E82B2059ADA20033A4EF /* IngredientFormViewController.swift */,
 				EF0BFE0A20532CEE00725EF5 /* Assets.xcassets */,
 				EF0BFE0C20532CEE00725EF5 /* LaunchScreen.storyboard */,
@@ -142,6 +145,7 @@
 				EF76E82C2059ADA20033A4EF /* IngredientFormViewController.swift in Sources */,
 				EF0BFE0620532CEE00725EF5 /* ViewController.swift in Sources */,
 				EF0BFE0420532CEE00725EF5 /* AppDelegate.swift in Sources */,
+				F73596242059BB67007A55DD /* RecipeResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
