@@ -6,8 +6,6 @@
 //  Copyright © 2018 Ingredible. All rights reserved.
 //
 
-// Test
-
 import UIKit
 
 @UIApplicationMain
