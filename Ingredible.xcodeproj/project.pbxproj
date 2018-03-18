@@ -7,16 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B20239A6F6202D58116A6AB /* Pods_Ingredible.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C020F02DE240688DD0588D /* Pods_Ingredible.framework */; };
 		EF0BFE0420532CEE00725EF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0BFE0320532CEE00725EF5 /* AppDelegate.swift */; };
 		EF0BFE0620532CEE00725EF5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0BFE0520532CEE00725EF5 /* ViewController.swift */; };
 		EF0BFE0920532CEE00725EF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF0BFE0720532CEE00725EF5 /* Main.storyboard */; };
 		EF0BFE0B20532CEE00725EF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF0BFE0A20532CEE00725EF5 /* Assets.xcassets */; };
 		EF0BFE0E20532CEE00725EF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF0BFE0C20532CEE00725EF5 /* LaunchScreen.storyboard */; };
+		EF55F453205F064F00F34677 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF55F452205F064E00F34677 /* GoogleService-Info.plist */; };
 		EF76E82C2059ADA20033A4EF /* IngredientFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF76E82B2059ADA20033A4EF /* IngredientFormViewController.swift */; };
 		F73596242059BB67007A55DD /* RecipeResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73596232059BB67007A55DD /* RecipeResultsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		289DF686674CEFA133678199 /* Pods-Ingredible.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ingredible.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ingredible/Pods-Ingredible.debug.xcconfig"; sourceTree = "<group>"; };
+		C9C020F02DE240688DD0588D /* Pods_Ingredible.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ingredible.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF0BFE0020532CEE00725EF5 /* Ingredible.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ingredible.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF0BFE0320532CEE00725EF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF0BFE0520532CEE00725EF5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,7 +28,9 @@
 		EF0BFE0A20532CEE00725EF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF0BFE0D20532CEE00725EF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF0BFE0F20532CEE00725EF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF55F452205F064E00F34677 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EF76E82B2059ADA20033A4EF /* IngredientFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientFormViewController.swift; sourceTree = "<group>"; };
+		F2A38AEC9FCE996A60E68B07 /* Pods-Ingredible.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ingredible.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ingredible/Pods-Ingredible.release.xcconfig"; sourceTree = "<group>"; };
 		F73596232059BB67007A55DD /* RecipeResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeResultsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -33,17 +39,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B20239A6F6202D58116A6AB /* Pods_Ingredible.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5069643E7A8FFD5E9C532596 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C9C020F02DE240688DD0588D /* Pods_Ingredible.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6494C0BF2615829C6B7713A9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				289DF686674CEFA133678199 /* Pods-Ingredible.debug.xcconfig */,
+				F2A38AEC9FCE996A60E68B07 /* Pods-Ingredible.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		EF0BFDF720532CEE00725EF5 = {
 			isa = PBXGroup;
 			children = (
 				EF0BFE0220532CEE00725EF5 /* Ingredible */,
 				EF0BFE0120532CEE00725EF5 /* Products */,
+				6494C0BF2615829C6B7713A9 /* Pods */,
+				5069643E7A8FFD5E9C532596 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +84,7 @@
 		EF0BFE0220532CEE00725EF5 /* Ingredible */ = {
 			isa = PBXGroup;
 			children = (
+				EF55F452205F064E00F34677 /* GoogleService-Info.plist */,
 				EF0BFE0320532CEE00725EF5 /* AppDelegate.swift */,
 				EF0BFE0520532CEE00725EF5 /* ViewController.swift */,
 				EF0BFE0720532CEE00725EF5 /* Main.storyboard */,
@@ -77,9 +104,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF0BFE1220532CEE00725EF5 /* Build configuration list for PBXNativeTarget "Ingredible" */;
 			buildPhases = (
+				BCAB4162710C9E38FFD7365B /* [CP] Check Pods Manifest.lock */,
 				EF0BFDFC20532CEE00725EF5 /* Sources */,
 				EF0BFDFD20532CEE00725EF5 /* Frameworks */,
 				EF0BFDFE20532CEE00725EF5 /* Resources */,
+				6009B25F7739D98CBC6F6A8F /* [CP] Embed Pods Frameworks */,
+				8159570062691D8FB3650636 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,12 +160,69 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF0BFE0E20532CEE00725EF5 /* LaunchScreen.storyboard in Resources */,
+				EF55F453205F064F00F34677 /* GoogleService-Info.plist in Resources */,
 				EF0BFE0B20532CEE00725EF5 /* Assets.xcassets in Resources */,
 				EF0BFE0920532CEE00725EF5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6009B25F7739D98CBC6F6A8F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Ingredible/Pods-Ingredible-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ingredible/Pods-Ingredible-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8159570062691D8FB3650636 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ingredible/Pods-Ingredible-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BCAB4162710C9E38FFD7365B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Ingredible-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EF0BFDFC20532CEE00725EF5 /* Sources */ = {
@@ -280,6 +367,7 @@
 		};
 		EF0BFE1320532CEE00725EF5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 289DF686674CEFA133678199 /* Pods-Ingredible.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -295,6 +383,7 @@
 		};
 		EF0BFE1420532CEE00725EF5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2A38AEC9FCE996A60E68B07 /* Pods-Ingredible.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
