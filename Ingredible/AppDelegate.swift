@@ -3,6 +3,7 @@
 //  Ingredible
 //
 //  Created by Kayla Nahi on 3/9/18.
+//  Chloe Johnson
 //  Copyright © 2018 Ingredible. All rights reserved.
 //
 
