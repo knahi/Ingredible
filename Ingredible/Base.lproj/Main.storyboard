@@ -204,7 +204,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nWq-OP-km2">
-                                <rect key="frame" x="153" y="20" width="48" height="30"/>
+                                <rect key="frame" x="16" y="20" width="48" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
@@ -304,17 +304,30 @@
         <!--AddPantry-->
         <scene sceneID="SFN-2C-eCj">
             <objects>
-                <viewController title="AddPantry" id="dAc-y7-oVA" sceneMemberID="viewController">
+                <viewController title="AddPantry" id="dAc-y7-oVA" customClass="AddPantryViewController" customModule="Ingredible" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wMZ-i0-mB1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7xY-gW-rBX">
+                                <rect key="frame" x="16" y="20" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backButton:" destination="dAc-y7-oVA" eventType="touchUpInside" id="7eB-Sd-IUm"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="jD1-5Q-qMr"/>
                     </view>
+                    <connections>
+                        <segue destination="CUh-Kn-zXT" kind="presentation" identifier="backToPantries" id="W2b-XI-KMY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkg-2c-ed4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1740" y="489"/>
+            <point key="canvasLocation" x="1801" y="489"/>
         </scene>
         <!--Favorites-->
         <scene sceneID="EaT-Gl-vuc">
@@ -354,6 +367,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Ui1-XY-8Cu"/>
+        <segue reference="w5t-Ff-xg8"/>
+        <segue reference="W2b-XI-KMY"/>
+        <segue reference="9TA-RG-wtZ"/>
     </inferredMetricsTieBreakers>
 </document>
