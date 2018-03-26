@@ -8,12 +8,40 @@
 
 import UIKit
 
-class IngredientFormViewController: UIViewController {
-
+class IngredientFormViewController: UIViewController,  UITableViewDataSource, UITableViewDelegate {
+    
+    @IBOutlet var tableView: UITableView!
+    
+    let foodCat = ["Grains", "Fruits", "Vegetables", "Proteins", "Dairy", "Sweets/Fats", "Seasoning"]
+    let textCellIdentifier = "TextCell"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
+    }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return foodCat.count
+    }
 
-        // Do any additional setup after loading the view.
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: textCellIdentifier, for: indexPath as IndexPath)
+        
+        let row = indexPath.row
+        cell.textLabel?.text = foodCat[row]
+        
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRow(at: indexPath as IndexPath, animated: true)
+        
+        let row = indexPath.row
+        print(foodCat[row])
     }
     
     // Back button to tab bar controller
@@ -25,15 +53,6 @@ class IngredientFormViewController: UIViewController {
     @IBAction func getRecipesButton(_ sender: Any) {
         performSegue(withIdentifier: "ingredientsToRecipes", sender: self)
     }
-    
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

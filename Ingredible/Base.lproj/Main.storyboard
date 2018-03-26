@@ -117,11 +117,6 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OGI-wO-NUJ">
-                                                <rect key="frame" x="8" y="472" width="359" height="434"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </tableView>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ut6-ER-Dhh">
                                                 <rect key="frame" x="8" y="120" width="359" height="29"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -133,6 +128,37 @@
                                                     <segment title="Snack"/>
                                                 </segments>
                                             </segmentedControl>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="md1-d8-JrV">
+                                                <rect key="frame" x="23" y="831" width="50" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OAt-Qk-iYf">
+                                                <rect key="frame" x="17" y="456" width="333" height="328"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <prototypes>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TextCell" textLabel="fOY-Nb-Mu2" style="IBUITableViewCellStyleDefault" id="idp-6j-M3P">
+                                                        <rect key="frame" x="0.0" y="28" width="333" height="44"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="idp-6j-M3P" id="Plm-gX-lUQ">
+                                                            <rect key="frame" x="0.0" y="0.0" width="333" height="43.5"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fOY-Nb-Mu2">
+                                                                    <rect key="frame" x="15" y="0.0" width="303" height="43.5"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </tableViewCellContentView>
+                                                    </tableViewCell>
+                                                </prototypes>
+                                            </tableView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -161,37 +187,13 @@
                     <tabBarItem key="tabBarItem" title="Item" id="aev-dd-b9l"/>
                     <size key="freeformSize" width="375" height="1000"/>
                     <connections>
-                        <outlet property="searchDisplayController" destination="3by-CK-ehK" id="Uw6-Dh-oby"/>
+                        <outlet property="tableView" destination="OAt-Qk-iYf" id="TxI-uA-Jt3"/>
                         <segue destination="GY2-9x-gjm" kind="presentation" identifier="ingredientsToRecipes" id="VZh-pr-3Xs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gv5-jr-uma" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="Kmf-un-sp1">
-                    <connections>
-                        <outlet property="delegate" destination="sqT-Lo-U1H" id="chU-7S-pxc"/>
-                        <outlet property="searchContentsController" destination="sqT-Lo-U1H" id="lpa-Vd-dl4"/>
-                        <outlet property="searchResultsDataSource" destination="sqT-Lo-U1H" id="U37-fC-RVh"/>
-                        <outlet property="searchResultsDelegate" destination="sqT-Lo-U1H" id="V2w-da-aTT"/>
-                    </connections>
-                </searchDisplayController>
-                <searchDisplayController id="cM5-E9-BjH">
-                    <connections>
-                        <outlet property="delegate" destination="sqT-Lo-U1H" id="hNw-Z7-Q6W"/>
-                        <outlet property="searchContentsController" destination="sqT-Lo-U1H" id="opl-me-CNB"/>
-                        <outlet property="searchResultsDataSource" destination="sqT-Lo-U1H" id="K38-qv-a4r"/>
-                        <outlet property="searchResultsDelegate" destination="sqT-Lo-U1H" id="1gN-I9-1E4"/>
-                    </connections>
-                </searchDisplayController>
-                <searchDisplayController id="3by-CK-ehK">
-                    <connections>
-                        <outlet property="delegate" destination="sqT-Lo-U1H" id="hNw-7K-188"/>
-                        <outlet property="searchContentsController" destination="sqT-Lo-U1H" id="vjv-iY-Kk0"/>
-                        <outlet property="searchResultsDataSource" destination="sqT-Lo-U1H" id="S0H-HS-L1R"/>
-                        <outlet property="searchResultsDelegate" destination="sqT-Lo-U1H" id="Nvj-ih-jer"/>
-                    </connections>
-                </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="1156" y="2178.7106446776615"/>
+            <point key="canvasLocation" x="1024.8" y="2197.6011994003002"/>
         </scene>
         <!--RecipeResults-->
         <scene sceneID="kfJ-yz-cGG">
