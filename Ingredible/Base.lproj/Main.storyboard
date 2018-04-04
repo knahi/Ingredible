@@ -325,7 +325,7 @@
         <!--Pantries-->
         <scene sceneID="j95-Es-wVP">
             <objects>
-                <viewController title="Pantries" id="CUh-Kn-zXT" sceneMemberID="viewController">
+                <viewController title="Pantries" id="CUh-Kn-zXT" customClass="PantriesViewController" customModule="Ingredible" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sz2-yc-CCH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -372,7 +372,7 @@
             </objects>
             <point key="canvasLocation" x="3778" y="486"/>
         </scene>
-        <!--Favorites-->
+        <!--View Controller-->
         <scene sceneID="EaT-Gl-vuc">
             <objects>
                 <viewController id="Z6c-mK-bUb" sceneMemberID="viewController">
@@ -382,7 +382,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="JQh-qW-jg0"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Favorites" id="eIR-vK-kb2"/>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="eIR-vK-kb2"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v95-U1-vuj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
