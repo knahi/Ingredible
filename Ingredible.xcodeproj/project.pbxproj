@@ -17,6 +17,7 @@
 		EF76E82C2059ADA20033A4EF /* IngredientFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF76E82B2059ADA20033A4EF /* IngredientFormViewController.swift */; };
 		F73596242059BB67007A55DD /* RecipeResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73596232059BB67007A55DD /* RecipeResultsViewController.swift */; };
 		F75ACBD9206980C90035A969 /* AddPantryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75ACBD8206980C90035A969 /* AddPantryViewController.swift */; };
+		F75ACBDB206AAD000035A969 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75ACBDA206AAD000035A969 /* Recipe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		F2A38AEC9FCE996A60E68B07 /* Pods-Ingredible.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ingredible.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ingredible/Pods-Ingredible.release.xcconfig"; sourceTree = "<group>"; };
 		F73596232059BB67007A55DD /* RecipeResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeResultsViewController.swift; sourceTree = "<group>"; };
 		F75ACBD8206980C90035A969 /* AddPantryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPantryViewController.swift; sourceTree = "<group>"; };
+		F75ACBDA206AAD000035A969 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 				EF0BFE0A20532CEE00725EF5 /* Assets.xcassets */,
 				EF0BFE0C20532CEE00725EF5 /* LaunchScreen.storyboard */,
 				EF0BFE0F20532CEE00725EF5 /* Info.plist */,
+				F75ACBDA206AAD000035A969 /* Recipe.swift */,
 			);
 			path = Ingredible;
 			sourceTree = "<group>";
@@ -180,11 +183,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Ingredible/Pods-Ingredible-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -235,6 +240,7 @@
 				EF76E82C2059ADA20033A4EF /* IngredientFormViewController.swift in Sources */,
 				EF0BFE0620532CEE00725EF5 /* ViewController.swift in Sources */,
 				F75ACBD9206980C90035A969 /* AddPantryViewController.swift in Sources */,
+				F75ACBDB206AAD000035A969 /* Recipe.swift in Sources */,
 				EF0BFE0420532CEE00725EF5 /* AppDelegate.swift in Sources */,
 				F73596242059BB67007A55DD /* RecipeResultsViewController.swift in Sources */,
 			);
