@@ -24,7 +24,7 @@
                                 <rect key="frame" x="100" y="519" width="175" height="34"/>
                                 <color key="backgroundColor" red="0.92312955856323242" green="0.95853263139724731" blue="0.91394710540771484" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Start cooking">
-                                    <color key="titleColor" red="0.31385826803790456" green="0.42443331697870634" blue="0.30148674682376714" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.33867630360000001" green="0.42167004940000002" blue="0.31318423150000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <color key="titleShadowColor" red="0.36107259320000001" green="0.48828166719999999" blue="0.34683999939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -96,10 +96,12 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="PdO-oE-64i">
                                                 <rect key="frame" x="120" y="187" width="49" height="31"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="onTintColor" red="0.3465241194" green="0.42951771620000001" blue="0.3210285604" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="aYe-05-8Ku">
                                                 <rect key="frame" x="296" y="187" width="49" height="31"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="onTintColor" red="0.3465241194" green="0.42951771620000001" blue="0.3210285604" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vegetarian" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lBW-8s-xvo">
                                                 <rect key="frame" x="16" y="192" width="91" height="21"/>
@@ -145,7 +147,7 @@
                                                 </segments>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
-                                                        <color key="value" red="0.48658260703086853" green="0.60289722681045532" blue="0.44620707631111145" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <color key="value" red="0.33867630362510681" green="0.42167004942893982" blue="0.3131842315196991" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </segmentedControl>
@@ -322,9 +324,9 @@
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
                                 </accessibility>
-                                <string key="text">Our goal for this project is to create an aesthetically pleasing mobile application that allows users to find recipes from their existing ingredient list. The recipes in our app will be pulled from websites like AllRecipes and FoodNetwork, various cookbooks, and our personal recipe archives. There are a few existing webpages, like SuperCook and FOODWISE, that have very elegantly tackled this application design. However, no mobile application that we have found has successfully implemented this idea. Apps like BigOven, CookPad, and EpiCu- rious are recipe-related and have achieved good ratings and many positive reviews, but do not offer an ingredient-to-recipe service. 
-We created this app to not only benefit college students on a budget, but also to help all chefs focused on eliminating waste. </string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <mutableString key="text">Our goal for this project is to create an aesthetically pleasing mobile application that allows users to find recipes from their existing ingredient list. The recipes in our app will be pulled from websites like AllRecipes and FoodNetwork, various cookbooks, and our personal recipe archives. There are a few existing webpages, like SuperCook and FOODWISE, that have very elegantly tackled this application design. However, no mobile application that we have found has successfully implemented this idea. Apps like BigOven, CookPad, and EpiCurious are recipe-related and have achieved good ratings and many positive reviews, but do not offer an ingredient-to-recipe service. 
+We created this app to not only benefit college students on a budget, but also to help all chefs focused on eliminating waste. </mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -332,7 +334,7 @@ We created this app to not only benefit college students on a budget, but also t
                                 <rect key="frame" x="92" y="57" width="191" height="32"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <color key="textColor" red="0.20849511292869888" green="0.28670330430964464" blue="0.2024725490424768" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="highlightedColor" red="0.313858268" green="0.42443331699999998" blue="0.30148674679999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="0.33867630362510681" green="0.42167004942893982" blue="0.3131842315196991" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -369,7 +371,9 @@ We created this app to not only benefit college students on a budget, but also t
                                 <rect key="frame" x="329" y="0.0" width="30" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <state key="normal" title="+"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" red="0.33867630362510681" green="0.42167004942893982" blue="0.3131842315196991" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
                                 <connections>
                                     <segue destination="k9U-Dq-a4l" kind="presentation" id="w5t-Ff-xg8"/>
                                 </connections>
@@ -393,6 +397,7 @@ We created this app to not only benefit college students on a budget, but also t
                     </view>
                     <navigationItem key="navigationItem" id="lnQ-kG-KVU">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="1Sb-Bm-epb">
+                            <color key="tintColor" red="0.33867630360000001" green="0.42167004940000002" blue="0.31318423150000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <action selector="back:" destination="dAc-y7-oVA" id="rG7-5q-TQn"/>
                             </connections>
