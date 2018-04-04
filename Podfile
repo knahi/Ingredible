@@ -7,5 +7,6 @@ target 'Ingredible' do
 
   # Pods for Ingredible
 pod 'Firebase/Core'
+pod 'Firebase/Database'
 
 end
