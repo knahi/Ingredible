@@ -17,9 +17,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xON-Uf-HeH">
-                                <rect key="frame" x="100" y="488" width="175" height="30"/>
-                                <state key="normal" title="Start cooking!"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="FullLogo1" translatesAutoresizingMaskIntoConstraints="NO" id="fkR-pP-yNI">
+                                <rect key="frame" x="30" y="77" width="315" height="391"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xON-Uf-HeH">
+                                <rect key="frame" x="100" y="519" width="175" height="34"/>
+                                <color key="backgroundColor" red="0.92312955856323242" green="0.95853263139724731" blue="0.91394710540771484" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Start cooking">
+                                    <color key="titleColor" red="0.31385826803790456" green="0.42443331697870634" blue="0.30148674682376714" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.36107259320000001" green="0.48828166719999999" blue="0.34683999939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="sqT-Lo-U1H" kind="presentation" id="Ui1-XY-8Cu"/>
                                 </connections>
@@ -28,8 +35,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="xON-Uf-HeH" firstAttribute="leading" secondItem="o9a-Rp-PoV" secondAttribute="leading" constant="100" id="5TN-sQ-6BO"/>
+                            <constraint firstItem="fkR-pP-yNI" firstAttribute="top" secondItem="o9a-Rp-PoV" secondAttribute="top" constant="57" id="G3G-5d-qH2"/>
+                            <constraint firstItem="o9a-Rp-PoV" firstAttribute="trailing" secondItem="fkR-pP-yNI" secondAttribute="trailing" constant="30" id="H3a-eo-vyf"/>
                             <constraint firstItem="o9a-Rp-PoV" firstAttribute="trailing" secondItem="xON-Uf-HeH" secondAttribute="trailing" constant="100" id="Oae-kF-vxO"/>
-                            <constraint firstItem="o9a-Rp-PoV" firstAttribute="bottom" secondItem="xON-Uf-HeH" secondAttribute="bottom" constant="100" id="sLq-Bo-5Pb"/>
+                            <constraint firstItem="fkR-pP-yNI" firstAttribute="leading" secondItem="o9a-Rp-PoV" secondAttribute="leading" constant="30" id="UPM-Is-CBs"/>
+                            <constraint firstItem="o9a-Rp-PoV" firstAttribute="bottom" secondItem="xON-Uf-HeH" secondAttribute="bottom" constant="65" id="sLq-Bo-5Pb"/>
+                            <constraint firstItem="xON-Uf-HeH" firstAttribute="top" secondItem="fkR-pP-yNI" secondAttribute="bottom" constant="51" id="yKA-47-3bT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="o9a-Rp-PoV"/>
                     </view>
@@ -37,7 +48,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aid-Am-aWG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="90" y="2198"/>
+            <point key="canvasLocation" x="88.799999999999997" y="2197.1514242878561"/>
         </scene>
         <!--IngredientForm-->
         <scene sceneID="CB7-EZ-JKY">
@@ -446,7 +457,10 @@
             <point key="canvasLocation" x="2839" y="488"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="FullLogo1" width="1231" height="1500"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="9TA-RG-wtZ"/>
+        <segue reference="Ui1-XY-8Cu"/>
     </inferredMetricsTieBreakers>
 </document>
