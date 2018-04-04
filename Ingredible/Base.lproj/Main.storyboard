@@ -67,16 +67,21 @@
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VHN-nl-CnB">
                                                 <rect key="frame" x="8" y="0.0" width="34" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Back"/>
+                                                <state key="normal" title="Back">
+                                                    <color key="titleColor" red="0.3465241194" green="0.42951771620000001" blue="0.3210285604" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="backButton:" destination="sqT-Lo-U1H" eventType="touchUpInside" id="tQe-sD-kRg"/>
                                                     <segue destination="dVw-bR-zyL" kind="show" id="iOP-27-yNG"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g5o-pu-eAg">
-                                                <rect key="frame" x="134" y="932" width="106" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Get results!"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g5o-pu-eAg">
+                                                <rect key="frame" x="100" y="901" width="175" height="34"/>
+                                                <color key="backgroundColor" red="0.92868542671203613" green="0.95370173454284668" blue="0.91747212409973145" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <state key="normal" title="Get results!">
+                                                    <color key="titleColor" red="0.34652411937713623" green="0.4295177161693573" blue="0.32102856040000916" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="getRecipesButton:" destination="sqT-Lo-U1H" eventType="touchUpInside" id="1kd-n1-QTD"/>
                                                 </connections>
@@ -138,6 +143,11 @@
                                                     <segment title="Dessert"/>
                                                     <segment title="Snack"/>
                                                 </segments>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                                        <color key="value" red="0.48658260703086853" green="0.60289722681045532" blue="0.44620707631111145" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </segmentedControl>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="md1-d8-JrV">
                                                 <rect key="frame" x="23" y="831" width="50" height="21"/>
@@ -173,7 +183,10 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstItem="g5o-pu-eAg" firstAttribute="leading" secondItem="Jyg-Md-mbC" secondAttribute="leading" constant="100" id="0qB-xe-sP1"/>
                                             <constraint firstAttribute="height" constant="1000" id="BDh-IJ-WVk"/>
+                                            <constraint firstAttribute="bottom" secondItem="g5o-pu-eAg" secondAttribute="bottom" constant="65" id="Fbv-QS-UTe"/>
+                                            <constraint firstAttribute="trailing" secondItem="g5o-pu-eAg" secondAttribute="trailing" constant="100" id="Jcu-ar-2WZ"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -251,7 +264,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nWq-OP-km2">
                                                 <rect key="frame" x="0.0" y="8" width="48" height="41"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Back"/>
+                                                <state key="normal" title="Back">
+                                                    <color key="titleColor" red="0.3465241194" green="0.42951771620000001" blue="0.3210285604" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="backButton:" destination="sqT-Lo-U1H" eventType="touchUpInside" id="ReH-01-3tt"/>
                                                     <action selector="backButton:" destination="GY2-9x-gjm" eventType="touchUpInside" id="XtW-fr-1xS"/>
@@ -307,8 +322,8 @@
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
                                 </accessibility>
-                                <mutableString key="text">Our goal for this project is to create an aesthetically pleasing mobile application that allows users to find recipes from their existing ingredient list. The recipes in our app will be pulled from websites like AllRecipes and FoodNetwork, various cookbooks, and our personal recipe archives. There are a few existing webpages, like SuperCook and FOODWISE, that have very elegantly tackled this application design. However, no mobile application that we have found has successfully implemented this idea. Apps like BigOven, CookPad, and EpiCu- rious are recipe-related and have achieved good ratings and many positive reviews, but do not offer an ingredient-to-recipe service. 
-We created this app to not only benefit college students on a budget, but also to help all chefs focused on eliminating waste. </mutableString>
+                                <string key="text">Our goal for this project is to create an aesthetically pleasing mobile application that allows users to find recipes from their existing ingredient list. The recipes in our app will be pulled from websites like AllRecipes and FoodNetwork, various cookbooks, and our personal recipe archives. There are a few existing webpages, like SuperCook and FOODWISE, that have very elegantly tackled this application design. However, no mobile application that we have found has successfully implemented this idea. Apps like BigOven, CookPad, and EpiCu- rious are recipe-related and have achieved good ratings and many positive reviews, but do not offer an ingredient-to-recipe service. 
+We created this app to not only benefit college students on a budget, but also to help all chefs focused on eliminating waste. </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -349,7 +364,7 @@ We created this app to not only benefit college students on a budget, but also t
                         <viewLayoutGuide key="safeArea" id="JIM-Vn-N4J"/>
                     </view>
                     <navigationItem key="navigationItem" id="Hbd-ob-8Ui">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="HCN-bc-PL1">
+                        <barButtonItem key="rightBarButtonItem" title="Item" style="plain" id="HCN-bc-PL1">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="WDX-uv-oAY">
                                 <rect key="frame" x="329" y="0.0" width="30" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -412,6 +427,11 @@ We created this app to not only benefit college students on a budget, but also t
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.33867630362510681" green="0.42167004942893982" blue="0.3131842315196991" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="a4d-u4-1zq" kind="relationship" relationship="viewControllers" id="a9g-ur-3Wq"/>
