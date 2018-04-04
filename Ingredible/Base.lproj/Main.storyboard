@@ -44,7 +44,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="o9a-Rp-PoV"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="T1X-zh-WL7"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="home" id="T1X-zh-WL7"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aid-Am-aWG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -327,7 +327,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="neB-NE-CGo"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="About" id="xPC-vd-xiN"/>
+                    <tabBarItem key="tabBarItem" title="About" image="info" id="xPC-vd-xiN"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q8H-QD-9RG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -423,7 +423,7 @@
         <scene sceneID="zA7-Ja-tmQ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CRL-bF-Bmw" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Pantries" id="ubA-Av-O2s"/>
+                    <tabBarItem key="tabBarItem" title="Pantries" image="basket" id="ubA-Av-O2s"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rnP-PV-ZJH">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -459,6 +459,9 @@
     </scenes>
     <resources>
         <image name="FullLogo1" width="1231" height="1500"/>
+        <image name="basket" width="32" height="32"/>
+        <image name="home" width="32" height="32"/>
+        <image name="info" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Ui1-XY-8Cu"/>
