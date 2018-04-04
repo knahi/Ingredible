@@ -329,36 +329,26 @@
                     <view key="view" contentMode="scaleToFill" id="sz2-yc-CCH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RHw-nN-85O">
-                                <rect key="frame" x="0.0" y="71" width="375" height="596"/>
-                            </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WDX-uv-oAY">
-                                <rect key="frame" x="335" y="17" width="30" height="46"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="JIM-Vn-N4J"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Hbd-ob-8Ui">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="HCN-bc-PL1">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="WDX-uv-oAY">
+                                <rect key="frame" x="329" y="0.0" width="30" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <state key="normal" title="+"/>
                                 <connections>
-                                    <segue destination="dAc-y7-oVA" kind="presentation" id="w5t-Ff-xg8"/>
+                                    <segue destination="k9U-Dq-a4l" kind="presentation" id="w5t-Ff-xg8"/>
                                 </connections>
                             </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="RHw-nN-85O" firstAttribute="leading" secondItem="sz2-yc-CCH" secondAttribute="leading" id="Aub-Ff-tQ1"/>
-                            <constraint firstItem="RHw-nN-85O" firstAttribute="top" secondItem="WDX-uv-oAY" secondAttribute="bottom" constant="8" id="EWa-Xe-Suu"/>
-                            <constraint firstAttribute="trailing" secondItem="RHw-nN-85O" secondAttribute="trailing" id="Hoi-S8-bDi"/>
-                            <constraint firstAttribute="bottom" secondItem="RHw-nN-85O" secondAttribute="bottom" id="PEe-LX-Okz"/>
-                            <constraint firstItem="WDX-uv-oAY" firstAttribute="leading" secondItem="JIM-Vn-N4J" secondAttribute="leading" constant="335" id="Q4S-10-UTm"/>
-                            <constraint firstItem="JIM-Vn-N4J" firstAttribute="trailing" secondItem="WDX-uv-oAY" secondAttribute="trailing" constant="10" id="gAS-DS-y0z"/>
-                            <constraint firstItem="WDX-uv-oAY" firstAttribute="top" secondItem="sz2-yc-CCH" secondAttribute="top" constant="17" id="sgR-NO-Fpr"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="JIM-Vn-N4J"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Pantries" id="ubA-Av-O2s"/>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lS6-we-xj8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1024.8" y="488.90554722638683"/>
+            <point key="canvasLocation" x="1903" y="488"/>
         </scene>
         <!--AddPantry-->
         <scene sceneID="SFN-2C-eCj">
@@ -367,31 +357,20 @@
                     <view key="view" contentMode="scaleToFill" id="wMZ-i0-mB1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7xY-gW-rBX">
-                                <rect key="frame" x="16" y="20" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Back"/>
-                                <connections>
-                                    <action selector="backButton:" destination="dAc-y7-oVA" eventType="touchUpInside" id="7eB-Sd-IUm"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B83-a4-NWM">
-                                <rect key="frame" x="164" y="354" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="jD1-5Q-qMr"/>
                     </view>
-                    <connections>
-                        <segue destination="CUh-Kn-zXT" kind="presentation" identifier="backToPantries" id="W2b-XI-KMY"/>
-                    </connections>
+                    <navigationItem key="navigationItem" id="lnQ-kG-KVU">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="1Sb-Bm-epb">
+                            <connections>
+                                <action selector="back:" destination="dAc-y7-oVA" id="rG7-5q-TQn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkg-2c-ed4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2001" y="405"/>
+            <point key="canvasLocation" x="3778" y="486"/>
         </scene>
         <!--Favorites-->
         <scene sceneID="EaT-Gl-vuc">
@@ -420,7 +399,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="a4d-u4-1zq" kind="relationship" relationship="viewControllers" id="a9g-ur-3Wq"/>
-                        <segue destination="CUh-Kn-zXT" kind="relationship" relationship="viewControllers" id="gQy-p3-BvF"/>
+                        <segue destination="CRL-bF-Bmw" kind="relationship" relationship="viewControllers" id="gQy-p3-BvF"/>
                         <segue destination="Z6c-mK-bUb" kind="relationship" relationship="viewControllers" id="MFk-mF-iHb"/>
                         <segue destination="24f-aq-dNF" kind="relationship" relationship="viewControllers" id="9X0-ow-9Ij"/>
                     </connections>
@@ -429,10 +408,45 @@
             </objects>
             <point key="canvasLocation" x="-36" y="885"/>
         </scene>
+        <!--Pantries-->
+        <scene sceneID="zA7-Ja-tmQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CRL-bF-Bmw" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Pantries" id="ubA-Av-O2s"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rnP-PV-ZJH">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="CUh-Kn-zXT" kind="relationship" relationship="rootViewController" id="Lal-oR-2WS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G9c-BN-jPd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1024" y="488.45577211394306"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="yfw-aa-TZ4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="k9U-Dq-a4l" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Rd2-7R-eRI">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dAc-y7-oVA" kind="relationship" relationship="rootViewController" id="Ql4-70-oW5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oLh-mk-o3T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2839" y="488"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="VZh-pr-3Xs"/>
-        <segue reference="W2b-XI-KMY"/>
         <segue reference="9TA-RG-wtZ"/>
     </inferredMetricsTieBreakers>
 </document>

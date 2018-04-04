@@ -9,7 +9,7 @@
 import UIKit
 
 class AddPantryViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,12 +21,18 @@ class AddPantryViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    // Temporary back button
-    // Takes you back to pantries screen
-    // Unfortunately, that means the pantry tab bar controller does not maintain the tab bar
-    @IBAction func backButton(_ sender: Any) {
-        performSegue(withIdentifier: "backToPantries", sender: self)
+    @IBAction func back(_ sender: UIBarButtonItem) {
+        if presentingViewController is UITabBarController{
+            dismiss(animated: true, completion: nil)
+            
+        }else if let owningNavController = navigationController{
+            owningNavController.popViewController(animated: true)
+        }else{
+            fatalError("view is not contained by a navigation controller")
+        }
     }
+    
+    
     /*
     // MARK: - Navigation
 
