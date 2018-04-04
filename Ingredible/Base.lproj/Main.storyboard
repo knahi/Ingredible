@@ -302,28 +302,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About Ingredible" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pmj-eK-zrO">
-                                <rect key="frame" x="100" y="45" width="175" height="26.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This is where our app description and project details will go." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GV6-GO-FP7">
-                                <rect key="frame" x="16" y="97" width="343" height="74"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="25" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GV6-GO-FP7">
+                                <rect key="frame" x="16" y="108" width="343" height="481"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
                                 </accessibility>
+                                <mutableString key="text">Our goal for this project is to create an aesthetically pleasing mobile application that allows users to find recipes from their existing ingredient list. The recipes in our app will be pulled from websites like AllRecipes and FoodNetwork, various cookbooks, and our personal recipe archives. There are a few existing webpages, like SuperCook and FOODWISE, that have very elegantly tackled this application design. However, no mobile application that we have found has successfully implemented this idea. Apps like BigOven, CookPad, and EpiCu- rious are recipe-related and have achieved good ratings and many positive reviews, but do not offer an ingredient-to-recipe service. 
+We created this app to not only benefit college students on a budget, but also to help all chefs focused on eliminating waste. </mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About Ingredible" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pmj-eK-zrO">
+                                <rect key="frame" x="92" y="57" width="191" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" red="0.20849511292869888" green="0.28670330430964464" blue="0.2024725490424768" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="0.313858268" green="0.42443331699999998" blue="0.30148674679999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="pmj-eK-zrO" firstAttribute="leading" secondItem="neB-NE-CGo" secondAttribute="leading" constant="100" id="eKI-SI-9na"/>
-                            <constraint firstItem="pmj-eK-zrO" firstAttribute="top" secondItem="neB-NE-CGo" secondAttribute="top" constant="25" id="kSV-dl-WBL"/>
-                            <constraint firstItem="neB-NE-CGo" firstAttribute="trailing" secondItem="pmj-eK-zrO" secondAttribute="trailing" constant="100" id="qCp-Ve-yrc"/>
+                            <constraint firstItem="neB-NE-CGo" firstAttribute="bottom" secondItem="GV6-GO-FP7" secondAttribute="bottom" constant="29" id="4E2-Vq-ZX7"/>
+                            <constraint firstItem="GV6-GO-FP7" firstAttribute="leading" secondItem="neB-NE-CGo" secondAttribute="leading" constant="16" id="KVq-Yp-euo"/>
+                            <constraint firstItem="GV6-GO-FP7" firstAttribute="top" secondItem="pmj-eK-zrO" secondAttribute="bottom" constant="19" id="alC-ZP-VtH"/>
+                            <constraint firstItem="pmj-eK-zrO" firstAttribute="leading" secondItem="neB-NE-CGo" secondAttribute="leading" constant="92" id="eKI-SI-9na"/>
+                            <constraint firstItem="pmj-eK-zrO" firstAttribute="top" secondItem="neB-NE-CGo" secondAttribute="top" constant="37" id="kSV-dl-WBL"/>
+                            <constraint firstItem="neB-NE-CGo" firstAttribute="trailing" secondItem="GV6-GO-FP7" secondAttribute="trailing" constant="16" id="n46-Z3-PXa"/>
+                            <constraint firstItem="neB-NE-CGo" firstAttribute="trailing" secondItem="pmj-eK-zrO" secondAttribute="trailing" constant="92" id="qCp-Ve-yrc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="neB-NE-CGo"/>
                     </view>
