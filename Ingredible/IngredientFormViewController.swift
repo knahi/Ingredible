@@ -151,10 +151,10 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
                     let recipe = item.value as? NSDictionary
                     
                     let ingredients = recipe?["Ingredients"] as! NSArray
-                    //if recipe contains everything in the ingredient list
-                    //itemSelected = true
-                    //else
-                    //itemSelected = false
+                    //if ingredients is in selectedIngredients {
+                    //itemSelected = true }
+                    //else {
+                    //itemSelected = false }
                     
                     if itemSelected{
                         self.count += 1
@@ -166,11 +166,6 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
                     print(recipe!)
                 } //end of loop
                 print(FavModel.allRecipes)
-                
-                //let recipe = Recipe()
-                
-                //recipe.setValuesForKeys(collection as! [String : Any])
-                //self.recipeList.append(recipe)
                 
                 //Takes care of firebase asynchronicity
                 DispatchQueue.main.async {self.tableView.reloadData()}
