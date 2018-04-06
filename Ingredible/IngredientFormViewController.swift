@@ -12,13 +12,21 @@
 import UIKit
 
 class IngredientFormViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    
+
+    @IBOutlet weak var vegetarian: UISwitch!
+    @IBOutlet weak var vegan: UISwitch!
     @IBOutlet weak var tableView: UITableView!
+    
+    var vegetarianBool = false
+    var veganBool =  false
+    var selectedIndexPathArray = Array<NSIndexPath>()
+    var selectedIngredients = Array<String>()
+    
     
     let foodCategories = ["Grains", "Fruits", "Vegetables", "Proteins", "Dairy", "Sweets/Fats", "Seasoning"]
     let ingredients = [
         // Grains
-        ["Rice", "Quinoa", "Couscous", "Farro", "Oats", "Bulgur", "Barley", "Bread"],
+        ["Rice", "Quinoa", "Couscous", "Farro", "Oats", "Bulgur", "Barley", "Bread", "Pasta"],
         // Fruits
         ["Bananas", "Apples", "Grapes", "Strawberries", "Oranges", "Watermelon", "Lemons", "Blueberries", "Peaches", "Cantaloupe", "Pineapples", "Cherries", "Pears", "Limes", "Raspberries", "Blackberries", "Plums", "Nectarines", "Grapefruit"],
         // Vegetables
@@ -26,17 +34,34 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
         // Proteins
         ["Seafood", "Eggs", "Pork", "Beef", "Chicken", "Duck", "Lamb", "Legumes"],
         // Dairy
-        ["Butter", "Cheese", "Milk", "Cream", "Yogurt"],
+        ["Butter", "Cheese", "Milk", "Cream", "Yogurt", "Condensed milk"],
         // Sweets/Fats
-        ["Chocolate", "Oil"],
+        ["Chocolate", "Vegetable oil", "Peanut butter"],
         // Seasoning
-        ["Thyme", "Basil", "Rosemary", "Sugar", "Salt"]
+        ["Thyme", "Basil", "Rosemary", "Sugar", "Salt", "Pepper", "Nutmeg", "Onion powder"]
     ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    
+    
+    @IBAction func vegetarianToggled(_ sender: UISwitch) {
+        if vegetarian.isOn {
+            vegetarianBool = true
+        } else {
+            vegetarianBool = false
+        }
+    }
+    
+    @IBAction func veganToggled(_ sender: UISwitch) {
+        if vegan.isOn {
+            veganBool = true
+        } else {
+            veganBool = false
+        }
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -58,8 +83,6 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
         header.textLabel?.textColor = UIColor.white
     }
     
-    var selectedIndexPathArray = Array<NSIndexPath>()
-    var selectedIngredients = Array<String>()
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if tableView.cellForRow(at: indexPath)?.accessoryType == UITableViewCellAccessoryType.none {

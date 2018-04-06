@@ -97,12 +97,20 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="PdO-oE-64i">
                                                 <rect key="frame" x="120" y="187" width="49" height="31"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="vegetarian"/>
                                                 <color key="onTintColor" red="0.486582607" green="0.60289722680000002" blue="0.44620707630000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <connections>
+                                                    <action selector="vegetarianToggled:" destination="sqT-Lo-U1H" eventType="valueChanged" id="hOG-5A-P2q"/>
+                                                </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="aYe-05-8Ku">
                                                 <rect key="frame" x="296" y="187" width="49" height="31"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="vegan"/>
                                                 <color key="onTintColor" red="0.486582607" green="0.60289722680000002" blue="0.44620707630000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <connections>
+                                                    <action selector="veganToggled:" destination="sqT-Lo-U1H" eventType="valueChanged" id="Ejs-WB-LTJ"/>
+                                                </connections>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vegetarian" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lBW-8s-xvo">
                                                 <rect key="frame" x="16" y="192" width="91" height="21"/>
@@ -208,6 +216,8 @@
                     <size key="freeformSize" width="375" height="1000"/>
                     <connections>
                         <outlet property="tableView" destination="OAt-Qk-iYf" id="TxI-uA-Jt3"/>
+                        <outlet property="vegan" destination="aYe-05-8Ku" id="e5C-jj-Vgh"/>
+                        <outlet property="vegetarian" destination="PdO-oE-64i" id="jhM-vv-jLV"/>
                         <segue destination="GY2-9x-gjm" kind="presentation" identifier="ingredientsToRecipes" id="VZh-pr-3Xs"/>
                     </connections>
                 </viewController>
