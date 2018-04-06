@@ -56,7 +56,7 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
         ref = Database.database().reference()
     }
     
-    
+    // Handles toggling of vegetarian switch
     @IBAction func vegetarianToggled(_ sender: UISwitch) {
         if vegetarian.isOn {
             vegetarianBool = true
@@ -65,6 +65,7 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
         }
     }
     
+    // Handles toggling of vegan switch
     @IBAction func veganToggled(_ sender: UISwitch) {
         if vegan.isOn {
             veganBool = true
@@ -99,9 +100,9 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
             selectedIngredients.append(ingredients[indexPath.section][indexPath.row])
         }
         else{
-            print(indexPath.row)
-            selectedIndexPathArray.remove(at: indexPath.row - 1)
-            selectedIngredients.remove(at: indexPath.row - 1)
+            let i = selectedIngredients.index(of: ingredients[indexPath.section][indexPath.row]) as! Int
+            selectedIndexPathArray.remove(at: i)
+            selectedIngredients.remove(at: i)
         }
         tableView.reloadData()
         print(selectedIngredients)
