@@ -5,13 +5,15 @@
 //  Created by Kayla Nahi on 3/14/18.
 //  Copyright © 2018 Ingredible. All rights reserved.
 //
-// References: https://www.youtube.com/watch?v=VKnrx5Feapc, https://www.youtube.com/watch?v=5MZ-WJuSdpg
+// References: https://www.youtube.com/watch?v=VKnrx5Feapc, https://www.youtube.com/watch?v=5MZ-WJuSdpg, https://stackoverflow.com/questions/41737562/how-to-add-checkmark-tableview-multiple-swift-3-0
 
 // Things to try later: https://www.youtube.com/watch?v=Q8k9E1gQ_qg
 
 import UIKit
 
 class IngredientFormViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    @IBOutlet weak var tableView: UITableView!
     
     let foodCategories = ["Grains", "Fruits", "Vegetables", "Proteins", "Dairy", "Sweets/Fats", "Seasoning"]
     let ingredients = [
@@ -30,13 +32,9 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
         // Seasoning
         ["Thyme", "Basil", "Rosemary", "Sugar", "Salt"]
     ]
-
-    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         tableView.delegate = self
         tableView.dataSource = self
     }
@@ -53,11 +51,6 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
         return ingredients[section].count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = ingredients[indexPath.section][indexPath.row]
-        return cell
-    }
     
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         view.tintColor = UIColor(red: 124/255, green: 154/255, blue: 114/255, alpha: 1)
@@ -65,14 +58,37 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
         header.textLabel?.textColor = UIColor.white
     }
     
+    var selectedIndexPathArray = Array<NSIndexPath>()
+    var selectedIngredients = Array<String>()
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        if tableView.cellForRow(at: indexPath)?.accessoryType == UITableViewCellAccessoryType.checkmark {
-            tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.none
+        if tableView.cellForRow(at: indexPath)?.accessoryType == UITableViewCellAccessoryType.none {
+            selectedIndexPathArray.append(indexPath as NSIndexPath)
+            selectedIngredients.append(ingredients[indexPath.section][indexPath.row])
         }
-        else {
-            tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.checkmark
+        else{
+            print(indexPath.row)
+            selectedIndexPathArray.remove(at: indexPath.row - 1)
+            selectedIngredients.remove(at: indexPath.row - 1)
         }
+        tableView.reloadData()
+        print(selectedIngredients)
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = ingredients[indexPath.section][indexPath.row]
+        cell.accessoryType = .none
+        for item in selectedIndexPathArray {
+            if indexPath == item as IndexPath  {
+                cell.accessoryType = .checkmark
+            }
+        }
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        tableView.cellForRow(at: indexPath)?.accessoryType = .none
     }
     
     override func didReceiveMemoryWarning() {
