@@ -19,6 +19,7 @@
 		F74D258420756CDA00B8E1D1 /* PantriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D258320756CDA00B8E1D1 /* PantriesViewController.swift */; };
 		F75ACBD9206980C90035A969 /* AddPantryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75ACBD8206980C90035A969 /* AddPantryViewController.swift */; };
 		F75ACBDB206AAD000035A969 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75ACBDA206AAD000035A969 /* Recipe.swift */; };
+		F7E51CE02077D07A00401243 /* FavModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E51CDF2077D07A00401243 /* FavModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		F74D258320756CDA00B8E1D1 /* PantriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantriesViewController.swift; sourceTree = "<group>"; };
 		F75ACBD8206980C90035A969 /* AddPantryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPantryViewController.swift; sourceTree = "<group>"; };
 		F75ACBDA206AAD000035A969 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		F7E51CDF2077D07A00401243 /* FavModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				F75ACBD8206980C90035A969 /* AddPantryViewController.swift */,
 				F73596232059BB67007A55DD /* RecipeResultsViewController.swift */,
 				EF76E82B2059ADA20033A4EF /* IngredientFormViewController.swift */,
+				F7E51CDF2077D07A00401243 /* FavModel.swift */,
 				EF0BFE0A20532CEE00725EF5 /* Assets.xcassets */,
 				EF0BFE0C20532CEE00725EF5 /* LaunchScreen.storyboard */,
 				EF0BFE0F20532CEE00725EF5 /* Info.plist */,
@@ -247,6 +250,7 @@
 				F75ACBDB206AAD000035A969 /* Recipe.swift in Sources */,
 				EF0BFE0420532CEE00725EF5 /* AppDelegate.swift in Sources */,
 				F73596242059BB67007A55DD /* RecipeResultsViewController.swift in Sources */,
+				F7E51CE02077D07A00401243 /* FavModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

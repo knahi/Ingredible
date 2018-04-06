@@ -10,6 +10,7 @@
 // Things to try later: https://www.youtube.com/watch?v=Q8k9E1gQ_qg
 
 import UIKit
+import Firebase
 
 class IngredientFormViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -21,6 +22,11 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
     var veganBool =  false
     var selectedIndexPathArray = Array<NSIndexPath>()
     var selectedIngredients = Array<String>()
+    
+    var ref: DatabaseReference!
+    var refHandle: UInt!
+    var recipeList = [Recipe]()
+    var count: Int = 0
     
     
     let foodCategories = ["Grains", "Fruits", "Vegetables", "Proteins", "Dairy", "Sweets/Fats", "Seasoning"]
@@ -45,6 +51,9 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        
+        //Firebase setup
+        ref = Database.database().reference()
     }
     
     
@@ -126,8 +135,49 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
     
     // Button to recipe results view controller
     @IBAction func getRecipesButton(_ sender: Any) {
+        fetchRecipes()
         performSegue(withIdentifier: "ingredientsToRecipes", sender: self)
     }
 
+    func fetchRecipes(){
+        self.count = 0
+        FavModel.allRecipes = [NSDictionary]()
+        ref.child("Recipes").observe(.value, with:{ (snapshot) in
+            // if it doesn't return null
+            if let collection = snapshot.value as? NSDictionary {
+                for item in collection{
+                    var itemSelected:Bool = true
+                    
+                    let recipe = item.value as? NSDictionary
+                    
+                    let ingredients = recipe?["Ingredients"] as! NSArray
+                    //if recipe contains everything in the ingredient list
+                    //itemSelected = true
+                    //else
+                    //itemSelected = false
+                    
+                    if itemSelected{
+                        self.count += 1
+                        FavModel.allRecipes.append(recipe!)
+                    }
+                    
+                    print (ingredients[0])
+                    print (ingredients.count)
+                    print(recipe!)
+                } //end of loop
+                print(FavModel.allRecipes)
+                
+                //let recipe = Recipe()
+                
+                //recipe.setValuesForKeys(collection as! [String : Any])
+                //self.recipeList.append(recipe)
+                
+                //Takes care of firebase asynchronicity
+                DispatchQueue.main.async {self.tableView.reloadData()}
+            }
+        })
+    }
 
 }
+
+
