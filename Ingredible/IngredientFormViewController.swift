@@ -152,6 +152,18 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
                     let recipe = item.value as? NSDictionary
                     
                     let ingredients = recipe?["Ingredients"] as! NSArray
+                    
+                    let selectedIngredientsNSSet = NSSet(array: self.selectedIngredients)
+                    let ingredientsNSSet = NSSet(array: ingredients as! [Any])
+                    let matches = ingredientsNSSet.isSubset(of: selectedIngredientsNSSet as! Set<AnyHashable>)
+                    
+                    if matches {
+                        itemSelected = true
+                    }
+                    else {
+                        itemSelected = false
+                    }
+                    
                     //if ingredients is in selectedIngredients {
                     //itemSelected = true }
                     //else {
