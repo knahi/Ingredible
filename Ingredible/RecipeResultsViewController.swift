@@ -27,8 +27,18 @@ class RecipeResultsViewController: UIViewController, UITableViewDataSource, UITa
         ref = Database.database().reference()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         fetchRecipes()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        getDetails()
+    }
+    
+    func getDetails(){
+        //print(FavModel.allRecipes)
+        let value = FavModel.allRecipes[1]
+        print(value["Ingredients"])
     }
     
     func fetchRecipes(){
@@ -87,11 +97,23 @@ class RecipeResultsViewController: UIViewController, UITableViewDataSource, UITa
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "customcell", for: indexPath) as! UITableViewCell
         cell.textLabel?.text = FavModel.allTitles[indexPath.item]
-        print(FavModel.allTitles[indexPath.item])
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //FavModel.selectedRecipe = FavModel.allRecipies.objectat()
+        let value = FavModel.allRecipes[indexPath.row]
+        
+        let recTitle = value["Title"]
+        let recServings = value["Servings"]
+        let recQuantity = value["Quantity"]
+        let recProcedure = value["Procedure"]
+        
+        RecipeModel.procedure = recProcedure as! String
+        RecipeModel.quantity = recQuantity as! [String]
+        RecipeModel.servings = recServings as! String
+        RecipeModel.title = recTitle as! String
+        
         performSegue(withIdentifier: "showRecipeDetail", sender: self)
     }
 

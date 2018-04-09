@@ -10,9 +10,6 @@ import Foundation
 
 class FavModel {
     
-    static var title: String = ""
-    static var ingredinets: NSArray! = []
-    
     //currently selected recipe
     static var currentSelection:String = ""
     
