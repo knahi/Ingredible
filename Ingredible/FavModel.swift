@@ -21,4 +21,7 @@ class FavModel {
     
     //list of all recipes displayed
     static var allRecipes = [NSDictionary]()
+    
+    //list of all matched recipe titles
+    static var allTitles = [String]()
 }
