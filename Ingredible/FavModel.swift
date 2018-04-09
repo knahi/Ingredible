@@ -24,4 +24,7 @@ class FavModel {
     
     //list of all matched recipe titles
     static var allTitles = [String]()
+    
+    //list of selected ingredients
+    static var selectedIng = [String]()
 }

@@ -11,7 +11,6 @@
 
 import UIKit
 import Firebase
-//import FirebaseDatabase
 
 class IngredientFormViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -156,7 +155,9 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
     
     // Button to recipe results view controller
     @IBAction func getRecipesButton(_ sender: Any) {
-        fetchRecipes()
+        //fetchRecipes()
+        FavModel.selectedIng = selectedIngredients
+        print(FavModel.selectedIng)
         performSegue(withIdentifier: "ingredientsToRecipes", sender: self)
     }
 
@@ -175,7 +176,7 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
                     let ingredients = recipe?["Ingredients"] as! NSArray
                     let title = recipe?["Title"] as! String
                     
-                    let selectedIngredientsNSSet = NSSet(array: self.selectedIngredients)
+                    let selectedIngredientsNSSet = NSSet(array: FavModel.selectedIng)
                     let ingredientsNSSet = NSSet(array: ingredients as! [Any])
                     let matches = ingredientsNSSet.isSubset(of: selectedIngredientsNSSet as! Set<AnyHashable>)
                     
