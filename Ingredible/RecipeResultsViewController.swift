@@ -31,16 +31,6 @@ class RecipeResultsViewController: UIViewController, UITableViewDataSource, UITa
         fetchRecipes()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        getDetails()
-    }
-    
-    func getDetails(){
-        //print(FavModel.allRecipes)
-        let value = FavModel.allRecipes[1]
-        print(value["Ingredients"])
-    }
-    
     func fetchRecipes(){
         self.count = 0
         FavModel.allRecipes = [NSDictionary]()
