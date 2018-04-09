@@ -299,7 +299,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="asD-XI-q7X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3404" y="1952"/>
+            <point key="canvasLocation" x="3078" y="2016"/>
         </scene>
         <!--About-->
         <scene sceneID="rTT-gc-Iyz">
@@ -484,7 +484,6 @@ We created this app to not only benefit college students on a budget, but also t
         <image name="info" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="VZh-pr-3Xs"/>
         <segue reference="9TA-RG-wtZ"/>
     </inferredMetricsTieBreakers>
 </document>

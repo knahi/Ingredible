@@ -28,7 +28,6 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
     
     var ref: DatabaseReference!
     var refHandle: UInt!
-    var recipeList = [Recipe]()
     var count: Int = 0
     
     
@@ -164,6 +163,7 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
     func fetchRecipes(){
         self.count = 0
         FavModel.allRecipes = [NSDictionary]()
+        FavModel.allTitles = [String]()
         ref.child("Recipes").observe(.value, with:{ (snapshot) in
             // if it doesn't return null
             if let collection = snapshot.value as? NSDictionary {

@@ -14,29 +14,24 @@ class RecipeResultsViewController: UIViewController, UITableViewDataSource, UITa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        tableView.delegate = self
+        tableView.dataSource = self
+        print(FavModel.allTitles.count)
     }
     
     // Returns the same number of cells as recipes in our list
     // override
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
-        //return FavModel.allTitles.count
+        return FavModel.allTitles.count
     }
     
     // override
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //let cell = UITableViewCell(style: .subtitle, reuseIdentifier: cellId)
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath as IndexPath)
-//
-//        // Set cell contents
-//        cell.textLabel?.text = FavModel.allTitles[indexPath.row]
-//        print(FavModel.allTitles[indexPath.row])
-//        print(FavModel.allTitles[indexPath.item])
-//        return cell
-//
+
         let cell = tableView.dequeueReusableCell(withIdentifier: "customcell", for: indexPath) as! UITableViewCell
-        cell.textLabel?.text = "test"
+        cell.textLabel?.text = FavModel.allTitles[indexPath.item]
+        print(FavModel.allTitles[indexPath.item])
         return cell
     }
 
