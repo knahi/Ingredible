@@ -15,6 +15,7 @@
 		EF0BFE0E20532CEE00725EF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF0BFE0C20532CEE00725EF5 /* LaunchScreen.storyboard */; };
 		EF55F453205F064F00F34677 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF55F452205F064E00F34677 /* GoogleService-Info.plist */; };
 		EF76E82C2059ADA20033A4EF /* IngredientFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF76E82B2059ADA20033A4EF /* IngredientFormViewController.swift */; };
+		EF7B4901207BDA5C00E286AB /* RecipeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B4900207BDA5C00E286AB /* RecipeDetail.swift */; };
 		F73596242059BB67007A55DD /* RecipeResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73596232059BB67007A55DD /* RecipeResultsViewController.swift */; };
 		F74D258420756CDA00B8E1D1 /* PantriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D258320756CDA00B8E1D1 /* PantriesViewController.swift */; };
 		F75ACBD9206980C90035A969 /* AddPantryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75ACBD8206980C90035A969 /* AddPantryViewController.swift */; };
@@ -33,6 +34,7 @@
 		EF0BFE0F20532CEE00725EF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF55F452205F064E00F34677 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EF76E82B2059ADA20033A4EF /* IngredientFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientFormViewController.swift; sourceTree = "<group>"; };
+		EF7B4900207BDA5C00E286AB /* RecipeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetail.swift; sourceTree = "<group>"; };
 		F2A38AEC9FCE996A60E68B07 /* Pods-Ingredible.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ingredible.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ingredible/Pods-Ingredible.release.xcconfig"; sourceTree = "<group>"; };
 		F73596232059BB67007A55DD /* RecipeResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeResultsViewController.swift; sourceTree = "<group>"; };
 		F74D258320756CDA00B8E1D1 /* PantriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantriesViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				EF0BFE0320532CEE00725EF5 /* AppDelegate.swift */,
 				EF0BFE0520532CEE00725EF5 /* ViewController.swift */,
 				EF0BFE0720532CEE00725EF5 /* Main.storyboard */,
+				EF7B4900207BDA5C00E286AB /* RecipeDetail.swift */,
 				F74D258320756CDA00B8E1D1 /* PantriesViewController.swift */,
 				F75ACBD8206980C90035A969 /* AddPantryViewController.swift */,
 				F73596232059BB67007A55DD /* RecipeResultsViewController.swift */,
@@ -240,6 +243,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF7B4901207BDA5C00E286AB /* RecipeDetail.swift in Sources */,
 				EF76E82C2059ADA20033A4EF /* IngredientFormViewController.swift in Sources */,
 				EF0BFE0620532CEE00725EF5 /* ViewController.swift in Sources */,
 				F75ACBD9206980C90035A969 /* AddPantryViewController.swift in Sources */,

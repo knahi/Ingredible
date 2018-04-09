@@ -90,6 +90,10 @@ class RecipeResultsViewController: UIViewController, UITableViewDataSource, UITa
         print(FavModel.allTitles[indexPath.item])
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showRecipeDetail", sender: self)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
