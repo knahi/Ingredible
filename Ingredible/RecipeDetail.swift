@@ -27,9 +27,6 @@ class RecipeDetail: UIViewController {
         servings.text = RecipeModel.servings
         quantity.text = quantityString
         procedure.text = RecipeModel.procedure
-        
-        
-        // Do any additional setup after loading the view.
     }
 
     @IBAction func favorite(_ sender: Any) {
