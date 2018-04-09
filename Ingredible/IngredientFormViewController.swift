@@ -11,13 +11,16 @@
 
 import UIKit
 import Firebase
+//import FirebaseDatabase
 
 class IngredientFormViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+    
+    @IBOutlet weak var mealType: UISegmentedControl!
     @IBOutlet weak var vegetarian: UISwitch!
     @IBOutlet weak var vegan: UISwitch!
     @IBOutlet weak var tableView: UITableView!
     
+    var mealTypeString = "Breakfast"
     var vegetarianBool = false
     var veganBool =  false
     var selectedIndexPathArray = Array<NSIndexPath>()
@@ -55,6 +58,25 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
         //Firebase setup
         ref = Database.database().reference()
     }
+    
+    @IBAction func mealType(_ sender: AnyObject) {
+        switch mealType.selectedSegmentIndex
+        {
+        case 0:
+            mealTypeString = "Breakfast";
+        case 1:
+            mealTypeString = "Lunch";
+        case 2:
+            mealTypeString = "Dinner";
+        case 3:
+            mealTypeString = "Dessert";
+        case 4:
+            mealTypeString = "Snack";
+        default:
+            break
+        }
+    }
+    
     
     // Handles toggling of vegetarian switch
     @IBAction func vegetarianToggled(_ sender: UISwitch) {
@@ -105,7 +127,6 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
             selectedIngredients.remove(at: i)
         }
         tableView.reloadData()
-        print(selectedIngredients)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -164,19 +185,14 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
                         itemSelected = false
                     }
                     
-                    //if ingredients is in selectedIngredients {
-                    //itemSelected = true }
-                    //else {
-                    //itemSelected = false }
-                    
                     if itemSelected{
                         self.count += 1
                         FavModel.allRecipes.append(recipe!)
                     }
                     
-                    print (ingredients[0])
-                    print (ingredients.count)
-                    print(recipe!)
+                    //print (ingredients[0])
+                    //print (ingredients.count)
+                    //print(recipe!)
                 } //end of loop
                 print(FavModel.allRecipes)
                 

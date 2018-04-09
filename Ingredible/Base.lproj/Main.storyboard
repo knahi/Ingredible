@@ -159,6 +159,9 @@
                                                         <color key="value" red="0.48658260703086853" green="0.60289722681045532" blue="0.44620707631111145" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="mealType:" destination="sqT-Lo-U1H" eventType="valueChanged" id="cND-E8-taD"/>
+                                                </connections>
                                             </segmentedControl>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OAt-Qk-iYf">
                                                 <rect key="frame" x="17" y="456" width="333" height="328"/>
@@ -215,6 +218,7 @@
                     <tabBarItem key="tabBarItem" title="Item" id="aev-dd-b9l"/>
                     <size key="freeformSize" width="375" height="1000"/>
                     <connections>
+                        <outlet property="mealType" destination="ut6-ER-Dhh" id="mhT-RG-wpU"/>
                         <outlet property="tableView" destination="OAt-Qk-iYf" id="TxI-uA-Jt3"/>
                         <outlet property="vegan" destination="aYe-05-8Ku" id="e5C-jj-Vgh"/>
                         <outlet property="vegetarian" destination="PdO-oE-64i" id="jhM-vv-jLV"/>
@@ -328,8 +332,8 @@
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
                                 </accessibility>
-                                <mutableString key="text">Our goal for this project is to create an aesthetically pleasing mobile application that allows users to find recipes from their existing ingredient list. The recipes in our app will be pulled from websites like AllRecipes and FoodNetwork, various cookbooks, and our personal recipe archives. There are a few existing webpages, like SuperCook and FOODWISE, that have very elegantly tackled this application design. However, no mobile application that we have found has successfully implemented this idea. Apps like BigOven, CookPad, and EpiCurious are recipe-related and have achieved good ratings and many positive reviews, but do not offer an ingredient-to-recipe service. 
-We created this app to not only benefit college students on a budget, but also to help all chefs focused on eliminating waste. </mutableString>
+                                <string key="text">Our goal for this project is to create an aesthetically pleasing mobile application that allows users to find recipes from their existing ingredient list. The recipes in our app will be pulled from websites like AllRecipes and FoodNetwork, various cookbooks, and our personal recipe archives. There are a few existing webpages, like SuperCook and FOODWISE, that have very elegantly tackled this application design. However, no mobile application that we have found has successfully implemented this idea. Apps like BigOven, CookPad, and EpiCurious are recipe-related and have achieved good ratings and many positive reviews, but do not offer an ingredient-to-recipe service. 
+We created this app to not only benefit college students on a budget, but also to help all chefs focused on eliminating waste. </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

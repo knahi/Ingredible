@@ -16,7 +16,7 @@ class FavModel {
     //currently selected recipe
     static var currentSelection:String = ""
     
-    //list of favorited dresses
+    //list of favorited recipes
     static var favorites = [String]()
     
     //list of all recipes displayed
