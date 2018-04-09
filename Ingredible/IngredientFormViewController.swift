@@ -33,19 +33,19 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
     let foodCategories = ["Grains", "Fruits", "Vegetables", "Proteins", "Dairy", "Sweets/Fats", "Seasoning"]
     let ingredients = [
         // Grains
-        ["Rice", "Quinoa", "Couscous", "Farro", "Oats", "Bulgur", "Barley", "Bread", "Pasta"],
+        ["Barley", "Bread", "Bulgur", "Couscous", "Farro", "Oats","Pasta", "Quinoa", "Rice", "Tortillas"],
         // Fruits
-        ["Bananas", "Apples", "Grapes", "Strawberries", "Oranges", "Watermelon", "Lemons", "Blueberries", "Peaches", "Cantaloupe", "Pineapples", "Cherries", "Pears", "Limes", "Raspberries", "Blackberries", "Plums", "Nectarines", "Grapefruit"],
+        ["Apples", "Bananas", "Blackberries", "Blueberries", "Cantaloupe", "Cherries", "Grapefruit", "Grapes", "Lemons", "Limes", "Nectarines", "Oranges", "Peaches", "Pears", "Pineapples", "Plums", "Raspberries", "Strawberries", "Watermelon"],
         // Vegetables
-        ["Potatoes", "Tomatoes", "Onions", "Avocados", "Carrots", "Lettuce", "Broccoli", "Bell peppers", "Celery", "Cucumbers", "Corn", "Garlic", "Mushrooms", "Sweet potatoes", "Spinach", "Cabbage", "Green beans", "Hot peppers", "Cauliflower", "Green onions", "Asparagus"],
+        ["Asparagus", "Avocados","Bell peppers", "Broccoli", "Cabbage", "Carrots", "Cauliflower", "Celery", "Corn", "Cucumbers",  "Garlic", "Green beans", "Green onions", "Hot peppers", "Lettuce", "Mushrooms", "Onions", "Potatoes", "Spaghetti squash", "Spinach", "Sweet potatoes", "Tomatoes"],
         // Proteins
-        ["Seafood", "Eggs", "Pork", "Beef", "Chicken", "Duck", "Lamb", "Legumes"],
+        ["Beef", "Chicken", "Duck", "Eggs", "Lamb", "Legumes", "Pork", "Seafood"],
         // Dairy
-        ["Butter", "Cheese", "Milk", "Cream", "Yogurt", "Condensed milk"],
+        ["Butter", "Cheese", "Condensed milk", "Cream", "Cream cheese", "Milk", "Sour cream", "Yogurt"],
         // Sweets/Fats
-        ["Chocolate", "Vegetable oil", "Peanut butter"],
+        ["Brown sugar", "Chocolate", "Peanut butter", "Vegetable oil", "White sugar"],
         // Seasoning
-        ["Thyme", "Basil", "Rosemary", "Sugar", "Salt", "Pepper", "Nutmeg", "Onion powder"]
+        ["Almond extract", "Basil", "Bay leaves", "Cayenne pepper", "Cilantro", "Cinnamon", "Cumin", "Curry powder", "Garlic powder", "Hot sauce", "Nutmeg", "Onion powder", "Paprika", "Pepper", "Rosemary", "Salt", "Sugar", "Thyme", "Vanilla extract"]
     ]
     
     override func viewDidLoad() {
