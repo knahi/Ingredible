@@ -39,13 +39,13 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
         // Vegetables
         ["Asparagus", "Avocados","Bell peppers", "Broccoli", "Cabbage", "Carrots", "Cauliflower", "Celery", "Corn", "Cucumbers",  "Garlic", "Green beans", "Green onions", "Hot peppers", "Lettuce", "Mushrooms", "Onions", "Potatoes", "Spaghetti squash", "Spinach", "Sweet potatoes", "Tomatoes", "Tomato paste", "Tomato sauce", "Vegetable soup"],
         // Proteins
-        ["Beef", "Chicken", "Duck", "Eggs", "Fish", "Lamb", "Legumes", "Pork", "Shrimp"],
+        ["Beef", "Chicken", "Duck", "Eggs", "Fish", "Lamb", "Legumes", "Pork", "Shrimp", "Tofu"],
         // Dairy
         ["Butter", "Cheese", "Condensed milk", "Cream", "Cream cheese", "Milk", "Sour cream", "Yogurt"],
         // Sweets/Fats
-        ["Brown sugar", "Chocolate", "Coconut oil", "Honey", "Peanut butter", "Vegetable oil", "White sugar"],
+        ["Brown sugar", "Chocolate", "Cocoa powder", "Coconut oil", "Graham crackers", "Honey", "Maple syrup", "Marshmallows", "Olive oil", "Peanut butter", "Vegetable oil", "White sugar"],
         // Seasoning
-        ["Almond extract", "Basil", "Bay leaves", "Cayenne pepper", "Cilantro", "Cinnamon", "Cloves", "Cumin", "Curry powder", "Garlic powder", "Ginger", "Hot sauce", "Mustard", "Nutmeg", "Onion powder", "Paprika", "Pepper", "Red wine vinegar", "Rosemary", "Salt", "Soy sauce", "Sugar", "Thyme", "Turmeric", "Vanilla extract"]
+        ["Almond extract", "Basil", "Bay leaves", "Cajun seasoning", "Cayenne pepper", "Cilantro", "Cinnamon", "Cloves", "Cumin", "Curry powder", "Garlic powder", "Ginger", "Hot sauce", "Mustard", "Nutmeg", "Onion powder", "Paprika", "Pepper", "Red wine vinegar", "Rosemary", "Sage", "Salt", "Soy sauce", "Thyme", "Turmeric", "Vanilla extract"]
     ]
     
     override func viewDidLoad() {
