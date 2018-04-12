@@ -18,6 +18,7 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
     @IBOutlet weak var vegetarian: UISwitch!
     @IBOutlet weak var vegan: UISwitch!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet var currentlySelected: UILabel!
     
     var mealTypeString = "Breakfast"
     var vegetarianBool = false
@@ -28,7 +29,6 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
     var ref: DatabaseReference!
     var refHandle: UInt!
     var count: Int = 0
-    
     
     let foodCategories = ["Grains", "Fruits", "Vegetables", "Proteins", "Dairy", "Sweets/Fats", "Seasoning"]
     let ingredients = [
@@ -125,6 +125,8 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
             selectedIngredients.remove(at: i)
         }
         tableView.reloadData()
+        let stringText = selectedIngredients.joined(separator: ", ")
+        currentlySelected.text = stringText
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
