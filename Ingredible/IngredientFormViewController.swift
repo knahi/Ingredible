@@ -19,6 +19,7 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
     @IBOutlet weak var vegan: UISwitch!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet var currentlySelected: UILabel!
+    @IBOutlet var scroller: UIScrollView!
     
     var mealTypeString = "Breakfast"
     var vegetarianBool = false
