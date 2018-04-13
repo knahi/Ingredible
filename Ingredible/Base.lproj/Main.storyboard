@@ -504,9 +504,8 @@ We created this app to not only benefit college students on a budget, but also t
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Se4-rM-Ni1">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Se4-rM-Ni1">
                                 <rect key="frame" x="0.0" y="138" width="375" height="480"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customcell" id="bMf-Fq-gUA">
@@ -530,38 +529,36 @@ We created this app to not only benefit college students on a budget, but also t
                         <constraints>
                             <constraint firstItem="JIM-Vn-N4J" firstAttribute="trailing" secondItem="lNS-rf-DNt" secondAttribute="trailing" constant="15" id="3qO-Bf-mYi"/>
                             <constraint firstItem="lNS-rf-DNt" firstAttribute="leading" secondItem="JIM-Vn-N4J" secondAttribute="leading" constant="15" id="ABM-ds-MqH"/>
+                            <constraint firstItem="Se4-rM-Ni1" firstAttribute="bottom" secondItem="JIM-Vn-N4J" secondAttribute="bottom" id="SOl-TI-3jF"/>
+                            <constraint firstItem="Se4-rM-Ni1" firstAttribute="trailing" secondItem="JIM-Vn-N4J" secondAttribute="trailing" id="U5v-K9-VRk"/>
+                            <constraint firstItem="Se4-rM-Ni1" firstAttribute="leading" secondItem="JIM-Vn-N4J" secondAttribute="leading" id="UEn-iX-fib"/>
+                            <constraint firstItem="Se4-rM-Ni1" firstAttribute="top" secondItem="lNS-rf-DNt" secondAttribute="bottom" constant="30" id="rtg-T8-DjA"/>
                             <constraint firstItem="lNS-rf-DNt" firstAttribute="top" secondItem="JIM-Vn-N4J" secondAttribute="top" constant="15" id="tBV-Kt-iJQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JIM-Vn-N4J"/>
                     </view>
                     <navigationItem key="navigationItem" id="Hbd-ob-8Ui">
-                        <barButtonItem key="rightBarButtonItem" title="Item" style="plain" id="HCN-bc-PL1">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="WDX-uv-oAY">
-                                <rect key="frame" x="329" y="0.0" width="30" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <state key="normal" title="+">
-                                    <color key="titleColor" red="0.33867630362510681" green="0.42167004942893982" blue="0.3131842315196991" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
-                                <connections>
-                                    <segue destination="k9U-Dq-a4l" kind="presentation" id="w5t-Ff-xg8"/>
-                                </connections>
-                            </button>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="TAf-cF-VFw">
+                            <color key="tintColor" red="0.33867630360000001" green="0.42167004940000002" blue="0.31318423150000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="addPantry:" destination="CUh-Kn-zXT" id="mAe-72-JMN"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="Se4-rM-Ni1" id="hWA-iX-ZXV"/>
-                        <segue destination="2qg-oq-aE2" kind="presentation" identifier="showPantryDetail" id="DEA-I8-1qc"/>
+                        <segue destination="2qg-oq-aE2" kind="presentation" identifier="addPantry" id="kRG-GC-sV8"/>
+                        <segue destination="k9U-Dq-a4l" kind="presentation" identifier="showPantryDetail" id="DaT-uW-7je"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lS6-we-xj8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1889" y="734"/>
+            <point key="canvasLocation" x="1858" y="734"/>
         </scene>
-        <!--Pantry Detail-->
+        <!--Add Pantry View Controller-->
         <scene sceneID="0iT-IR-dKM">
             <objects>
-                <viewController id="Bjh-hg-SAR" customClass="PantryDetail" customModule="Ingredible" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Bjh-hg-SAR" customClass="AddPantryViewController" customModule="Ingredible" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xJo-oj-dse">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -570,8 +567,9 @@ We created this app to not only benefit college students on a budget, but also t
                     </view>
                     <navigationItem key="navigationItem" id="AUt-JZ-rEd">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="uQw-pl-oX9">
+                            <color key="tintColor" red="0.33867630360000001" green="0.42167004940000002" blue="0.31318423150000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
-                                <action selector="back:" destination="Bjh-hg-SAR" id="3E8-El-xcj"/>
+                                <action selector="back:" destination="Bjh-hg-SAR" id="psT-I7-ZH3"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -583,14 +581,13 @@ We created this app to not only benefit college students on a budget, but also t
         <!--AddPantry-->
         <scene sceneID="SFN-2C-eCj">
             <objects>
-                <viewController title="AddPantry" id="dAc-y7-oVA" customClass="AddPantryViewController" customModule="Ingredible" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="AddPantry" id="dAc-y7-oVA" customClass="PantryDetail" customModule="Ingredible" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wMZ-i0-mB1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uHg-uy-Jw3">
-                                <rect key="frame" x="0.0" y="157" width="375" height="510"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uHg-uy-Jw3">
+                                <rect key="frame" x="0.0" y="138" width="375" height="529"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customcell" id="NhX-lJ-N3L">
@@ -612,8 +609,12 @@ We created this app to not only benefit college students on a budget, but also t
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="uHg-uy-Jw3" firstAttribute="bottom" secondItem="jD1-5Q-qMr" secondAttribute="bottom" id="5EO-io-cWA"/>
+                            <constraint firstItem="uHg-uy-Jw3" firstAttribute="trailing" secondItem="jD1-5Q-qMr" secondAttribute="trailing" id="8qD-J7-11g"/>
+                            <constraint firstItem="uHg-uy-Jw3" firstAttribute="leading" secondItem="jD1-5Q-qMr" secondAttribute="leading" id="Dci-WU-AxD"/>
                             <constraint firstItem="jKi-E2-lKC" firstAttribute="top" secondItem="jD1-5Q-qMr" secondAttribute="top" constant="15" id="Ghd-KA-ZXE"/>
                             <constraint firstItem="jKi-E2-lKC" firstAttribute="leading" secondItem="jD1-5Q-qMr" secondAttribute="leading" constant="15" id="VWz-op-U82"/>
+                            <constraint firstItem="uHg-uy-Jw3" firstAttribute="top" secondItem="jKi-E2-lKC" secondAttribute="bottom" constant="30" id="rxo-HE-V7T"/>
                             <constraint firstItem="jD1-5Q-qMr" firstAttribute="trailing" secondItem="jKi-E2-lKC" secondAttribute="trailing" constant="15" id="uvP-ve-Fmv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jD1-5Q-qMr"/>
@@ -622,10 +623,14 @@ We created this app to not only benefit college students on a budget, but also t
                         <barButtonItem key="leftBarButtonItem" title="Back" id="1Sb-Bm-epb">
                             <color key="tintColor" red="0.33867630360000001" green="0.42167004940000002" blue="0.31318423150000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
-                                <action selector="back:" destination="dAc-y7-oVA" id="rG7-5q-TQn"/>
+                                <action selector="back:" destination="dAc-y7-oVA" id="uhB-2a-jqd"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="pantryTitle" destination="jKi-E2-lKC" id="0xf-wq-h2W"/>
+                        <outlet property="tableView" destination="uHg-uy-Jw3" id="URW-HG-3wV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkg-2c-ed4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -927,33 +932,6 @@ We created this app to not only benefit college students on a budget, but also t
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hmg-6V-x76" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2865.5999999999999" y="1087.5562218890555"/>
-        </scene>
-        <!--Table View Controller-->
-        <scene sceneID="qyQ-XZ-mJa">
-            <objects>
-                <tableViewController id="FQD-PG-UCk" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="xaX-Su-JxN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="I9n-Pe-fCK">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="I9n-Pe-fCK" id="spV-B9-LUF">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="FQD-PG-UCk" id="Kel-GN-FsG"/>
-                            <outlet property="delegate" destination="FQD-PG-UCk" id="Qaa-qC-18c"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LX4-oY-IUU" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
         </scene>
     </scenes>
     <resources>
