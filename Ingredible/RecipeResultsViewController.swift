@@ -125,7 +125,6 @@ class RecipeResultsViewController: UIViewController, UITableViewDataSource, UITa
     @IBAction func back(_ sender: UIBarButtonItem) {
         if presentingViewController is UITabBarController{
             dismiss(animated: true, completion: nil)
-            
         }else if let owningNavController = navigationController{
             owningNavController.popViewController(animated: true)
         }else{
