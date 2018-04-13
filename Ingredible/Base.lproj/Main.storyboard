@@ -49,7 +49,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aid-Am-aWG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="88.799999999999997" y="2197.1514242878561"/>
+            <point key="canvasLocation" x="-92" y="2198"/>
         </scene>
         <!--IngredientForm-->
         <scene sceneID="CB7-EZ-JKY">
@@ -502,7 +502,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="25" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GV6-GO-FP7">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="25" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GV6-GO-FP7">
                                 <rect key="frame" x="16" y="108" width="343" height="481"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
@@ -678,7 +678,7 @@ We created this app to not only benefit college students on a budget, but also t
         <image name="info" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="VZh-pr-3Xs"/>
-        <segue reference="9TA-RG-wtZ"/>
+        <segue reference="izF-ZT-esi"/>
+        <segue reference="Ui1-XY-8Cu"/>
     </inferredMetricsTieBreakers>
 </document>

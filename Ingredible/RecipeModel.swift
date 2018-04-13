@@ -15,4 +15,8 @@ class RecipeModel {
     static var servings: String = ""
     static var procedure: String = ""
     
+    static var ingredients = [String]()
+    static var meal: String = ""
+    static var vegan: Bool = false
+    static var vegetarian: Bool = false
 }

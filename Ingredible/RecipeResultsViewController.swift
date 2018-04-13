@@ -91,7 +91,6 @@ class RecipeResultsViewController: UIViewController, UITableViewDataSource, UITa
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //FavModel.selectedRecipe = FavModel.allRecipies.objectat()
         let value = FavModel.allRecipes[indexPath.row]
         
         let recTitle = value["Title"]
@@ -99,10 +98,20 @@ class RecipeResultsViewController: UIViewController, UITableViewDataSource, UITa
         let recQuantity = value["Quantity"]
         let recProcedure = value["Procedure"]
         
+        let recIngredients = value["Ingredients"]
+        let recMeal = value["Meal"]
+        let recVegan = value["Vegan"]
+        let recVegetarian = value["Vegetarian"]
+        
         RecipeModel.procedure = recProcedure as! String
         RecipeModel.quantity = recQuantity as! [String]
         RecipeModel.servings = recServings as! String
         RecipeModel.title = recTitle as! String
+        
+        RecipeModel.ingredients = recIngredients as! [String]
+        RecipeModel.meal = recMeal as! String
+        RecipeModel.vegan = recVegan as! Bool
+        RecipeModel.vegetarian = recVegetarian as! Bool
         
         performSegue(withIdentifier: "showRecipeDetail", sender: self)
     }

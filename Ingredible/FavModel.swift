@@ -14,7 +14,7 @@ class FavModel {
     static var currentSelection:String = ""
     
     //list of favorited recipes
-    static var favorites = [String]()
+    static var favorites = [String : [String : Any]]()
     
     //list of all recipes displayed
     static var allRecipes = [NSDictionary]()

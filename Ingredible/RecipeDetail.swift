@@ -34,10 +34,18 @@ class RecipeDetail: UIViewController {
             let image = UIImage(named: "filled-in-star") as UIImage!
             favoriteButton.setImage(image, for: .normal)
             pressed = true
+            
+            //Add recipe to list of favoites
+            FavModel.favorites[RecipeModel.title] = ["Title": RecipeModel.title, "Servings": RecipeModel.servings, "Quantity": RecipeModel.quantity, "Procedure": RecipeModel.procedure]
+            print(FavModel.favorites)
         } else {
             let image = UIImage(named: "empty-star") as UIImage!
             favoriteButton.setImage(image, for: .normal)
             pressed = false
+            
+            //Remove recipe from list of favorites
+            FavModel.favorites.removeValue(forKey: RecipeModel.title)
+            print(FavModel.favorites)
         }
         
     }
