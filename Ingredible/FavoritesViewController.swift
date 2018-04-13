@@ -39,13 +39,14 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "customcell", for: indexPath) 
-        
+        let dicTitle = Array(FavModel.favorites.keys)
         cell.textLabel?.text = dicTitle[indexPath.item]
         return cell
 
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let dicTitle = Array(FavModel.favorites.keys)
         let favName = dicTitle[indexPath.row]
         let value = FavModel.favorites[favName]
         

@@ -31,20 +31,17 @@ class FavoriteDetail: UIViewController {
         //Check if recipe is in the favorites dictionary
         if FavModel.favorites[RecipeModel.title] != nil {
             pressed = true
-            //let image = UIImage(named: "filled-in-star") as UIImage!
             favoriteButton.image = UIImage(named: "filled-in-star")        }
     }
     
     @IBAction func favorite(_ sender: Any) {
         if !pressed {
-            //let image = UIImage(named: "filled-in-star") as UIImage!
             favoriteButton.image = UIImage(named: "filled-in-star")
             pressed = true
             
             //Add recipe to list of favoites
             FavModel.favorites[RecipeModel.title] = ["Title": RecipeModel.title, "Servings": RecipeModel.servings, "Quantity": RecipeModel.quantity, "Procedure": RecipeModel.procedure]
         } else {
-            //let image = UIImage(named: "empty-star") as UIImage!
             favoriteButton.image = UIImage(named: "empty-star")
             pressed = false
             

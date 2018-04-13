@@ -121,10 +121,16 @@ class RecipeResultsViewController: UIViewController, UITableViewDataSource, UITa
         // Dispose of any resources that can be recreated.
     }
     
-    // Temporary back button
-    // Takes you back to home screen
-    @IBAction func backButton(_ sender: Any) {
-        performSegue(withIdentifier: "backToIngredients", sender: self)
+    //Back button
+    @IBAction func back(_ sender: UIBarButtonItem) {
+        if presentingViewController is UITabBarController{
+            dismiss(animated: true, completion: nil)
+            
+        }else if let owningNavController = navigationController{
+            owningNavController.popViewController(animated: true)
+        }else{
+            fatalError("view is not contained by a navigation controller")
+        }
     }
 
 }

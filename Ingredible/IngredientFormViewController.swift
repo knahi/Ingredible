@@ -5,8 +5,6 @@
 //  Created by Kayla Nahi on 3/14/18.
 //  Copyright © 2018 Ingredible. All rights reserved.
 //
-// References: https://www.youtube.com/watch?v=VKnrx5Feapc, https://www.youtube.com/watch?v=5MZ-WJuSdpg, https://stackoverflow.com/questions/41737562/how-to-add-checkmark-tableview-multiple-swift-3-0
-
 // Things to try later: https://www.youtube.com/watch?v=Q8k9E1gQ_qg
 
 import UIKit
@@ -150,10 +148,16 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
         super.didReceiveMemoryWarning()
     }
     
-    
-    // Back button to tab bar controller
-    @IBAction func backButton(_ segue: UITabBarController) {
-        
+    //Back button
+    @IBAction func back(_ sender: UIBarButtonItem) {
+        if presentingViewController is UITabBarController{
+            dismiss(animated: true, completion: nil)
+            
+        }else if let owningNavController = navigationController{
+            owningNavController.popViewController(animated: true)
+        }else{
+            fatalError("view is not contained by a navigation controller")
+        }
     }
     
     // Button to recipe results view controller
