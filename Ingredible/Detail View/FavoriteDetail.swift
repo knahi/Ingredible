@@ -47,7 +47,6 @@ class FavoriteDetail: UIViewController {
             
             //Remove recipe from list of favorites
             FavModel.favorites.removeValue(forKey: RecipeModel.title)
-            print(FavModel.favorites)
         }
         
     }

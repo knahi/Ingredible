@@ -10,12 +10,13 @@
 import UIKit
 import Firebase
 
-class IngredientFormViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class IngredientFormViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
     
     @IBOutlet weak var mealType: UISegmentedControl!
     @IBOutlet weak var vegetarian: UISwitch!
     @IBOutlet weak var vegan: UISwitch!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet var pickerView: UIPickerView!
     @IBOutlet var currentlySelected: UILabel!
     @IBOutlet var scroller: UIScrollView!
     
@@ -24,6 +25,9 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
     var veganBool =  false
     var selectedIndexPathArray = Array<NSIndexPath>()
     var selectedIngredients = Array<String>()
+    var selectedPantry = Array<String>()
+    var allIngredients = Array<String>()
+    var uniqueIngredients = Array<String>()
     
     var ref: DatabaseReference!
     var refHandle: UInt!
@@ -49,8 +53,12 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tableView.delegate = self
         tableView.dataSource = self
+        
+        pickerView.delegate = self
+        pickerView.dataSource = self
         
         //Firebase setup
         ref = Database.database().reference()
@@ -93,6 +101,8 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
         }
     }
     
+    //TableView Set-Up
+    
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return self.foodCategories[section]
     }
@@ -112,7 +122,6 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
         header.textLabel?.textColor = UIColor.white
     }
     
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if tableView.cellForRow(at: indexPath)?.accessoryType == UITableViewCellAccessoryType.none {
             selectedIndexPathArray.append(indexPath as NSIndexPath)
@@ -124,7 +133,15 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
             selectedIngredients.remove(at: i)
         }
         tableView.reloadData()
-        let stringText = selectedIngredients.joined(separator: ", ")
+        
+        //Combine picker and table view ingredients
+        allIngredients = selectedIngredients
+        allIngredients.append(contentsOf: selectedPantry)
+        uniqueIngredients = Array(Set(allIngredients))
+        uniqueIngredients = uniqueIngredients.sorted()
+        
+        //Set label
+        let stringText = uniqueIngredients.joined(separator: ", ")
         currentlySelected.text = stringText
     }
     
@@ -142,6 +159,44 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         tableView.cellForRow(at: indexPath)?.accessoryType = .none
+    }
+    
+
+    //PickerView Set-Up
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return PantriesModel.pantries.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        let keys = Array(PantriesModel.pantries.keys)
+        return keys[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        let keys = Array(PantriesModel.pantries.keys)
+        let title = keys[row]
+        let ing = PantriesModel.pantries[title]
+        
+        selectedPantry = [String]()
+        for i in 0..<(ing!.count-1) {
+            selectedPantry.append(ing![i])
+        }
+        print(selectedPantry)
+        
+        //Combine picker and table view ingredients
+        allIngredients = selectedIngredients
+        allIngredients.append(contentsOf: selectedPantry)
+        uniqueIngredients = Array(Set(allIngredients))
+        uniqueIngredients = uniqueIngredients.sorted()
+        
+        //Set label
+        let stringText = uniqueIngredients.joined(separator: ", ")
+        currentlySelected.text = stringText
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -162,8 +217,7 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
     
     // Button to recipe results view controller
     @IBAction func getRecipesButton(_ sender: Any) {
-        //fetchRecipes()
-        FavModel.selectedIng = selectedIngredients
+        FavModel.selectedIng = uniqueIngredients
         performSegue(withIdentifier: "ingredientsToRecipes", sender: self)
     }
 }

@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="yVN-q1-XER">
             <objects>
-                <viewController id="a4d-u4-1zq" sceneMemberID="viewController">
+                <viewController id="a4d-u4-1zq" customClass="HomeViewController" customModule="Ingredible" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lrG-bN-gX4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -267,6 +267,7 @@
                     <connections>
                         <outlet property="currentlySelected" destination="HJ9-qV-T71" id="abt-Xn-Rzb"/>
                         <outlet property="mealType" destination="ut6-ER-Dhh" id="mhT-RG-wpU"/>
+                        <outlet property="pickerView" destination="L34-a5-ye6" id="Ga7-aQ-3m3"/>
                         <outlet property="scroller" destination="QTz-LQ-9eN" id="Wqo-yf-AMo"/>
                         <outlet property="tableView" destination="OAt-Qk-iYf" id="TxI-uA-Jt3"/>
                         <outlet property="vegan" destination="aYe-05-8Ku" id="e5C-jj-Vgh"/>
@@ -494,7 +495,7 @@ We created this app to not only benefit college students on a budget, but also t
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q8H-QD-9RG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1023" y="-372"/>
+            <point key="canvasLocation" x="1022" y="-85"/>
         </scene>
         <!--Pantries-->
         <scene sceneID="j95-Es-wVP">
