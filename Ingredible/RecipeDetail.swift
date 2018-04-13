@@ -17,6 +17,7 @@ class RecipeDetail: UIViewController {
     
     @IBOutlet var favoriteButton: UIButton!
     var pressed = false
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +28,13 @@ class RecipeDetail: UIViewController {
         servings.text = RecipeModel.servings
         quantity.text = quantityString
         procedure.text = RecipeModel.procedure
+        
+        //Check if recipe is in the favorites dictionary
+        if FavModel.favorites[RecipeModel.title] != nil {
+            pressed = true
+            let image = UIImage(named: "filled-in-star") as UIImage!
+            favoriteButton.setImage(image, for: .normal)
+        }
     }
 
     @IBAction func favorite(_ sender: Any) {
@@ -37,7 +45,6 @@ class RecipeDetail: UIViewController {
             
             //Add recipe to list of favoites
             FavModel.favorites[RecipeModel.title] = ["Title": RecipeModel.title, "Servings": RecipeModel.servings, "Quantity": RecipeModel.quantity, "Procedure": RecipeModel.procedure]
-            print(FavModel.favorites)
         } else {
             let image = UIImage(named: "empty-star") as UIImage!
             favoriteButton.setImage(image, for: .normal)
@@ -45,7 +52,6 @@ class RecipeDetail: UIViewController {
             
             //Remove recipe from list of favorites
             FavModel.favorites.removeValue(forKey: RecipeModel.title)
-            print(FavModel.favorites)
         }
         
     }
