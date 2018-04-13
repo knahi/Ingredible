@@ -18,6 +18,8 @@
 		EF7B4903207BEDF700E286AB /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B4902207BEDF700E286AB /* RecipeModel.swift */; };
 		EFF3BE72208032AB00754D65 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF3BE71208032AB00754D65 /* FavoritesViewController.swift */; };
 		EFF3BE742080413100754D65 /* FavoriteDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF3BE732080413100754D65 /* FavoriteDetail.swift */; };
+		EFF3BE772080EE6500754D65 /* PantriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF3BE762080EE6500754D65 /* PantriesModel.swift */; };
+		EFF3BE7B208106D800754D65 /* PantryDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF3BE7A208106D800754D65 /* PantryDetail.swift */; };
 		F73596242059BB67007A55DD /* RecipeResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73596232059BB67007A55DD /* RecipeResultsViewController.swift */; };
 		F74D258420756CDA00B8E1D1 /* PantriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D258320756CDA00B8E1D1 /* PantriesViewController.swift */; };
 		F75ACBD9206980C90035A969 /* AddPantryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75ACBD8206980C90035A969 /* AddPantryViewController.swift */; };
@@ -39,6 +41,8 @@
 		EF7B4902207BEDF700E286AB /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
 		EFF3BE71208032AB00754D65 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		EFF3BE732080413100754D65 /* FavoriteDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteDetail.swift; sourceTree = "<group>"; };
+		EFF3BE762080EE6500754D65 /* PantriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantriesModel.swift; sourceTree = "<group>"; };
+		EFF3BE7A208106D800754D65 /* PantryDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantryDetail.swift; sourceTree = "<group>"; };
 		F2A38AEC9FCE996A60E68B07 /* Pods-Ingredible.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ingredible.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ingredible/Pods-Ingredible.release.xcconfig"; sourceTree = "<group>"; };
 		F73596232059BB67007A55DD /* RecipeResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeResultsViewController.swift; sourceTree = "<group>"; };
 		F74D258320756CDA00B8E1D1 /* PantriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantriesViewController.swift; sourceTree = "<group>"; };
@@ -99,9 +103,11 @@
 				EF55F452205F064E00F34677 /* GoogleService-Info.plist */,
 				EF0BFE0320532CEE00725EF5 /* AppDelegate.swift */,
 				EF0BFE0720532CEE00725EF5 /* Main.storyboard */,
+				EFF3BE762080EE6500754D65 /* PantriesModel.swift */,
 				EFF3BE71208032AB00754D65 /* FavoritesViewController.swift */,
 				EFF3BE732080413100754D65 /* FavoriteDetail.swift */,
 				EF7B4900207BDA5C00E286AB /* RecipeDetail.swift */,
+				EFF3BE7A208106D800754D65 /* PantryDetail.swift */,
 				F74D258320756CDA00B8E1D1 /* PantriesViewController.swift */,
 				F75ACBD8206980C90035A969 /* AddPantryViewController.swift */,
 				F73596232059BB67007A55DD /* RecipeResultsViewController.swift */,
@@ -250,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF7B4901207BDA5C00E286AB /* RecipeDetail.swift in Sources */,
+				EFF3BE772080EE6500754D65 /* PantriesModel.swift in Sources */,
 				EF76E82C2059ADA20033A4EF /* IngredientFormViewController.swift in Sources */,
 				EFF3BE742080413100754D65 /* FavoriteDetail.swift in Sources */,
 				F75ACBD9206980C90035A969 /* AddPantryViewController.swift in Sources */,
@@ -258,6 +265,7 @@
 				F73596242059BB67007A55DD /* RecipeResultsViewController.swift in Sources */,
 				F7E51CE02077D07A00401243 /* FavModel.swift in Sources */,
 				EFF3BE72208032AB00754D65 /* FavoritesViewController.swift in Sources */,
+				EFF3BE7B208106D800754D65 /* PantryDetail.swift in Sources */,
 				EF7B4903207BEDF700E286AB /* RecipeModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
