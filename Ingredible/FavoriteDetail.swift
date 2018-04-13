@@ -9,11 +9,50 @@
 import UIKit
 
 class FavoriteDetail: UIViewController {
-
+    
+    @IBOutlet var recipeTitle: UILabel!
+    @IBOutlet var servings: UILabel!
+    @IBOutlet var quantity: UILabel!
+    @IBOutlet var procedure: UILabel!
+    
+    @IBOutlet var favoriteButton: UIBarButtonItem!
+    var pressed = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let quantityString = RecipeModel.quantity.joined(separator: "\n")
+        
+        recipeTitle.text = RecipeModel.title
+        servings.text = RecipeModel.servings
+        quantity.text = quantityString
+        procedure.text = RecipeModel.procedure
+       
+        //Check if recipe is in the favorites dictionary
+        if FavModel.favorites[RecipeModel.title] != nil {
+            pressed = true
+            //let image = UIImage(named: "filled-in-star") as UIImage!
+            favoriteButton.image = UIImage(named: "filled-in-star")        }
+    }
+    
+    @IBAction func favorite(_ sender: Any) {
+        if !pressed {
+            //let image = UIImage(named: "filled-in-star") as UIImage!
+            favoriteButton.image = UIImage(named: "filled-in-star")
+            pressed = true
+            
+            //Add recipe to list of favoites
+            FavModel.favorites[RecipeModel.title] = ["Title": RecipeModel.title, "Servings": RecipeModel.servings, "Quantity": RecipeModel.quantity, "Procedure": RecipeModel.procedure]
+        } else {
+            //let image = UIImage(named: "empty-star") as UIImage!
+            favoriteButton.image = UIImage(named: "empty-star")
+            pressed = false
+            
+            //Remove recipe from list of favorites
+            FavModel.favorites.removeValue(forKey: RecipeModel.title)
+            print(FavModel.favorites)
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {

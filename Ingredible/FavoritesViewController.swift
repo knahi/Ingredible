@@ -18,8 +18,10 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
         
         tableView.delegate = self
         tableView.dataSource = self
-
-        // For each key in FavModel.favorites put it in a row 
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
