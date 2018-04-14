@@ -48,12 +48,32 @@ class RecipeResultsViewController: UIViewController, UITableViewDataSource, UITa
                     let ingredients = recipe?["Ingredients"] as! NSArray
                     let title = recipe?["Title"] as! String
                     
+                    let vegan = recipe?["Vegan"] as! Bool
+                    let vegetarian = recipe?["Vegetarian"] as! Bool
+                    
                     let selectedIngredientsNSSet = NSSet(array: FavModel.selectedIng)
                     let ingredientsNSSet = NSSet(array: ingredients as! [Any])
                     let matches = ingredientsNSSet.isSubset(of: selectedIngredientsNSSet as! Set<AnyHashable>)
                     
                     if matches {
-                        itemSelected = true
+                        //if vegetarian switch on, find only vegetarian recipes
+                        if FavModel.vegetarianSwitch {
+                            if vegetarian {
+                                itemSelected = true
+                            }
+                            else {
+                                itemSelected = false
+                            }
+                        }
+                        // if vegan switch on, find only vegan recipes
+                        if FavModel.veganSwitch {
+                            if vegan {
+                                itemSelected = true
+                            }
+                            else {
+                                itemSelected = false
+                            }
+                        }
                     }
                     else {
                         itemSelected = false

@@ -27,4 +27,11 @@ class FavModel {
     
     //list of selected ingredients
     static var selectedIng = [String]()
+
+    //the state of the vegetarian switch (on or off)
+    static var vegetarianSwitch = Bool()
+    
+    //the state of the vegan switch (on or off)
+    static var veganSwitch = Bool()
+
 }

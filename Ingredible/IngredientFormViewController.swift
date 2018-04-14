@@ -21,8 +21,8 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
     @IBOutlet var scroller: UIScrollView!
     
     var mealTypeString = "Breakfast"
-    var vegetarianBool = false
-    var veganBool =  false
+    //var vegetarianBool = false
+    //var veganBool =  false
     var selectedIndexPathArray = Array<NSIndexPath>()
     var selectedIngredients = Array<String>()
     var selectedPantry = Array<String>()
@@ -90,18 +90,22 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
     // Handles toggling of vegetarian switch
     @IBAction func vegetarianToggled(_ sender: UISwitch) {
         if vegetarian.isOn {
-            vegetarianBool = true
+            FavModel.vegetarianSwitch = true
+            //vegetarianBool = true
         } else {
-            vegetarianBool = false
+            FavModel.vegetarianSwitch = false
+            //vegetarianBool = false
         }
     }
     
     // Handles toggling of vegan switch
     @IBAction func veganToggled(_ sender: UISwitch) {
         if vegan.isOn {
-            veganBool = true
+            FavModel.veganSwitch = true
+            //veganBool = true
         } else {
-            veganBool = false
+            FavModel.veganSwitch = false
+            //veganBool = false
         }
     }
     
