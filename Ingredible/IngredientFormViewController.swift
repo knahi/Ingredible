@@ -20,9 +20,6 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
     @IBOutlet var currentlySelected: UILabel!
     @IBOutlet var scroller: UIScrollView!
     
-    var mealTypeString = "Breakfast"
-    //var vegetarianBool = false
-    //var veganBool =  false
     var selectedIndexPathArray = Array<NSIndexPath>()
     var selectedIngredients = Array<String>()
     var selectedPantry = Array<String>()
@@ -64,6 +61,10 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
         let defaultRowIndex = Array(PantriesModel.pantries.keys).sorted().index(of: "No pantry")
         pickerView.selectRow(defaultRowIndex!, inComponent: 0, animated: true)
         
+        // set font size of segmented control segments
+        let font = UIFont.systemFont(ofSize: 12)
+        mealType.setTitleTextAttributes([NSAttributedStringKey.font: font], for: .normal)
+        
         //Firebase setup
         ref = Database.database().reference()
     }
@@ -72,15 +73,17 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
         switch mealType.selectedSegmentIndex
         {
         case 0:
-            mealTypeString = "Breakfast";
+            FavModel.mealType = "All";
         case 1:
-            mealTypeString = "Lunch";
+            FavModel.mealType = "Breakfast";
         case 2:
-            mealTypeString = "Dinner";
+            FavModel.mealType = "Lunch";
         case 3:
-            mealTypeString = "Dessert";
+            FavModel.mealType = "Dinner";
         case 4:
-            mealTypeString = "Snack";
+            FavModel.mealType = "Dessert";
+        case 5:
+            FavModel.mealType = "Snack";
         default:
             break
         }
@@ -91,10 +94,8 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
     @IBAction func vegetarianToggled(_ sender: UISwitch) {
         if vegetarian.isOn {
             FavModel.vegetarianSwitch = true
-            //vegetarianBool = true
         } else {
             FavModel.vegetarianSwitch = false
-            //vegetarianBool = false
         }
     }
     
@@ -102,10 +103,8 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
     @IBAction func veganToggled(_ sender: UISwitch) {
         if vegan.isOn {
             FavModel.veganSwitch = true
-            //veganBool = true
         } else {
             FavModel.veganSwitch = false
-            //veganBool = false
         }
     }
     

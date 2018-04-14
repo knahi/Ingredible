@@ -121,6 +121,7 @@
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ut6-ER-Dhh">
                                                 <rect key="frame" x="8" y="89" width="359" height="29"/>
                                                 <segments>
+                                                    <segment title="All"/>
                                                     <segment title="Breakfast"/>
                                                     <segment title="Lunch"/>
                                                     <segment title="Dinner"/>

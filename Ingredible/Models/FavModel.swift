@@ -28,6 +28,9 @@ class FavModel {
     //list of selected ingredients
     static var selectedIng = [String]()
 
+    //the state of the meal type segmented control
+    static var mealType = String()
+    
     //the state of the vegetarian switch (on or off)
     static var vegetarianSwitch = Bool()
     
