@@ -18,6 +18,7 @@ class HomeViewController: UIViewController {
         PantriesModel.pantries["Kitchen Classics"] = ["Bread", "Brown sugar", "Butter", "Eggs", "Flour", "Milk", "Peanut butter", "Pepper", "Salt", "Vegetable oil", "White sugar"]
         PantriesModel.pantries["Dining Hall"] = ["Apples", "Bananas", "Bell peppers", "Bread", "Broccoli", "Brown sugar", "Butter", "Carrots", "Cheese", "Chocolate", "Cinnamon", "Cream cheese", "Grapefruit", "Honey", "Hot sauce", "Jam", "Ketchup", "Lettuce", "Milk", "Mustard", "Olives", "Onions", "Oranges", "Peanut butter", "Pepper", "Quinoa", "Rice", "Salt", "Soy sauce", "Spinach", "Tofu", "Tomatoes", "Tortillas", "White sugar", "Yogurt"]
         PantriesModel.pantries["Fruit Basket"] = ["Apples", "Bananas", "Blueberries", "Cantaloupe", "Cherries", "Grapes", "Lemons", "Limes", "Oranges", "Pears", "Pineapples", "Raspberries", "Strawberries"]
+        PantriesModel.pantries["Get Recipes"] = ["Apples", "Avocados", "Bread", "Brown sugar", "Butter", "Cheese", "Chicken", "Chocolate", "Cocoa powder", "Coconut oil", "Condensed milk", "Couscous", "Cream", "Eggs", "Garlic powder", "Ginger", "Graham crackers", "Honey", "Lemons", "Maple syrup", "Marshmallows", "Milk", "Onion powder", "Pasta", "Peanut butter", "Pepper", "Pork", "Quinoa", "Rice", "Salt", "Tomatoes", "Tomato paste", "Tomato sauce", "Tortillas", "Vanilla extract", "Vegetable oil", "Vegetable soup", "White sugar"]
         
     }
     
