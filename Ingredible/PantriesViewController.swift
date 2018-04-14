@@ -40,21 +40,25 @@ class PantriesViewController: UIViewController, UITableViewDataSource, UITableVi
     // Returns the same number of cells as recipes in our list
     // override
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return PantriesModel.pantries.count
+        return PantriesModel.pantries.count - 1
     }
     
     
     // override
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let titles = Array(PantriesModel.pantries.keys)
-        let cell = tableView.dequeueReusableCell(withIdentifier: "customcell", for: indexPath) as! UITableViewCell
+        var titles = Array(PantriesModel.pantries.keys)
+        let index = titles.index(of: "No pantry")
+        titles.remove(at: index!)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "customcell", for: indexPath)
         cell.textLabel?.text = titles[indexPath.item]
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let titles = Array(PantriesModel.pantries.keys)
+        var titles = Array(PantriesModel.pantries.keys)
+        let index = titles.index(of: "No pantry")
+        titles.remove(at: index!)
         let pantryTitle = titles[indexPath.row]
         let ingredients = PantriesModel.pantries[pantryTitle]
         

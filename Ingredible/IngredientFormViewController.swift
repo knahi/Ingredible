@@ -60,6 +60,10 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
         pickerView.delegate = self
         pickerView.dataSource = self
         
+        // Find the index of "No pantry" and set it as the default pick
+        let defaultRowIndex = Array(PantriesModel.pantries.keys).index(of: "No pantry")
+        pickerView.selectRow(defaultRowIndex!, inComponent: 0, animated: true)
+        
         //Firebase setup
         ref = Database.database().reference()
     }
