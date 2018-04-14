@@ -61,7 +61,7 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
         pickerView.dataSource = self
         
         // Find the index of "No pantry" and set it as the default pick
-        let defaultRowIndex = Array(PantriesModel.pantries.keys).index(of: "No pantry")
+        let defaultRowIndex = Array(PantriesModel.pantries.keys).sorted().index(of: "No pantry")
         pickerView.selectRow(defaultRowIndex!, inComponent: 0, animated: true)
         
         //Firebase setup
@@ -176,12 +176,12 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        let keys = Array(PantriesModel.pantries.keys)
+        let keys = Array(PantriesModel.pantries.keys).sorted()
         return keys[row]
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        let keys = Array(PantriesModel.pantries.keys)
+        let keys = Array(PantriesModel.pantries.keys).sorted()
         let title = keys[row]
         let ing = PantriesModel.pantries[title]
         
@@ -189,7 +189,6 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
         for i in 0..<(ing!.count-1) {
             selectedPantry.append(ing![i])
         }
-        print(selectedPantry)
         
         //Combine picker and table view ingredients
         allIngredients = selectedIngredients
