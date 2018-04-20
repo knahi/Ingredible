@@ -37,13 +37,13 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
         // Fruits
         ["Apples", "Bananas", "Blackberries", "Blueberries", "Cantaloupe", "Cherries", "Grapefruit", "Grapes", "Lemons", "Limes", "Nectarines", "Oranges", "Peaches", "Pears", "Pineapples", "Plums", "Raspberries", "Strawberries", "Watermelon"],
         // Vegetables
-        ["Asparagus", "Avocados", "Bell peppers", "Broccoli", "Cabbage", "Carrots", "Cauliflower", "Celery", "Corn", "Cucumbers",  "Garlic", "Green beans", "Green onions", "Hot peppers", "Kale", "Lettuce", "Mushrooms", "Onions", "Potatoes", "Spaghetti squash", "Spinach", "Sweet potatoes", "Tomatoes"],
+        ["Asparagus", "Avocados", "Bell peppers", "Broccoli", "Cabbage", "Carrots", "Cauliflower", "Celery", "Corn", "Cucumbers",  "Garlic", "Green beans", "Green onions", "Hot peppers", "Kale", "Lettuce", "Mushrooms", "Onions", "Peppers", "Potatoes", "Spaghetti squash", "Spinach", "Sweet potatoes", "Tomatoes"],
         // Proteins
-        ["Beef", "Chicken", "Duck", "Eggs", "Fish", "Lamb", "Legumes", "Pork", "Shrimp", "Tofu"],
+        ["Beef", "Chicken", "Duck", "Eggs", "Fish", "Lamb", "Legumes", "Nuts", "Pork", "Shrimp", "Tofu"],
         // Dairy
         ["Butter", "Cheese", "Condensed milk", "Cream", "Cream cheese", "Milk", "Sour cream", "Yogurt"],
         // Sweets/Fats
-        ["Brown sugar", "Chocolate", "Cocoa powder", "Coconut oil", "Graham crackers", "Honey", "Maple syrup", "Marshmallows", "Olive oil", "Peanut butter", "Vegetable oil", "White sugar"],
+        ["Brown sugar", "Chocolate", "Cocoa powder", "Coconut oil", "Confectioners' sugar", "Graham crackers", "Honey", "Maple syrup", "Marshmallows", "Olive oil", "Peanut butter", "Vegetable oil", "White sugar"],
         // Seasoning
         ["Almond extract", "Basil", "Bay leaves", "Cajun seasoning", "Cayenne pepper", "Chili powder", "Cilantro", "Cinnamon", "Cloves", "Cumin", "Curry powder", "Garlic powder", "Ginger", "Hot sauce", "Mustard", "Nutmeg", "Nutritional yeast", "Onion powder", "Paprika", "Pepper", "Red wine vinegar", "Rosemary", "Sage", "Salsa", "Salt", "Soy sauce", "Thyme", "Tomato paste", "Tomato sauce", "Turmeric", "Vanilla extract", "Vegetable broth", "Vegetable soup"]
     ]
