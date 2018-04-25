@@ -2,7 +2,7 @@
 //  RecipeResultsViewController.swift
 //  Ingredible
 //
-//  Created by Chloe Johnson on 3/14/18.
+//  Created by Kayla Nahi on 3/14/18.
 //  Copyright © 2018 Ingredible. All rights reserved.
 
 import UIKit

@@ -27,11 +27,6 @@ class PantriesViewController: UIViewController, UITableViewDataSource, UITableVi
     
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
-    //        PantriesModel.pantries["Classic Pantry"] = ["Bread", "Brown sugar", "Butter", "Eggs", "Flour", "Milk", "Peanut butter", "Pepper", "Salt", "Vegetable oil", "White sugar"]
-    //        PantriesModel.pantries["Dining Hall"] = ["Apples", "Bananas", "Bell peppers", "Bread", "Broccoli", "Brown sugar", "Butter", "Carrots", "Cheese", "Chocolate", "Cinnamon", "Cream cheese", "Grapefruit", "Honey", "Hot sauce", "Jam", "Ketchup", "Lettuce", "Milk", "Mustard", "Olives", "Onions", "Oranges", "Peanut butter", "Pepper", "Quinoa", "Rice", "Salt", "Soy sauce", "Spinach", "Tofu", "Tomatoes", "Tortillas", "White sugar", "Yogurt"]
-        //let sortedClassicPantry = classicPantry["Classic Pantry"]?.sorted()
-        //print(sortedClassicPantry as Any)
-        //print(PantriesModel.pantries)
     }
     
     
@@ -66,16 +61,19 @@ class PantriesViewController: UIViewController, UITableViewDataSource, UITableVi
         performSegue(withIdentifier: "showPantryDetail", sender: self)
     }
     
+    //Deletes pantry from list and from pantry model when swiped
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             print("Deleted")
             
             var titles = Array(PantriesModel.pantries.keys)
-            print(titles[indexPath.row+1])
-            PantriesModel.pantries.removeValue(forKey: titles[indexPath.row+1])
+            let index = titles.index(of: "No pantry")
+            titles.remove(at: index!)
+            print(titles[indexPath.row])
+            print (titles)
+            PantriesModel.pantries.removeValue(forKey: titles[indexPath.row])
             self.tableView.deleteRows(at: [indexPath], with: .automatic)
-            
-            //print(PantriesModel.pantries)
+            print(PantriesModel.pantries)
         }
     }
     
