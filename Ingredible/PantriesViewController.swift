@@ -11,7 +11,6 @@ import UIKit
 class PantriesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet var tableView: UITableView!
-    let titles = Array(PantriesModel.pantries.keys)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,6 +64,19 @@ class PantriesViewController: UIViewController, UITableViewDataSource, UITableVi
         PantriesModel.ingredients = ingredients as! [String]
         
         performSegue(withIdentifier: "showPantryDetail", sender: self)
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            print("Deleted")
+            
+            var titles = Array(PantriesModel.pantries.keys)
+            print(titles[indexPath.row+1])
+            PantriesModel.pantries.removeValue(forKey: titles[indexPath.row+1])
+            self.tableView.deleteRows(at: [indexPath], with: .automatic)
+            
+            //print(PantriesModel.pantries)
+        }
     }
     
     @IBAction func addPantry(_ sender: Any) {

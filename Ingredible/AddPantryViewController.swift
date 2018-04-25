@@ -110,7 +110,6 @@ class AddPantryViewController: UIViewController, UITableViewDataSource, UITableV
     @IBAction func addPantry(_ sender: Any) {
         let title = pantryTitle.text
         PantriesModel.pantries[title!] = uniqueIngredients
-        print(PantriesModel.pantries)
         
         if presentingViewController is UITabBarController{
             dismiss(animated: true, completion: nil)

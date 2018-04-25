@@ -374,10 +374,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gdd-Uh-MhG">
-                                <rect key="frame" x="15" y="188.5" width="345" height="170"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="13" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gdd-Uh-MhG">
+                                <rect key="frame" x="15" y="188.5" width="345" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="170" id="AeO-dC-Hze"/>
+                                    <constraint firstAttribute="height" constant="200" id="AeO-dC-Hze"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -390,7 +390,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1hj-G7-X86">
-                                <rect key="frame" x="15" y="385.5" width="345" height="266.5"/>
+                                <rect key="frame" x="15" y="408.5" width="345" height="243.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u6O-lo-SG2">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="20.5"/>
@@ -416,7 +416,7 @@
                             <constraint firstItem="tMH-c3-7xo" firstAttribute="top" secondItem="zxR-F6-y4d" secondAttribute="top" constant="15" id="62k-0g-Zgw"/>
                             <constraint firstItem="1hj-G7-X86" firstAttribute="leading" secondItem="zxR-F6-y4d" secondAttribute="leading" constant="15" id="7ph-GY-ncC"/>
                             <constraint firstItem="zxR-F6-y4d" firstAttribute="trailing" secondItem="uUP-e6-SEk" secondAttribute="trailing" constant="15" id="B6v-AU-S3J"/>
-                            <constraint firstItem="1hj-G7-X86" firstAttribute="top" secondItem="Gdd-Uh-MhG" secondAttribute="bottom" constant="27" id="D8a-jk-9w2"/>
+                            <constraint firstItem="1hj-G7-X86" firstAttribute="top" secondItem="Gdd-Uh-MhG" secondAttribute="bottom" constant="20" id="D8a-jk-9w2"/>
                             <constraint firstItem="Gdd-Uh-MhG" firstAttribute="top" secondItem="uUP-e6-SEk" secondAttribute="bottom" constant="20" id="LNn-2U-Ph0"/>
                             <constraint firstItem="zxR-F6-y4d" firstAttribute="trailing" secondItem="Gdd-Uh-MhG" secondAttribute="trailing" constant="15" id="OMf-5Z-UCE"/>
                             <constraint firstItem="uUP-e6-SEk" firstAttribute="top" secondItem="tMH-c3-7xo" secondAttribute="bottom" constant="40" id="VSp-Me-5Sd"/>

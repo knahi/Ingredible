@@ -68,6 +68,10 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
         ref = Database.database().reference()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        pickerView.reloadAllComponents()
+    }
+    
     @IBAction func mealType(_ sender: AnyObject) {
         switch mealType.selectedSegmentIndex
         {
