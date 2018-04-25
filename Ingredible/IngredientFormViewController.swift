@@ -192,7 +192,7 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
         let ing = PantriesModel.pantries[title]
         
         selectedPantry = [String]()
-        for i in 0..<(ing!.count-1) {
+        for i in 0..<(ing!.count) {
             selectedPantry.append(ing![i])
         }
         

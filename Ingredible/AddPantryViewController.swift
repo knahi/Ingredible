@@ -119,6 +119,11 @@ class AddPantryViewController: UIViewController, UITableViewDataSource, UITableV
         }else{
             fatalError("view is not contained by a navigation controller")
         }
+        
+        let defaults = UserDefaults.standard
+        defaults.set(PantriesModel.pantries[title!], forKey: title!)
+        defaults.synchronize()
+
     }
     
     override func didReceiveMemoryWarning() {

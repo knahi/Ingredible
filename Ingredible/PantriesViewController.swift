@@ -19,6 +19,10 @@ class PantriesViewController: UIViewController, UITableViewDataSource, UITableVi
         tableView.dataSource = self
         
     }
+//    
+//    func loadDefaults() {
+//
+//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -27,6 +31,9 @@ class PantriesViewController: UIViewController, UITableViewDataSource, UITableVi
     
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
+        
+        let defaults = UserDefaults.standard
+        print(defaults.object(forKey: "test"))
     }
     
     
@@ -69,11 +76,8 @@ class PantriesViewController: UIViewController, UITableViewDataSource, UITableVi
             var titles = Array(PantriesModel.pantries.keys)
             let index = titles.index(of: "No pantry")
             titles.remove(at: index!)
-            print(titles[indexPath.row])
-            print (titles)
             PantriesModel.pantries.removeValue(forKey: titles[indexPath.row])
             self.tableView.deleteRows(at: [indexPath], with: .automatic)
-            print(PantriesModel.pantries)
         }
     }
     
