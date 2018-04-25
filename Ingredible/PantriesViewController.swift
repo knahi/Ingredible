@@ -33,9 +33,9 @@ class PantriesViewController: UIViewController, UITableViewDataSource, UITableVi
         tableView.reloadData()
         
         let defaults = UserDefaults.standard
-        //var titles = Array(PantriesModel.pantries.keys)
         var pantriesDict = defaults.object(forKey: "Pantries") as! [String: [String]]
         PantriesModel.pantries = pantriesDict
+        print(PantriesModel.pantries)
     }
     
     
@@ -46,11 +46,7 @@ class PantriesViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     
-    // override
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //let defaults = UserDefaults.standard
-        //var titles = Array(PantriesModel.pantries.keys)
-        //var pantriesDict = defaults.object(forKey: "Pantries") as! [String: [String]]
         var titles = Array(PantriesModel.pantries.keys)
         print(titles)
         let index = titles.index(of: "No pantry")
@@ -84,6 +80,12 @@ class PantriesViewController: UIViewController, UITableViewDataSource, UITableVi
             titles.remove(at: index!)
             PantriesModel.pantries.removeValue(forKey: titles[indexPath.row])
             self.tableView.deleteRows(at: [indexPath], with: .automatic)
+            
+            // State saving when pantry is deleted
+            let defaults = UserDefaults.standard
+            defaults.set(PantriesModel.pantries, forKey: "Pantries")
+            defaults.synchronize()
+            print(defaults.object(forKey: "Pantries"))
         }
     }
     

@@ -120,10 +120,10 @@ class AddPantryViewController: UIViewController, UITableViewDataSource, UITableV
             fatalError("view is not contained by a navigation controller")
         }
         
+        // State saving when new pantry is added
         let defaults = UserDefaults.standard
         defaults.set(PantriesModel.pantries, forKey: "Pantries")
         defaults.synchronize()
-        //print(defaults.object(forKey: "Pantries"))
 
     }
     
