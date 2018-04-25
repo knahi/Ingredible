@@ -5,7 +5,6 @@
 //  Created by Kayla Nahi on 3/14/18.
 //  Copyright © 2018 Ingredible. All rights reserved.
 //
-// Things to try later: https://www.youtube.com/watch?v=Q8k9E1gQ_qg
 
 import UIKit
 import Firebase

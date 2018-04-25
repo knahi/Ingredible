@@ -4,7 +4,6 @@
 //
 //  Created by Chloe Johnson on 3/14/18.
 //  Copyright © 2018 Ingredible. All rights reserved.
-//  HUGE thanks to https://www.youtube.com/watch?v=tv5c1mZttVE
 
 import UIKit
 import Firebase

@@ -564,7 +564,118 @@ We created this app to not only benefit college students on a budget, but also t
                     <view key="view" contentMode="scaleToFill" id="xJo-oj-dse">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xAo-2H-Ud2">
+                                <rect key="frame" x="17" y="242" width="341" height="238"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="238" id="M0F-w0-Msi"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="QIq-0d-HTM">
+                                        <rect key="frame" x="0.0" y="28" width="341" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QIq-0d-HTM" id="tOs-CW-M2f">
+                                            <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selected Ingredients:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OgZ-fD-jNL">
+                                <rect key="frame" x="17" y="512" width="341" height="20.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="h8p-Jx-1Ja">
+                                <rect key="frame" x="17" y="153" width="333" height="25"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title of Pantry:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgg-Le-aRq">
+                                        <rect key="frame" x="0.0" y="0.0" width="121" height="25"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lh1-GD-LU2">
+                                        <rect key="frame" x="131" y="0.0" width="202" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="sg9-9B-Atg"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HaI-Vt-GAP">
+                                <rect key="frame" x="17" y="542.5" width="341" height="52.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MXQ-m6-ye6">
+                                        <rect key="frame" x="0.0" y="0.0" width="340" height="0.0"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="340" id="cHp-V5-Sdg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="MXQ-m6-ye6" secondAttribute="trailing" constant="1" id="Oyg-P4-WaH"/>
+                                    <constraint firstAttribute="bottom" secondItem="MXQ-m6-ye6" secondAttribute="bottom" constant="86.5" id="WNE-qu-aN0"/>
+                                    <constraint firstItem="MXQ-m6-ye6" firstAttribute="top" secondItem="HaI-Vt-GAP" secondAttribute="top" id="fgz-Xj-50r"/>
+                                    <constraint firstItem="MXQ-m6-ye6" firstAttribute="leading" secondItem="HaI-Vt-GAP" secondAttribute="leading" id="lKE-l5-0pC"/>
+                                </constraints>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jpX-WY-U0P">
+                                <rect key="frame" x="100" y="612" width="175" height="30"/>
+                                <color key="backgroundColor" red="0.92312955860000001" green="0.9585326314" blue="0.91394710540000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Add Pantry">
+                                    <color key="titleColor" red="0.33867630360000001" green="0.42167004940000002" blue="0.31318423150000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="addPantry:" destination="Bjh-hg-SAR" eventType="touchUpInside" id="V7m-PG-zTv"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Pantry Form" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O33-Ug-uyX">
+                                <rect key="frame" x="75" y="94" width="225" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredient Search" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FN9-L4-a9E">
+                                <rect key="frame" x="17" y="213" width="157" height="20.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Wi-aY-X4F" firstAttribute="trailing" secondItem="FN9-L4-a9E" secondAttribute="trailing" constant="201" id="1hF-Xs-Ic9"/>
+                            <constraint firstItem="HaI-Vt-GAP" firstAttribute="top" secondItem="OgZ-fD-jNL" secondAttribute="bottom" constant="10" id="56e-Be-Hw0"/>
+                            <constraint firstItem="6Wi-aY-X4F" firstAttribute="trailing" secondItem="jpX-WY-U0P" secondAttribute="trailing" constant="100" id="8Qt-K4-QGZ"/>
+                            <constraint firstItem="jpX-WY-U0P" firstAttribute="leading" secondItem="6Wi-aY-X4F" secondAttribute="leading" constant="100" id="8Zs-y0-dmk"/>
+                            <constraint firstItem="6Wi-aY-X4F" firstAttribute="trailing" secondItem="O33-Ug-uyX" secondAttribute="trailing" constant="75" id="E0T-z1-38t"/>
+                            <constraint firstItem="O33-Ug-uyX" firstAttribute="top" secondItem="6Wi-aY-X4F" secondAttribute="top" constant="30" id="EWh-Jd-PjW"/>
+                            <constraint firstItem="6Wi-aY-X4F" firstAttribute="trailing" secondItem="OgZ-fD-jNL" secondAttribute="trailing" constant="17" id="Fal-lt-Xau"/>
+                            <constraint firstItem="OgZ-fD-jNL" firstAttribute="leading" secondItem="6Wi-aY-X4F" secondAttribute="leading" constant="17" id="Fhp-Ae-dLK"/>
+                            <constraint firstItem="h8p-Jx-1Ja" firstAttribute="leading" secondItem="6Wi-aY-X4F" secondAttribute="leading" constant="17" id="LGg-dz-p25"/>
+                            <constraint firstItem="h8p-Jx-1Ja" firstAttribute="top" secondItem="O33-Ug-uyX" secondAttribute="bottom" constant="30" id="Np8-BU-TuK"/>
+                            <constraint firstItem="FN9-L4-a9E" firstAttribute="top" secondItem="h8p-Jx-1Ja" secondAttribute="bottom" constant="35" id="Q0v-7w-6el"/>
+                            <constraint firstItem="xAo-2H-Ud2" firstAttribute="leading" secondItem="6Wi-aY-X4F" secondAttribute="leading" constant="17" id="VF7-sb-999"/>
+                            <constraint firstItem="6Wi-aY-X4F" firstAttribute="trailing" secondItem="xAo-2H-Ud2" secondAttribute="trailing" constant="17" id="az9-M7-LCl"/>
+                            <constraint firstItem="6Wi-aY-X4F" firstAttribute="trailing" secondItem="h8p-Jx-1Ja" secondAttribute="trailing" constant="25" id="azw-kN-a9s"/>
+                            <constraint firstItem="HaI-Vt-GAP" firstAttribute="leading" secondItem="6Wi-aY-X4F" secondAttribute="leading" constant="17" id="cKM-jK-n1d"/>
+                            <constraint firstItem="FN9-L4-a9E" firstAttribute="leading" secondItem="6Wi-aY-X4F" secondAttribute="leading" constant="17" id="dfo-m8-D0M"/>
+                            <constraint firstItem="xAo-2H-Ud2" firstAttribute="top" secondItem="FN9-L4-a9E" secondAttribute="bottom" constant="8" id="le2-eb-7f4"/>
+                            <constraint firstItem="6Wi-aY-X4F" firstAttribute="trailing" secondItem="HaI-Vt-GAP" secondAttribute="trailing" constant="17" id="lvJ-PZ-diR"/>
+                            <constraint firstItem="6Wi-aY-X4F" firstAttribute="bottom" secondItem="jpX-WY-U0P" secondAttribute="bottom" constant="25" id="mpe-SD-a85"/>
+                            <constraint firstItem="O33-Ug-uyX" firstAttribute="leading" secondItem="6Wi-aY-X4F" secondAttribute="leading" constant="75" id="o3c-6E-egJ"/>
+                            <constraint firstItem="jpX-WY-U0P" firstAttribute="top" secondItem="HaI-Vt-GAP" secondAttribute="bottom" constant="17" id="qqE-dd-BIn"/>
+                            <constraint firstItem="OgZ-fD-jNL" firstAttribute="top" secondItem="xAo-2H-Ud2" secondAttribute="bottom" constant="32" id="rAc-av-njI"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Wi-aY-X4F"/>
                     </view>
                     <navigationItem key="navigationItem" id="AUt-JZ-rEd">
@@ -575,10 +686,16 @@ We created this app to not only benefit college students on a budget, but also t
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="currentlySelected" destination="MXQ-m6-ye6" id="DoL-RW-Kln"/>
+                        <outlet property="pantryTitle" destination="Lh1-GD-LU2" id="UiY-Jt-WRt"/>
+                        <outlet property="scroller" destination="HaI-Vt-GAP" id="XPf-n8-ZSq"/>
+                        <outlet property="tableView" destination="xAo-2H-Ud2" id="0Fb-TO-Z9Z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VAk-SI-gll" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3788" y="1087"/>
+            <point key="canvasLocation" x="3788" y="1086.2068965517242"/>
         </scene>
         <!--AddPantry-->
         <scene sceneID="SFN-2C-eCj">
