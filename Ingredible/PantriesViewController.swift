@@ -33,7 +33,9 @@ class PantriesViewController: UIViewController, UITableViewDataSource, UITableVi
         tableView.reloadData()
         
         let defaults = UserDefaults.standard
-        print(defaults.object(forKey: "test"))
+        //var titles = Array(PantriesModel.pantries.keys)
+        var pantriesDict = defaults.object(forKey: "Pantries") as! [String: [String]]
+        PantriesModel.pantries = pantriesDict
     }
     
     
@@ -46,7 +48,11 @@ class PantriesViewController: UIViewController, UITableViewDataSource, UITableVi
     
     // override
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        //let defaults = UserDefaults.standard
+        //var titles = Array(PantriesModel.pantries.keys)
+        //var pantriesDict = defaults.object(forKey: "Pantries") as! [String: [String]]
         var titles = Array(PantriesModel.pantries.keys)
+        print(titles)
         let index = titles.index(of: "No pantry")
         titles.remove(at: index!)
         let cell = tableView.dequeueReusableCell(withIdentifier: "customcell", for: indexPath)

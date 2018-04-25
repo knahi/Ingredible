@@ -121,8 +121,9 @@ class AddPantryViewController: UIViewController, UITableViewDataSource, UITableV
         }
         
         let defaults = UserDefaults.standard
-        defaults.set(PantriesModel.pantries[title!], forKey: title!)
+        defaults.set(PantriesModel.pantries, forKey: "Pantries")
         defaults.synchronize()
+        //print(defaults.object(forKey: "Pantries"))
 
     }
     
