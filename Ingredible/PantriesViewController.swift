@@ -35,12 +35,11 @@ class PantriesViewController: UIViewController, UITableViewDataSource, UITableVi
     
     
     // Returns the same number of cells as recipes in our list
-    // override
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return PantriesModel.pantries.count - 1
     }
     
-    
+    // populates tableview with pantry names
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var titles = Array(PantriesModel.pantries.keys)
         let index = titles.index(of: "No pantry")
@@ -50,6 +49,8 @@ class PantriesViewController: UIViewController, UITableViewDataSource, UITableVi
         return cell
     }
     
+    // handles row selection
+    // performs segue to PantryDetail VC
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         var titles = Array(PantriesModel.pantries.keys)
@@ -82,6 +83,7 @@ class PantriesViewController: UIViewController, UITableViewDataSource, UITableVi
         }
     }
     
+    // button to segue to AddPantry VC
     @IBAction func addPantry(_ sender: Any) {
         performSegue(withIdentifier: "addPantry", sender: self)
     }

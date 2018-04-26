@@ -53,6 +53,11 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
         tableView.delegate = self
         tableView.dataSource = self
         
+        // set tableview border
+        tableView.layer.masksToBounds = true
+        tableView.layer.borderColor = UIColor(red: 124/255, green: 154/255, blue: 114/255, alpha: 1).cgColor
+        tableView.layer.borderWidth = 2.0
+        
         pickerView.delegate = self
         pickerView.dataSource = self
         

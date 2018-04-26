@@ -88,7 +88,7 @@
                                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="PdO-oE-64i">
                                                         <rect key="frame" x="112.5" y="0.0" width="51" height="31"/>
                                                         <accessibility key="accessibilityConfiguration" identifier="vegetarian"/>
-                                                        <color key="onTintColor" red="0.486582607" green="0.60289722680000002" blue="0.44620707630000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <color key="onTintColor" red="0.48627450980392156" green="0.60392156862745094" blue="0.44705882352941173" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <connections>
                                                             <action selector="vegetarianToggled:" destination="sqT-Lo-U1H" eventType="valueChanged" id="hOG-5A-P2q"/>
                                                         </connections>
@@ -102,7 +102,7 @@
                                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="aYe-05-8Ku">
                                                         <rect key="frame" x="270" y="0.0" width="51" height="31"/>
                                                         <accessibility key="accessibilityConfiguration" identifier="vegan"/>
-                                                        <color key="onTintColor" red="0.486582607" green="0.60289722680000002" blue="0.44620707630000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <color key="onTintColor" red="0.48627450980392156" green="0.60392156862745094" blue="0.44705882352941173" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <connections>
                                                             <action selector="veganToggled:" destination="sqT-Lo-U1H" eventType="valueChanged" id="Ejs-WB-LTJ"/>
                                                         </connections>
@@ -582,7 +582,7 @@ We created this app to not only benefit college students on a budget, but also t
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selected Ingredients:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OgZ-fD-jNL">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selected Ingredients" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OgZ-fD-jNL">
                                 <rect key="frame" x="17" y="512" width="341" height="20.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>

@@ -44,6 +44,11 @@ class AddPantryViewController: UIViewController, UITableViewDataSource, UITableV
 
         tableView.delegate = self
         tableView.dataSource = self
+        
+        // set tableview border
+        tableView.layer.masksToBounds = true
+        tableView.layer.borderColor = UIColor(red: 124/255, green: 154/255, blue: 114/255, alpha: 1).cgColor
+        tableView.layer.borderWidth = 2.0
 
     }
     
