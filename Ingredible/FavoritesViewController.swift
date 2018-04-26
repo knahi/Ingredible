@@ -46,6 +46,7 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
         let cell = tableView.dequeueReusableCell(withIdentifier: "customcell", for: indexPath) 
         let dicTitle = Array(FavModel.favorites.keys).sorted()
         cell.textLabel?.text = dicTitle[indexPath.item]
+        cell.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
         return cell
 
     }

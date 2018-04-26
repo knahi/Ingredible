@@ -46,6 +46,7 @@ class PantriesViewController: UIViewController, UITableViewDataSource, UITableVi
         titles.remove(at: index!)
         let cell = tableView.dequeueReusableCell(withIdentifier: "customcell", for: indexPath)
         cell.textLabel?.text = titles[indexPath.item]
+        cell.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
         return cell
     }
     
