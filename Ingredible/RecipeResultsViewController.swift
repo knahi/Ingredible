@@ -103,16 +103,16 @@ class RecipeResultsViewController: UIViewController, UITableViewDataSource, UITa
     }
     
     // Returns the same number of cells as recipes in our list
-    // override
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return FavModel.allTitles.count
     }
-    
-    // override
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "customcell", for: indexPath) as! UITableViewCell
         cell.textLabel?.text = FavModel.allTitles[indexPath.item]
+        if (indexPath.row % 2 == 0) {
+            cell.backgroundColor = UIColor(red: 248/255, green: 248/255, blue: 248/255, alpha: 1.0)
+        }
         return cell
     }
     

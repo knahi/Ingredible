@@ -88,7 +88,7 @@
                                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="PdO-oE-64i">
                                                         <rect key="frame" x="112.5" y="0.0" width="51" height="31"/>
                                                         <accessibility key="accessibilityConfiguration" identifier="vegetarian"/>
-                                                        <color key="onTintColor" red="0.48627450980392156" green="0.60392156862745094" blue="0.44705882352941173" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <color key="onTintColor" red="0.95082786099532013" green="1" blue="0.95423458235795477" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <connections>
                                                             <action selector="vegetarianToggled:" destination="sqT-Lo-U1H" eventType="valueChanged" id="hOG-5A-P2q"/>
                                                         </connections>
