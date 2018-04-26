@@ -42,12 +42,22 @@ class RecipeDetail: UIViewController {
             
             //Add recipe to list of favoites
             FavModel.favorites[RecipeModel.title] = ["Title": RecipeModel.title, "Servings": RecipeModel.servings, "Quantity": RecipeModel.quantity, "Procedure": RecipeModel.procedure]
+            
+            // State saving when recipe is favorited
+            let defaults = UserDefaults.standard
+            defaults.set(FavModel.favorites, forKey: "Favorites")
+            defaults.synchronize()
         } else {
             favoriteButton.image = UIImage(named: "empty-star")
             pressed = false
             
             //Remove recipe from list of favorites
             FavModel.favorites.removeValue(forKey: RecipeModel.title)
+            
+            // State saving when recipe is unfavorited
+            let defaults = UserDefaults.standard
+            defaults.set(FavModel.favorites, forKey: "Favorites")
+            defaults.synchronize()
         }
         
     }
