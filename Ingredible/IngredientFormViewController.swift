@@ -162,6 +162,7 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.tintColor = UIColor(red: 124/255, green: 154/255, blue: 114/255, alpha: 1)
         cell.textLabel?.text = ingredients[indexPath.section][indexPath.row]
         cell.accessoryType = .none
         for item in selectedIndexPathArray {

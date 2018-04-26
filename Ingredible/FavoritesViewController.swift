@@ -46,9 +46,6 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
         let cell = tableView.dequeueReusableCell(withIdentifier: "customcell", for: indexPath) 
         let dicTitle = Array(FavModel.favorites.keys).sorted()
         cell.textLabel?.text = dicTitle[indexPath.item]
-        if (indexPath.row % 2 == 0) {
-            cell.backgroundColor = UIColor(red: 248/255, green: 248/255, blue: 248/255, alpha: 1.0)
-        }
         return cell
 
     }

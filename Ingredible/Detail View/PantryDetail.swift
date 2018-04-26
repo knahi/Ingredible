@@ -38,9 +38,6 @@ class PantryDetail: UIViewController, UITableViewDataSource, UITableViewDelegate
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "customcell", for: indexPath) as! UITableViewCell
         cell.textLabel?.text = PantriesModel.ingredients[indexPath.item]
-        if (indexPath.row % 2 == 0) {
-            cell.backgroundColor = UIColor(red: 248/255, green: 248/255, blue: 248/255, alpha: 1.0)
-        }
         return cell
     }
     
