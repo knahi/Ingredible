@@ -15,8 +15,8 @@ class HomeViewController: UIViewController {
         
         // Synchronize state when app opens
         let defaults = UserDefaults.standard
-        defaults.set(PantriesModel.pantries, forKey: "Pantries")
-        defaults.synchronize()
+        var pantriesDict = defaults.object(forKey: "Pantries") as! [String: [String]]
+        PantriesModel.pantries = pantriesDict
         
     }
     

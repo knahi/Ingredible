@@ -20,7 +20,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        //Firebase Installation code
         
         let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
         if !launchedBefore {
@@ -31,12 +30,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             PantriesModel.pantries["Fruit Basket"] = ["Apples", "Bananas", "Blueberries", "Cantaloupe", "Cherries", "Grapes", "Lemons", "Limes", "Oranges", "Pears", "Pineapples", "Raspberries", "Strawberries"]
             PantriesModel.pantries["Get Recipes"] = ["Apples", "Avocados", "Bananas", "Bay leaves", "Bread", "Brown sugar", "Butter", "Cajun seasoning", "Cayenne pepper", "Cheese", "Chicken", "Chocolate", "Cinnamon", "Cloves", "Cocoa powder", "Coconut oil", "Condensed milk", "Couscous", "Cream", "Cumin", "Eggs", "Fish", "Garlic", "Garlic powder", "Ginger", "Graham crackers", "Honey", "Lemons", "Maple syrup", "Marshmallows", "Milk", "Mustard", "Olive oil", "Onions", "Onion powder", "Oranges", "Pasta", "Peanut butter", "Pepper", "Pork", "Quinoa", "Red wine vinegar", "Rice", "Salt", "Soy sauce", "Tomatoes", "Tomato paste", "Tomato sauce", "Tortillas", "Turmeric", "Vanilla extract", "Vegetable oil", "Vegetable soup", "White sugar"]
             UserDefaults.standard.set(true, forKey: "launchedBefore")
+            
+            let defaults = UserDefaults.standard
+            defaults.set(PantriesModel.pantries, forKey: "Pantries")
+            defaults.synchronize()
         }
-        
-        let defaults = UserDefaults.standard
-        defaults.set(PantriesModel.pantries, forKey: "Pantries")
-        defaults.synchronize()
-        
+
+        //Firebase Installation code
         FirebaseApp.configure()
         return true
     }

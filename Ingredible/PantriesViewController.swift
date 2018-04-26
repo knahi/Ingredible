@@ -19,10 +19,6 @@ class PantriesViewController: UIViewController, UITableViewDataSource, UITableVi
         tableView.dataSource = self
         
     }
-//    
-//    func loadDefaults() {
-//
-//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -30,12 +26,12 @@ class PantriesViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        tableView.reloadData()
-        
         let defaults = UserDefaults.standard
         var pantriesDict = defaults.object(forKey: "Pantries") as! [String: [String]]
         PantriesModel.pantries = pantriesDict
         print(PantriesModel.pantries)
+        
+        tableView.reloadData()
     }
     
     
