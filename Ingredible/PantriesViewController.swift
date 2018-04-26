@@ -43,7 +43,6 @@ class PantriesViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var titles = Array(PantriesModel.pantries.keys)
-        print(titles)
         let index = titles.index(of: "No pantry")
         titles.remove(at: index!)
         let cell = tableView.dequeueReusableCell(withIdentifier: "customcell", for: indexPath)
