@@ -32,6 +32,15 @@ class RecipeResultsViewController: UIViewController, UITableViewDataSource, UITa
         fetchRecipes()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        // provide an alert if the recipe search did not yield any recipes
+        if FavModel.allRecipes.isEmpty {
+            let alert = UIAlertController(title: "Your search did not yield any recipes.", message: "Try adding more ingredients to your search and make sure you did not forget common items like salt, pepper, milk, and butter.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true)
+        }
+    }
+    
     func fetchRecipes(){
         self.count = 0
         FavModel.allRecipes = [NSDictionary]()
@@ -95,7 +104,6 @@ class RecipeResultsViewController: UIViewController, UITableViewDataSource, UITa
                     }
                     
                 } //end of loop
-                
                 //Takes care of firebase asynchronicity
                 DispatchQueue.main.async {self.tableView.reloadData()}
             }
