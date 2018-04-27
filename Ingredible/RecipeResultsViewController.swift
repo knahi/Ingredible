@@ -35,7 +35,7 @@ class RecipeResultsViewController: UIViewController, UITableViewDataSource, UITa
     override func viewDidAppear(_ animated: Bool) {
         // provide an alert if the recipe search did not yield any recipes
         if FavModel.allRecipes.isEmpty {
-            let alert = UIAlertController(title: "Your search did not yield any recipes.", message: "Try adding more ingredients to your search and make sure you did not forget to add common items like salt and pepper.", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Your search did not yield any recipes.", message: "Try adding more ingredients to your search. Make sure you include common items like salt and pepper.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
                 if self.presentingViewController is UITabBarController{
                     self.dismiss(animated: true, completion: nil)
