@@ -294,22 +294,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iSD-XI-bp0" userLabel="Content View">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JjC-sE-6zv">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" red="0.92941176470588238" green="0.95294117647058818" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Results" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j6R-qP-a3q">
-                                                <rect key="frame" x="75" y="15" width="225" height="29"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                <color key="textColor" red="0.33725490196078434" green="0.42352941176470588" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LQN-Yw-Y0G">
-                                                <rect key="frame" x="0.0" y="73" width="375" height="530"/>
+                                                <rect key="frame" x="0.0" y="73" width="375" height="481"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <prototypes>
@@ -323,12 +309,22 @@
                                                     </tableViewCell>
                                                 </prototypes>
                                             </tableView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Results" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j6R-qP-a3q">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
+                                                <color key="backgroundColor" red="0.92312955860000001" green="0.9585326314" blue="0.91394710540000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="65" id="llm-tP-yIJ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <color key="textColor" red="0.33725490196078434" green="0.42352941176470588" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="j6R-qP-a3q" secondAttribute="trailing" constant="75" id="Grm-do-yrD"/>
-                                            <constraint firstItem="j6R-qP-a3q" firstAttribute="top" secondItem="iSD-XI-bp0" secondAttribute="top" constant="15" id="SoS-Nr-Wqn"/>
-                                            <constraint firstItem="j6R-qP-a3q" firstAttribute="leading" secondItem="iSD-XI-bp0" secondAttribute="leading" constant="75" id="Ue2-KI-4Ce"/>
+                                            <constraint firstAttribute="trailing" secondItem="j6R-qP-a3q" secondAttribute="trailing" id="Grm-do-yrD"/>
+                                            <constraint firstItem="j6R-qP-a3q" firstAttribute="top" secondItem="iSD-XI-bp0" secondAttribute="top" id="SoS-Nr-Wqn"/>
+                                            <constraint firstItem="j6R-qP-a3q" firstAttribute="leading" secondItem="iSD-XI-bp0" secondAttribute="leading" id="Ue2-KI-4Ce"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -515,7 +511,7 @@ We created this app to not only benefit college students on a budget, but also t
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Se4-rM-Ni1">
-                                <rect key="frame" x="0.0" y="138" width="375" height="480"/>
+                                <rect key="frame" x="0.0" y="137" width="375" height="481"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customcell" id="bMf-Fq-gUA">
@@ -528,16 +524,12 @@ We created this app to not only benefit college students on a budget, but also t
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HvP-yo-7u5">
-                                <rect key="frame" x="0.0" y="64" width="375" height="66"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.92941176469999998" green="0.95294117649999999" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pantries" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lNS-rf-DNt">
-                                <rect key="frame" x="15" y="79" width="345" height="29"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="65"/>
+                                <color key="backgroundColor" red="0.92312955860000001" green="0.9585326314" blue="0.91394710540000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="uwM-Tp-lMr"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" red="0.33867630360000001" green="0.42167004940000002" blue="0.31318423150000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -545,13 +537,13 @@ We created this app to not only benefit college students on a budget, but also t
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="JIM-Vn-N4J" firstAttribute="trailing" secondItem="lNS-rf-DNt" secondAttribute="trailing" constant="15" id="3qO-Bf-mYi"/>
-                            <constraint firstItem="lNS-rf-DNt" firstAttribute="leading" secondItem="JIM-Vn-N4J" secondAttribute="leading" constant="15" id="ABM-ds-MqH"/>
+                            <constraint firstItem="JIM-Vn-N4J" firstAttribute="trailing" secondItem="lNS-rf-DNt" secondAttribute="trailing" id="3qO-Bf-mYi"/>
+                            <constraint firstItem="lNS-rf-DNt" firstAttribute="leading" secondItem="JIM-Vn-N4J" secondAttribute="leading" id="ABM-ds-MqH"/>
                             <constraint firstItem="Se4-rM-Ni1" firstAttribute="bottom" secondItem="JIM-Vn-N4J" secondAttribute="bottom" id="SOl-TI-3jF"/>
                             <constraint firstItem="Se4-rM-Ni1" firstAttribute="trailing" secondItem="JIM-Vn-N4J" secondAttribute="trailing" id="U5v-K9-VRk"/>
                             <constraint firstItem="Se4-rM-Ni1" firstAttribute="leading" secondItem="JIM-Vn-N4J" secondAttribute="leading" id="UEn-iX-fib"/>
-                            <constraint firstItem="Se4-rM-Ni1" firstAttribute="top" secondItem="lNS-rf-DNt" secondAttribute="bottom" constant="30" id="rtg-T8-DjA"/>
-                            <constraint firstItem="lNS-rf-DNt" firstAttribute="top" secondItem="JIM-Vn-N4J" secondAttribute="top" constant="15" id="tBV-Kt-iJQ"/>
+                            <constraint firstItem="Se4-rM-Ni1" firstAttribute="top" secondItem="lNS-rf-DNt" secondAttribute="bottom" constant="8" id="rtg-T8-DjA"/>
+                            <constraint firstItem="lNS-rf-DNt" firstAttribute="top" secondItem="JIM-Vn-N4J" secondAttribute="top" id="tBV-Kt-iJQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JIM-Vn-N4J"/>
                     </view>
@@ -874,7 +866,7 @@ We created this app to not only benefit college students on a budget, but also t
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5N3-Mp-MJm">
-                                <rect key="frame" x="0.0" y="140" width="375" height="478"/>
+                                <rect key="frame" x="0.0" y="137" width="375" height="481"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -888,16 +880,12 @@ We created this app to not only benefit college students on a budget, but also t
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbZ-fh-jAR">
-                                <rect key="frame" x="0.0" y="64" width="375" height="68"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.92312955860000001" green="0.9585326314" blue="0.91394710540000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorite Recipes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sJV-Xl-szb">
-                                <rect key="frame" x="15" y="79" width="345" height="29"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="65"/>
+                                <color key="backgroundColor" red="0.92941176469999998" green="0.95294117649999999" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="8Uh-Ma-nj9"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" red="0.33867630360000001" green="0.42167004940000002" blue="0.31318423150000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -905,9 +893,9 @@ We created this app to not only benefit college students on a budget, but also t
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="sJV-Xl-szb" firstAttribute="leading" secondItem="JQh-qW-jg0" secondAttribute="leading" constant="15" id="JjD-nv-qFx"/>
-                            <constraint firstItem="sJV-Xl-szb" firstAttribute="top" secondItem="JQh-qW-jg0" secondAttribute="top" constant="15" id="bTe-gF-VMk"/>
-                            <constraint firstItem="JQh-qW-jg0" firstAttribute="trailing" secondItem="sJV-Xl-szb" secondAttribute="trailing" constant="15" id="kHQ-b8-Cfn"/>
+                            <constraint firstItem="sJV-Xl-szb" firstAttribute="leading" secondItem="JQh-qW-jg0" secondAttribute="leading" id="JjD-nv-qFx"/>
+                            <constraint firstItem="sJV-Xl-szb" firstAttribute="top" secondItem="JQh-qW-jg0" secondAttribute="top" id="bTe-gF-VMk"/>
+                            <constraint firstItem="JQh-qW-jg0" firstAttribute="trailing" secondItem="sJV-Xl-szb" secondAttribute="trailing" id="kHQ-b8-Cfn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JQh-qW-jg0"/>
                     </view>
