@@ -20,6 +20,15 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
         tableView.dataSource = self
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        if FavModel.favorites.isEmpty {
+            let alert = UIAlertController(title: "You currently do not have any favorited recipes.", message: "Tap over to the home screen and 'Start cooking' to find and favorite a new recipe.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+            }))
+            self.present(alert, animated: true)
+        }
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         let defaults = UserDefaults.standard
         if(defaults.object(forKey: "Favorites") != nil) {
