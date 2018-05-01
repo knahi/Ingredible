@@ -27,7 +27,7 @@ class PantriesViewController: UIViewController, UITableViewDataSource, UITableVi
     
     override func viewWillAppear(_ animated: Bool) {
         let defaults = UserDefaults.standard
-        var pantriesDict = defaults.object(forKey: "Pantries") as! [String: [String]]
+        let pantriesDict = defaults.object(forKey: "Pantries") as! [String: [String]]
         PantriesModel.pantries = pantriesDict
         
         tableView.reloadData()

@@ -32,7 +32,7 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
     override func viewWillAppear(_ animated: Bool) {
         let defaults = UserDefaults.standard
         if(defaults.object(forKey: "Favorites") != nil) {
-            var favoritesDict = defaults.object(forKey: "Favorites") as! [String : [String : Any]]
+            let favoritesDict = defaults.object(forKey: "Favorites") as! [String : [String : Any]]
             FavModel.favorites = favoritesDict
         }
         tableView.reloadData()
