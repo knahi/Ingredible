@@ -373,33 +373,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tMH-c3-7xo">
-                                <rect key="frame" x="15" y="79" width="345" height="29"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="13" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gdd-Uh-MhG">
-                                <rect key="frame" x="15" y="188.5" width="345" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="AeO-dC-Hze"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="15" y="89" width="345" height="29"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label autoresizesSubviews="NO" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uUP-e6-SEk">
-                                <rect key="frame" x="15" y="148" width="345" height="20.5"/>
+                                <rect key="frame" x="15" y="148" width="345" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1hj-G7-X86">
-                                <rect key="frame" x="15" y="408.5" width="345" height="243.5"/>
+                                <rect key="frame" x="15" y="387" width="345" height="258"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u6O-lo-SG2">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="20.5"/>
+                                        <rect key="frame" x="8" y="8" width="327" height="21"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="343" id="uq2-TI-cGg"/>
+                                            <constraint firstAttribute="width" constant="327" id="uq2-TI-cGg"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -407,28 +398,49 @@
                                     </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="u6O-lo-SG2" secondAttribute="bottom" constant="246" id="mey-Wj-ZKC"/>
-                                    <constraint firstAttribute="trailing" secondItem="u6O-lo-SG2" secondAttribute="trailing" id="miP-yh-D3r"/>
-                                    <constraint firstItem="u6O-lo-SG2" firstAttribute="top" secondItem="1hj-G7-X86" secondAttribute="top" id="qzg-Of-y5Q"/>
-                                    <constraint firstItem="u6O-lo-SG2" firstAttribute="leading" secondItem="1hj-G7-X86" secondAttribute="leading" id="zD4-U4-xRO"/>
+                                    <constraint firstAttribute="bottom" secondItem="u6O-lo-SG2" secondAttribute="bottom" id="mey-Wj-ZKC"/>
+                                    <constraint firstAttribute="trailing" secondItem="u6O-lo-SG2" secondAttribute="trailing" constant="8" id="miP-yh-D3r"/>
+                                    <constraint firstItem="u6O-lo-SG2" firstAttribute="top" secondItem="1hj-G7-X86" secondAttribute="top" constant="8" id="qzg-Of-y5Q"/>
+                                    <constraint firstItem="u6O-lo-SG2" firstAttribute="leading" secondItem="1hj-G7-X86" secondAttribute="leading" constant="8" id="zD4-U4-xRO"/>
+                                </constraints>
+                            </scrollView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9tT-3B-766">
+                                <rect key="frame" x="15" y="184" width="344" height="188"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="13" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gdd-Uh-MhG">
+                                        <rect key="frame" x="8" y="8" width="327" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="327" id="7da-PD-TjR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Gdd-Uh-MhG" firstAttribute="top" secondItem="9tT-3B-766" secondAttribute="top" constant="8" id="6p9-dU-De6"/>
+                                    <constraint firstItem="Gdd-Uh-MhG" firstAttribute="leading" secondItem="9tT-3B-766" secondAttribute="leading" constant="8" id="BK9-CH-Jgd"/>
+                                    <constraint firstAttribute="bottom" secondItem="Gdd-Uh-MhG" secondAttribute="bottom" id="Y4U-sw-tBT"/>
+                                    <constraint firstAttribute="trailing" secondItem="Gdd-Uh-MhG" secondAttribute="trailing" constant="8" id="snl-NE-76S"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="uUP-e6-SEk" firstAttribute="leading" secondItem="zxR-F6-y4d" secondAttribute="leading" constant="15" id="4YB-Aq-RNY"/>
-                            <constraint firstItem="tMH-c3-7xo" firstAttribute="top" secondItem="zxR-F6-y4d" secondAttribute="top" constant="15" id="62k-0g-Zgw"/>
+                            <constraint firstItem="9tT-3B-766" firstAttribute="leading" secondItem="uUP-e6-SEk" secondAttribute="leading" id="5IJ-4Y-ghC"/>
+                            <constraint firstItem="tMH-c3-7xo" firstAttribute="top" secondItem="zxR-F6-y4d" secondAttribute="top" constant="25" id="62k-0g-Zgw"/>
                             <constraint firstItem="1hj-G7-X86" firstAttribute="leading" secondItem="zxR-F6-y4d" secondAttribute="leading" constant="15" id="7ph-GY-ncC"/>
                             <constraint firstItem="zxR-F6-y4d" firstAttribute="trailing" secondItem="uUP-e6-SEk" secondAttribute="trailing" constant="15" id="B6v-AU-S3J"/>
-                            <constraint firstItem="1hj-G7-X86" firstAttribute="top" secondItem="Gdd-Uh-MhG" secondAttribute="bottom" constant="20" id="D8a-jk-9w2"/>
-                            <constraint firstItem="Gdd-Uh-MhG" firstAttribute="top" secondItem="uUP-e6-SEk" secondAttribute="bottom" constant="20" id="LNn-2U-Ph0"/>
-                            <constraint firstItem="zxR-F6-y4d" firstAttribute="trailing" secondItem="Gdd-Uh-MhG" secondAttribute="trailing" constant="15" id="OMf-5Z-UCE"/>
-                            <constraint firstItem="uUP-e6-SEk" firstAttribute="top" secondItem="tMH-c3-7xo" secondAttribute="bottom" constant="40" id="VSp-Me-5Sd"/>
+                            <constraint firstItem="1hj-G7-X86" firstAttribute="top" secondItem="9tT-3B-766" secondAttribute="bottom" constant="15" id="RMB-7t-pFm"/>
+                            <constraint firstItem="uUP-e6-SEk" firstAttribute="top" secondItem="tMH-c3-7xo" secondAttribute="bottom" constant="30" id="VSp-Me-5Sd"/>
+                            <constraint firstItem="9tT-3B-766" firstAttribute="top" secondItem="uUP-e6-SEk" secondAttribute="bottom" constant="15" id="bqB-3Y-m8U"/>
+                            <constraint firstItem="9tT-3B-766" firstAttribute="centerX" secondItem="uUP-e6-SEk" secondAttribute="centerX" id="cer-NT-Pbh"/>
                             <constraint firstItem="zxR-F6-y4d" firstAttribute="trailing" secondItem="tMH-c3-7xo" secondAttribute="trailing" constant="15" id="lsl-Dx-6WD"/>
-                            <constraint firstItem="Gdd-Uh-MhG" firstAttribute="leading" secondItem="zxR-F6-y4d" secondAttribute="leading" constant="15" id="pzq-ew-7DK"/>
                             <constraint firstItem="tMH-c3-7xo" firstAttribute="leading" secondItem="zxR-F6-y4d" secondAttribute="leading" constant="15" id="soB-NN-gp9"/>
                             <constraint firstItem="zxR-F6-y4d" firstAttribute="trailing" secondItem="1hj-G7-X86" secondAttribute="trailing" constant="15" id="xNx-If-r8E"/>
-                            <constraint firstItem="zxR-F6-y4d" firstAttribute="bottom" secondItem="1hj-G7-X86" secondAttribute="bottom" constant="15" id="yUr-uX-2IB"/>
+                            <constraint firstAttribute="bottom" secondItem="9tT-3B-766" secondAttribute="bottom" constant="295" id="xTa-E1-7yP"/>
+                            <constraint firstItem="zxR-F6-y4d" firstAttribute="bottom" secondItem="1hj-G7-X86" secondAttribute="bottom" constant="22" id="yUr-uX-2IB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zxR-F6-y4d"/>
                     </view>
@@ -449,14 +461,16 @@
                     <connections>
                         <outlet property="favoriteButton" destination="jDl-Cf-KaE" id="VkR-sD-Pcg"/>
                         <outlet property="procedure" destination="u6O-lo-SG2" id="Zd9-u6-XRd"/>
+                        <outlet property="procedureScrollView" destination="1hj-G7-X86" id="ctA-Hi-9jP"/>
                         <outlet property="quantity" destination="Gdd-Uh-MhG" id="x12-OK-yxB"/>
+                        <outlet property="quantityScrollView" destination="9tT-3B-766" id="V0e-OO-saa"/>
                         <outlet property="recipeTitle" destination="tMH-c3-7xo" id="yIG-3d-1gf"/>
                         <outlet property="servings" destination="uUP-e6-SEk" id="oY1-dc-xHJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2dw-8n-90B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5580" y="2194"/>
+            <point key="canvasLocation" x="5593" y="2195"/>
         </scene>
         <!--About-->
         <scene sceneID="rTT-gc-Iyz">
@@ -514,7 +528,7 @@ We created this app to not only benefit college students on a budget, but also t
                                 <rect key="frame" x="0.0" y="137" width="375" height="481"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customcell" id="bMf-Fq-gUA">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customcell" id="bMf-Fq-gUA">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bMf-Fq-gUA" id="wBT-Uy-4v4">
@@ -580,7 +594,7 @@ We created this app to not only benefit college students on a budget, but also t
                                     <constraint firstAttribute="height" constant="238" id="M0F-w0-Msi"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="QIq-0d-HTM">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="QIq-0d-HTM">
                                         <rect key="frame" x="0.0" y="28" width="341" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QIq-0d-HTM" id="tOs-CW-M2f">
@@ -717,7 +731,7 @@ We created this app to not only benefit college students on a budget, but also t
                                 <rect key="frame" x="0.0" y="138" width="375" height="529"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customcell" id="NhX-lJ-N3L">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customcell" id="NhX-lJ-N3L">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NhX-lJ-N3L" id="jZ8-RV-LTF">
@@ -772,12 +786,12 @@ We created this app to not only benefit college students on a budget, but also t
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ig-Gq-fT7">
-                                <rect key="frame" x="15" y="386" width="345" height="266"/>
+                                <rect key="frame" x="15" y="387" width="345" height="258"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zvS-78-BAa">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="21"/>
+                                        <rect key="frame" x="8" y="8" width="329" height="21"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="343" id="Qcs-Rk-Qum"/>
+                                            <constraint firstAttribute="width" constant="329" id="Qcs-Rk-Qum"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -785,10 +799,10 @@ We created this app to not only benefit college students on a budget, but also t
                                     </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="zvS-78-BAa" secondAttribute="trailing" id="0cf-gi-xOh"/>
-                                    <constraint firstItem="zvS-78-BAa" firstAttribute="top" secondItem="0ig-Gq-fT7" secondAttribute="top" id="BuU-qm-3Es"/>
-                                    <constraint firstAttribute="bottom" secondItem="zvS-78-BAa" secondAttribute="bottom" constant="246" id="CMG-ui-HYv"/>
-                                    <constraint firstItem="zvS-78-BAa" firstAttribute="leading" secondItem="0ig-Gq-fT7" secondAttribute="leading" id="CQh-F0-IUJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="zvS-78-BAa" secondAttribute="trailing" constant="8" id="0cf-gi-xOh"/>
+                                    <constraint firstItem="zvS-78-BAa" firstAttribute="top" secondItem="0ig-Gq-fT7" secondAttribute="top" constant="8" id="BuU-qm-3Es"/>
+                                    <constraint firstAttribute="bottom" secondItem="zvS-78-BAa" secondAttribute="bottom" id="CMG-ui-HYv"/>
+                                    <constraint firstItem="zvS-78-BAa" firstAttribute="leading" secondItem="0ig-Gq-fT7" secondAttribute="leading" constant="8" id="CQh-F0-IUJ"/>
                                 </constraints>
                             </scrollView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJN-EI-YTc">
@@ -798,36 +812,48 @@ We created this app to not only benefit college students on a budget, but also t
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BML-2j-8NX">
-                                <rect key="frame" x="15" y="79" width="345" height="29"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <rect key="frame" x="15" y="89" width="345" height="29"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dlv-Ou-ZUR">
-                                <rect key="frame" x="15" y="189" width="345" height="170"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a3X-pA-w9d">
+                                <rect key="frame" x="15" y="184" width="345" height="188"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dlv-Ou-ZUR">
+                                        <rect key="frame" x="8" y="8" width="329" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="329" id="z3d-XQ-g44"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="170" id="mVh-tN-u9d"/>
+                                    <constraint firstItem="Dlv-Ou-ZUR" firstAttribute="leading" secondItem="a3X-pA-w9d" secondAttribute="leading" constant="8" id="93V-VA-F7f"/>
+                                    <constraint firstAttribute="bottom" secondItem="Dlv-Ou-ZUR" secondAttribute="bottom" id="RuA-5X-Os0"/>
+                                    <constraint firstAttribute="trailing" secondItem="Dlv-Ou-ZUR" secondAttribute="trailing" constant="8" id="Tl4-sq-Ag3"/>
+                                    <constraint firstItem="Dlv-Ou-ZUR" firstAttribute="top" secondItem="a3X-pA-w9d" secondAttribute="top" constant="8" id="d21-4l-dWc"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="8vG-tz-EH6" firstAttribute="trailing" secondItem="0ig-Gq-fT7" secondAttribute="trailing" constant="15" id="2yx-Ni-tRv"/>
                             <constraint firstItem="8vG-tz-EH6" firstAttribute="trailing" secondItem="BML-2j-8NX" secondAttribute="trailing" constant="15" id="4g4-Rv-8Qh"/>
-                            <constraint firstItem="BML-2j-8NX" firstAttribute="top" secondItem="8vG-tz-EH6" secondAttribute="top" constant="15" id="74M-OX-UJA"/>
-                            <constraint firstItem="Dlv-Ou-ZUR" firstAttribute="top" secondItem="DJN-EI-YTc" secondAttribute="bottom" constant="20" id="7mX-eE-eea"/>
+                            <constraint firstItem="BML-2j-8NX" firstAttribute="top" secondItem="8vG-tz-EH6" secondAttribute="top" constant="25" id="74M-OX-UJA"/>
                             <constraint firstItem="8vG-tz-EH6" firstAttribute="trailing" secondItem="DJN-EI-YTc" secondAttribute="trailing" constant="15" id="9wy-Ew-zYO"/>
-                            <constraint firstItem="8vG-tz-EH6" firstAttribute="trailing" secondItem="Dlv-Ou-ZUR" secondAttribute="trailing" constant="15" id="FI1-Po-ER9"/>
+                            <constraint firstItem="a3X-pA-w9d" firstAttribute="leading" secondItem="DJN-EI-YTc" secondAttribute="leading" id="Cn4-ef-Bja"/>
+                            <constraint firstAttribute="bottom" secondItem="a3X-pA-w9d" secondAttribute="bottom" constant="295" id="ED6-yB-uIb"/>
                             <constraint firstItem="0ig-Gq-fT7" firstAttribute="leading" secondItem="8vG-tz-EH6" secondAttribute="leading" constant="15" id="FpA-pg-E0K"/>
-                            <constraint firstItem="0ig-Gq-fT7" firstAttribute="top" secondItem="Dlv-Ou-ZUR" secondAttribute="bottom" constant="27" id="YzB-LY-rwi"/>
-                            <constraint firstItem="8vG-tz-EH6" firstAttribute="bottom" secondItem="0ig-Gq-fT7" secondAttribute="bottom" constant="15" id="Yzu-xQ-376"/>
+                            <constraint firstItem="8vG-tz-EH6" firstAttribute="bottom" secondItem="0ig-Gq-fT7" secondAttribute="bottom" constant="22" id="Yzu-xQ-376"/>
                             <constraint firstItem="BML-2j-8NX" firstAttribute="leading" secondItem="8vG-tz-EH6" secondAttribute="leading" constant="15" id="aB4-6k-9xE"/>
-                            <constraint firstItem="DJN-EI-YTc" firstAttribute="top" secondItem="BML-2j-8NX" secondAttribute="bottom" constant="40" id="hJR-4c-MW5"/>
-                            <constraint firstItem="Dlv-Ou-ZUR" firstAttribute="leading" secondItem="8vG-tz-EH6" secondAttribute="leading" constant="15" id="qkD-TG-57W"/>
+                            <constraint firstItem="a3X-pA-w9d" firstAttribute="trailing" secondItem="DJN-EI-YTc" secondAttribute="trailing" id="glG-4Z-n6c"/>
+                            <constraint firstItem="DJN-EI-YTc" firstAttribute="top" secondItem="BML-2j-8NX" secondAttribute="bottom" constant="30" id="hJR-4c-MW5"/>
+                            <constraint firstItem="0ig-Gq-fT7" firstAttribute="top" secondItem="a3X-pA-w9d" secondAttribute="bottom" constant="15" id="omC-Jw-2Wo"/>
                             <constraint firstItem="DJN-EI-YTc" firstAttribute="leading" secondItem="8vG-tz-EH6" secondAttribute="leading" constant="15" id="vrp-HU-see"/>
+                            <constraint firstItem="a3X-pA-w9d" firstAttribute="top" secondItem="DJN-EI-YTc" secondAttribute="bottom" constant="15" id="yI7-yT-ne1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8vG-tz-EH6"/>
                     </view>
@@ -848,14 +874,16 @@ We created this app to not only benefit college students on a budget, but also t
                     <connections>
                         <outlet property="favoriteButton" destination="ZVC-LP-nez" id="rJK-ec-jCd"/>
                         <outlet property="procedure" destination="zvS-78-BAa" id="GDd-bG-gRe"/>
+                        <outlet property="procedureScrollView" destination="0ig-Gq-fT7" id="Rb1-sl-6m5"/>
                         <outlet property="quantity" destination="Dlv-Ou-ZUR" id="AfG-pS-Y0I"/>
+                        <outlet property="quantityScrollView" destination="a3X-pA-w9d" id="BwE-MS-Uht"/>
                         <outlet property="recipeTitle" destination="BML-2j-8NX" id="Lcv-Zm-SOW"/>
                         <outlet property="servings" destination="DJN-EI-YTc" id="ffb-Hu-1Ej"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k3X-6t-iWU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3266" y="1645"/>
+            <point key="canvasLocation" x="-3266.4000000000001" y="1644.8275862068967"/>
         </scene>
         <!--Favorites View Controller-->
         <scene sceneID="EaT-Gl-vuc">
@@ -870,7 +898,7 @@ We created this app to not only benefit college students on a budget, but also t
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customcell" id="oZn-6E-BhE">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customcell" id="oZn-6E-BhE">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oZn-6E-BhE" id="wnK-ds-agd">
@@ -1025,7 +1053,7 @@ We created this app to not only benefit college students on a budget, but also t
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Clr-66-Fxz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4527" y="2194"/>
+            <point key="canvasLocation" x="4481" y="2196"/>
         </scene>
         <!--Home-->
         <scene sceneID="Jbe-lH-htW">

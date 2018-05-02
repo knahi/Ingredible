@@ -14,6 +14,8 @@ class FavoriteDetail: UIViewController {
     @IBOutlet var servings: UILabel!
     @IBOutlet var quantity: UILabel!
     @IBOutlet var procedure: UILabel!
+    @IBOutlet var quantityScrollView: UIScrollView!
+    @IBOutlet var procedureScrollView: UIScrollView!
     
     @IBOutlet var favoriteButton: UIBarButtonItem!
     var pressed = false
@@ -32,6 +34,16 @@ class FavoriteDetail: UIViewController {
         if FavModel.favorites[RecipeModel.title] != nil {
             pressed = true
             favoriteButton.image = UIImage(named: "filled-in-star")        }
+        
+        // set quantity border
+        quantityScrollView.layer.masksToBounds = true
+        quantityScrollView.layer.borderColor = UIColor(red: 124/255, green: 154/255, blue: 114/255, alpha: 1).cgColor
+        quantityScrollView.layer.borderWidth = 2.0
+        
+        // set tableview border
+        procedureScrollView.layer.masksToBounds = true
+        procedureScrollView.layer.borderColor = UIColor(red: 124/255, green: 154/255, blue: 114/255, alpha: 1).cgColor
+        procedureScrollView.layer.borderWidth = 2.0
     }
     
     @IBAction func favorite(_ sender: Any) {
