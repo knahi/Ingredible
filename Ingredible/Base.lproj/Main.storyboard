@@ -54,7 +54,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aid-Am-aWG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1239" y="2197"/>
+            <point key="canvasLocation" x="741" y="2170"/>
         </scene>
         <!--IngredientForm-->
         <scene sceneID="CB7-EZ-JKY">
@@ -283,7 +283,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gv5-jr-uma" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2303" y="2196"/>
+            <point key="canvasLocation" x="1378" y="2169"/>
         </scene>
         <!--RecipeResults-->
         <scene sceneID="kfJ-yz-cGG">
@@ -367,7 +367,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="asD-XI-q7X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3400.8000000000002" y="2195.3523238380812"/>
+            <point key="canvasLocation" x="1989" y="2170"/>
         </scene>
         <!--RecipeDetail-->
         <scene sceneID="kSM-WV-d06">
@@ -377,7 +377,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tMH-c3-7xo">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="tMH-c3-7xo">
                                 <rect key="frame" x="15" y="89" width="345" height="29"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                 <nil key="textColor"/>
@@ -403,7 +403,7 @@
                                     </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="u6O-lo-SG2" secondAttribute="bottom" id="mey-Wj-ZKC"/>
+                                    <constraint firstAttribute="bottom" secondItem="u6O-lo-SG2" secondAttribute="bottom" constant="8" id="mey-Wj-ZKC"/>
                                     <constraint firstAttribute="trailing" secondItem="u6O-lo-SG2" secondAttribute="trailing" constant="8" id="miP-yh-D3r"/>
                                     <constraint firstItem="u6O-lo-SG2" firstAttribute="top" secondItem="1hj-G7-X86" secondAttribute="top" constant="8" id="qzg-Of-y5Q"/>
                                     <constraint firstItem="u6O-lo-SG2" firstAttribute="leading" secondItem="1hj-G7-X86" secondAttribute="leading" constant="8" id="zD4-U4-xRO"/>
@@ -425,7 +425,7 @@
                                 <constraints>
                                     <constraint firstItem="Gdd-Uh-MhG" firstAttribute="top" secondItem="9tT-3B-766" secondAttribute="top" constant="8" id="6p9-dU-De6"/>
                                     <constraint firstItem="Gdd-Uh-MhG" firstAttribute="leading" secondItem="9tT-3B-766" secondAttribute="leading" constant="8" id="BK9-CH-Jgd"/>
-                                    <constraint firstAttribute="bottom" secondItem="Gdd-Uh-MhG" secondAttribute="bottom" id="Y4U-sw-tBT"/>
+                                    <constraint firstAttribute="bottom" secondItem="Gdd-Uh-MhG" secondAttribute="bottom" constant="8" id="Y4U-sw-tBT"/>
                                     <constraint firstAttribute="trailing" secondItem="Gdd-Uh-MhG" secondAttribute="trailing" constant="8" id="snl-NE-76S"/>
                                 </constraints>
                             </scrollView>
@@ -475,7 +475,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2dw-8n-90B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5532" y="2196"/>
+            <point key="canvasLocation" x="3266" y="2170"/>
         </scene>
         <!--About-->
         <scene sceneID="rTT-gc-Iyz">
@@ -519,7 +519,7 @@ We created this app to not only benefit college students on a budget, but also t
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q8H-QD-9RG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="918" y="-85"/>
+            <point key="canvasLocation" x="569" y="-83"/>
         </scene>
         <!--Pantries-->
         <scene sceneID="j95-Es-wVP">
@@ -582,7 +582,7 @@ We created this app to not only benefit college students on a budget, but also t
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lS6-we-xj8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1856.5" y="733.5"/>
+            <point key="canvasLocation" x="1219" y="736"/>
         </scene>
         <!--Add Pantry View Controller-->
         <scene sceneID="0iT-IR-dKM">
@@ -722,7 +722,7 @@ We created this app to not only benefit college students on a budget, but also t
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VAk-SI-gll" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3787.5" y="1085.5"/>
+            <point key="canvasLocation" x="2724" y="1139"/>
         </scene>
         <!--AddPantry-->
         <scene sceneID="SFN-2C-eCj">
@@ -780,7 +780,7 @@ We created this app to not only benefit college students on a budget, but also t
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkg-2c-ed4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3787.5" y="321.5"/>
+            <point key="canvasLocation" x="2724" y="348"/>
         </scene>
         <!--Favorite Detail-->
         <scene sceneID="Oz7-3R-TXf">
@@ -806,7 +806,7 @@ We created this app to not only benefit college students on a budget, but also t
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="zvS-78-BAa" secondAttribute="trailing" constant="8" id="0cf-gi-xOh"/>
                                     <constraint firstItem="zvS-78-BAa" firstAttribute="top" secondItem="0ig-Gq-fT7" secondAttribute="top" constant="8" id="BuU-qm-3Es"/>
-                                    <constraint firstAttribute="bottom" secondItem="zvS-78-BAa" secondAttribute="bottom" id="CMG-ui-HYv"/>
+                                    <constraint firstAttribute="bottom" secondItem="zvS-78-BAa" secondAttribute="bottom" constant="8" id="CMG-ui-HYv"/>
                                     <constraint firstItem="zvS-78-BAa" firstAttribute="leading" secondItem="0ig-Gq-fT7" secondAttribute="leading" constant="8" id="CQh-F0-IUJ"/>
                                 </constraints>
                             </scrollView>
@@ -816,7 +816,7 @@ We created this app to not only benefit college students on a budget, but also t
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BML-2j-8NX">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="BML-2j-8NX">
                                 <rect key="frame" x="15" y="89" width="345" height="29"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                 <nil key="textColor"/>
@@ -837,7 +837,7 @@ We created this app to not only benefit college students on a budget, but also t
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="Dlv-Ou-ZUR" firstAttribute="leading" secondItem="a3X-pA-w9d" secondAttribute="leading" constant="8" id="93V-VA-F7f"/>
-                                    <constraint firstAttribute="bottom" secondItem="Dlv-Ou-ZUR" secondAttribute="bottom" id="RuA-5X-Os0"/>
+                                    <constraint firstAttribute="bottom" secondItem="Dlv-Ou-ZUR" secondAttribute="bottom" constant="8" id="RuA-5X-Os0"/>
                                     <constraint firstAttribute="trailing" secondItem="Dlv-Ou-ZUR" secondAttribute="trailing" constant="8" id="Tl4-sq-Ag3"/>
                                     <constraint firstItem="Dlv-Ou-ZUR" firstAttribute="top" secondItem="a3X-pA-w9d" secondAttribute="top" constant="8" id="d21-4l-dWc"/>
                                 </constraints>
@@ -888,7 +888,7 @@ We created this app to not only benefit college students on a budget, but also t
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k3X-6t-iWU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3266.4000000000001" y="1644.8275862068967"/>
+            <point key="canvasLocation" x="-2183" y="1645"/>
         </scene>
         <!--Favorites View Controller-->
         <scene sceneID="EaT-Gl-vuc">
@@ -940,7 +940,7 @@ We created this app to not only benefit college students on a budget, but also t
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v95-U1-vuj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1490.5" y="1644.5"/>
+            <point key="canvasLocation" x="-1043" y="1645"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="UM7-vd-pXV">
@@ -984,7 +984,7 @@ We created this app to not only benefit college students on a budget, but also t
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G9c-BN-jPd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="918" y="735"/>
+            <point key="canvasLocation" x="569" y="736"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yfw-aa-TZ4">
@@ -1002,7 +1002,7 @@ We created this app to not only benefit college students on a budget, but also t
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oLh-mk-o3T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2862" y="324"/>
+            <point key="canvasLocation" x="2064" y="348"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0Sv-9O-z6o">
@@ -1021,7 +1021,7 @@ We created this app to not only benefit college students on a budget, but also t
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="68d-9h-kWh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2375" y="1645"/>
+            <point key="canvasLocation" x="-1622" y="1645"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="M6J-bD-h9d">
@@ -1040,7 +1040,7 @@ We created this app to not only benefit college students on a budget, but also t
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nnN-jU-SLR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-590" y="1645"/>
+            <point key="canvasLocation" x="-487" y="1645"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6q9-Gq-V1c">
@@ -1058,7 +1058,7 @@ We created this app to not only benefit college students on a budget, but also t
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Clr-66-Fxz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4481" y="2196"/>
+            <point key="canvasLocation" x="2656" y="2170"/>
         </scene>
         <!--Home-->
         <scene sceneID="Jbe-lH-htW">
@@ -1077,7 +1077,7 @@ We created this app to not only benefit college students on a budget, but also t
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZjQ-17-z2O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="214" y="2194"/>
+            <point key="canvasLocation" x="133" y="2170"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7W8-3u-cJA">
@@ -1095,7 +1095,7 @@ We created this app to not only benefit college students on a budget, but also t
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hmg-6V-x76" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2865.5999999999999" y="1087.5562218890555"/>
+            <point key="canvasLocation" x="2064" y="1139"/>
         </scene>
     </scenes>
     <resources>
