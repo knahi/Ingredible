@@ -124,7 +124,7 @@ class RecipeResultsViewController: UIViewController, UITableViewDataSource, UITa
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "customcell", for: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "customcell", for: indexPath) 
         cell.textLabel?.text = FavModel.allTitles[indexPath.item]
         cell.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
         return cell
