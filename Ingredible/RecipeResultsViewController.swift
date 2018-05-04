@@ -18,12 +18,12 @@ class RecipeResultsViewController: UIViewController, UITableViewDataSource, UITa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        tableView.delegate = self
-        tableView.dataSource = self
         
         //Firebase setup
         ref = Database.database().reference()
+
+        tableView.delegate = self
+        tableView.dataSource = self
         
         self.navigationItem.hidesBackButton = true
         
@@ -159,6 +159,17 @@ class RecipeResultsViewController: UIViewController, UITableViewDataSource, UITa
         // Dispose of any resources that can be recreated.
     }
     
+    //Swipe right to go back
+    @IBAction func swipeRight(_ sender: Any) {
+        if presentingViewController is UITabBarController{
+            dismiss(animated: true, completion: nil)
+        }else if let owningNavController = navigationController{
+            owningNavController.popViewController(animated: true)
+        }else{
+            fatalError("view is not contained by a navigation controller")
+        }
+    }
+    
     //Back button
     @IBAction func back(_ sender: UIBarButtonItem) {
         if presentingViewController is UITabBarController{
@@ -169,5 +180,4 @@ class RecipeResultsViewController: UIViewController, UITableViewDataSource, UITa
             fatalError("view is not contained by a navigation controller")
         }
     }
-
 }

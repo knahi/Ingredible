@@ -78,7 +78,8 @@ class FavoriteDetail: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func back(_ sender: UIBarButtonItem) {
+    //Swipe right to go back
+    @IBAction func swipeRight(_ sender: Any) {
         if presentingViewController is UITabBarController{
             dismiss(animated: true, completion: nil)
             
@@ -89,14 +90,15 @@ class FavoriteDetail: UIViewController {
         }
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    //Back button
+    @IBAction func back(_ sender: UIBarButtonItem) {
+        if presentingViewController is UITabBarController{
+            dismiss(animated: true, completion: nil)
+            
+        }else if let owningNavController = navigationController{
+            owningNavController.popViewController(animated: true)
+        }else{
+            fatalError("view is not contained by a navigation controller")
+        }
     }
-    */
-
 }

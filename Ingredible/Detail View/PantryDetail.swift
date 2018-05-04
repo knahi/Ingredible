@@ -41,6 +41,19 @@ class PantryDetail: UIViewController, UITableViewDataSource, UITableViewDelegate
         return cell
     }
     
+    //Swipe right to go back
+    @IBAction func swipeRight(_ sender: Any) {
+        if presentingViewController is UITabBarController{
+            dismiss(animated: true, completion: nil)
+            
+        }else if let owningNavController = navigationController{
+            owningNavController.popViewController(animated: true)
+        }else{
+            fatalError("view is not contained by a navigation controller")
+        }
+    }
+    
+    //Back button
     @IBAction func back(_ sender: Any) {
         if presentingViewController is UITabBarController{
             dismiss(animated: true, completion: nil)

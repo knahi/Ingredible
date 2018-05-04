@@ -339,6 +339,7 @@
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="2kA-v9-LRT" firstAttribute="top" secondItem="1Th-jG-j1l" secondAttribute="top" id="46X-JM-Qsy"/>
                             <constraint firstItem="2kA-v9-LRT" firstAttribute="leading" secondItem="1Th-jG-j1l" secondAttribute="leading" id="5IE-uh-Rfq"/>
@@ -346,6 +347,9 @@
                             <constraint firstItem="1Th-jG-j1l" firstAttribute="bottom" secondItem="2kA-v9-LRT" secondAttribute="bottom" id="qIN-qO-l6c"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1Th-jG-j1l"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="ybQ-b0-NfM" appends="YES" id="ZWl-dN-r6N"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="mzM-Mo-hZg">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="Oue-fL-azN">
@@ -361,8 +365,13 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="asD-XI-q7X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer cancelsTouchesInView="NO" direction="right" id="ybQ-b0-NfM">
+                    <connections>
+                        <action selector="swipeRight:" destination="GY2-9x-gjm" id="fzm-TT-Fmx"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2396" y="2169"/>
+            <point key="canvasLocation" x="2462" y="2169"/>
         </scene>
         <!--RecipeDetail-->
         <scene sceneID="kSM-WV-d06">
@@ -426,6 +435,7 @@
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="uUP-e6-SEk" firstAttribute="leading" secondItem="zxR-F6-y4d" secondAttribute="leading" constant="15" id="4YB-Aq-RNY"/>
                             <constraint firstItem="9tT-3B-766" firstAttribute="leading" secondItem="uUP-e6-SEk" secondAttribute="leading" id="5IJ-4Y-ghC"/>
@@ -443,6 +453,9 @@
                             <constraint firstItem="zxR-F6-y4d" firstAttribute="bottom" secondItem="1hj-G7-X86" secondAttribute="bottom" constant="22" id="yUr-uX-2IB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zxR-F6-y4d"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="sjB-YN-1HO" appends="YES" id="J9N-wr-BXq"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="p4Q-RV-eUi">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="CbH-kI-QhN">
@@ -469,6 +482,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2dw-8n-90B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="down" id="sjB-YN-1HO">
+                    <connections>
+                        <action selector="swipeRight:" destination="kR4-hK-Iac" id="5hb-Sb-ypW"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="4113" y="2168"/>
         </scene>
@@ -700,6 +718,9 @@ We created this app to not only benefit college students on a budget, but also t
                             <constraint firstItem="OgZ-fD-jNL" firstAttribute="top" secondItem="xAo-2H-Ud2" secondAttribute="bottom" constant="32" id="rAc-av-njI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Wi-aY-X4F"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="7wV-12-1oe" appends="YES" id="l4b-tV-oaX"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="AUt-JZ-rEd">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="uQw-pl-oX9">
@@ -717,6 +738,11 @@ We created this app to not only benefit college students on a budget, but also t
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VAk-SI-gll" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="down" id="7wV-12-1oe">
+                    <connections>
+                        <action selector="swipeRight:" destination="Bjh-hg-SAR" id="wRW-A9-Vwf"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3084" y="1138"/>
         </scene>
@@ -744,12 +770,13 @@ We created this app to not only benefit college students on a budget, but also t
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jKi-E2-lKC">
                                 <rect key="frame" x="15" y="79" width="345" height="29"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="uHg-uy-Jw3" firstAttribute="bottom" secondItem="jD1-5Q-qMr" secondAttribute="bottom" id="5EO-io-cWA"/>
                             <constraint firstItem="uHg-uy-Jw3" firstAttribute="trailing" secondItem="jD1-5Q-qMr" secondAttribute="trailing" id="8qD-J7-11g"/>
@@ -760,6 +787,9 @@ We created this app to not only benefit college students on a budget, but also t
                             <constraint firstItem="jD1-5Q-qMr" firstAttribute="trailing" secondItem="jKi-E2-lKC" secondAttribute="trailing" constant="15" id="uvP-ve-Fmv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jD1-5Q-qMr"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="8rB-hL-04J" appends="YES" id="Jn3-Yp-zlY"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="lnQ-kG-KVU">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="1Sb-Bm-epb">
@@ -775,8 +805,13 @@ We created this app to not only benefit college students on a budget, but also t
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkg-2c-ed4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="down" id="8rB-hL-04J">
+                    <connections>
+                        <action selector="swipeRight:" destination="dAc-y7-oVA" id="UAk-ka-4iv"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2724" y="348"/>
+            <point key="canvasLocation" x="3084" y="348"/>
         </scene>
         <!--Favorite Detail-->
         <scene sceneID="Oz7-3R-TXf">
@@ -840,6 +875,7 @@ We created this app to not only benefit college students on a budget, but also t
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="8vG-tz-EH6" firstAttribute="trailing" secondItem="0ig-Gq-fT7" secondAttribute="trailing" constant="15" id="2yx-Ni-tRv"/>
                             <constraint firstItem="8vG-tz-EH6" firstAttribute="trailing" secondItem="BML-2j-8NX" secondAttribute="trailing" constant="15" id="4g4-Rv-8Qh"/>
@@ -857,6 +893,9 @@ We created this app to not only benefit college students on a budget, but also t
                             <constraint firstItem="a3X-pA-w9d" firstAttribute="top" secondItem="DJN-EI-YTc" secondAttribute="bottom" constant="15" id="yI7-yT-ne1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8vG-tz-EH6"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="657-c7-PUZ" appends="YES" id="mu6-zO-bKB"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="Xau-E4-e8Z">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="Qt7-7d-nrQ">
@@ -883,6 +922,11 @@ We created this app to not only benefit college students on a budget, but also t
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k3X-6t-iWU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="down" id="657-c7-PUZ">
+                    <connections>
+                        <action selector="swipeRight:" destination="I2h-dE-Qhp" id="hik-8j-beP"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-2879" y="1645"/>
         </scene>
@@ -998,7 +1042,7 @@ We created this app to not only benefit college students on a budget, but also t
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oLh-mk-o3T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2064" y="348"/>
+            <point key="canvasLocation" x="2262" y="348"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0Sv-9O-z6o">
