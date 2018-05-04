@@ -12,7 +12,7 @@
 		EF0BFE0920532CEE00725EF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF0BFE0720532CEE00725EF5 /* Main.storyboard */; };
 		EF0BFE0B20532CEE00725EF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF0BFE0A20532CEE00725EF5 /* Assets.xcassets */; };
 		EF0BFE0E20532CEE00725EF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF0BFE0C20532CEE00725EF5 /* LaunchScreen.storyboard */; };
-		EF55F453205F064F00F34677 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF55F452205F064E00F34677 /* GoogleService-Info.plist */; };
+		EF466C37209CDD04007371E4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF466C36209CDD04007371E4 /* GoogleService-Info.plist */; };
 		EF76E82C2059ADA20033A4EF /* IngredientFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF76E82B2059ADA20033A4EF /* IngredientFormViewController.swift */; };
 		EF7B4901207BDA5C00E286AB /* RecipeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B4900207BDA5C00E286AB /* RecipeDetail.swift */; };
 		EF7B4903207BEDF700E286AB /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B4902207BEDF700E286AB /* RecipeModel.swift */; };
@@ -36,7 +36,7 @@
 		EF0BFE0A20532CEE00725EF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF0BFE0D20532CEE00725EF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF0BFE0F20532CEE00725EF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EF55F452205F064E00F34677 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EF466C36209CDD04007371E4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EF76E82B2059ADA20033A4EF /* IngredientFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientFormViewController.swift; sourceTree = "<group>"; };
 		EF7B4900207BDA5C00E286AB /* RecipeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetail.swift; sourceTree = "<group>"; };
 		EF7B4902207BEDF700E286AB /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
@@ -102,10 +102,10 @@
 		EF0BFE0220532CEE00725EF5 /* Ingredible */ = {
 			isa = PBXGroup;
 			children = (
+				EF466C36209CDD04007371E4 /* GoogleService-Info.plist */,
 				EFF3BE7E20812ABA00754D65 /* Models */,
 				EFF3BE7F20812ADE00754D65 /* Detail View */,
 				EFF3BE7C208129CA00754D65 /* HomeViewController.swift */,
-				EF55F452205F064E00F34677 /* GoogleService-Info.plist */,
 				EF0BFE0320532CEE00725EF5 /* AppDelegate.swift */,
 				EF0BFE0720532CEE00725EF5 /* Main.storyboard */,
 				EFF3BE71208032AB00754D65 /* FavoritesViewController.swift */,
@@ -203,7 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF0BFE0E20532CEE00725EF5 /* LaunchScreen.storyboard in Resources */,
-				EF55F453205F064F00F34677 /* GoogleService-Info.plist in Resources */,
+				EF466C37209CDD04007371E4 /* GoogleService-Info.plist in Resources */,
 				EF0BFE0B20532CEE00725EF5 /* Assets.xcassets in Resources */,
 				EF0BFE0920532CEE00725EF5 /* Main.storyboard in Resources */,
 			);

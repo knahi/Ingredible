@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddPantryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class AddPantryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
     
     @IBOutlet var tableView: UITableView!
     @IBOutlet var currentlySelected: UILabel!
@@ -49,7 +49,9 @@ class AddPantryViewController: UIViewController, UITableViewDataSource, UITableV
         tableView.layer.masksToBounds = true
         tableView.layer.borderColor = UIColor(red: 124/255, green: 154/255, blue: 114/255, alpha: 1).cgColor
         tableView.layer.borderWidth = 2.0
-
+        
+        //Code to allow tap removal of keyboard
+        pantryTitle.delegate = self as? UITextFieldDelegate
     }
     
     //TableView Set-Up
@@ -97,6 +99,7 @@ class AddPantryViewController: UIViewController, UITableViewDataSource, UITableV
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.tintColor = UIColor(red: 124/255, green: 154/255, blue: 114/255, alpha: 1)
         cell.textLabel?.text = ingredients[indexPath.section][indexPath.row]
@@ -148,4 +151,16 @@ class AddPantryViewController: UIViewController, UITableViewDataSource, UITableV
             fatalError("view is not contained by a navigation controller")
         }
     }
+    
+    //Tap dismiss the keyboard when the done button is typed
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder() //hide the keyboard
+        return true
+    }
+    
+    //When the keyboard is showing, tapping outside of the keyboard makes it go away
+//    @IBAction func tapToDismissKeyboard(_ sender: UITapGestureRecognizer) {
+//        pantryTitle.resignFirstResponder() //hide the keyboard
+//    }
+    
 }

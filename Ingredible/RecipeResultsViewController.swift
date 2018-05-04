@@ -26,9 +26,7 @@ class RecipeResultsViewController: UIViewController, UITableViewDataSource, UITa
         ref = Database.database().reference()
         
         self.navigationItem.hidesBackButton = true
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
+        
         fetchRecipes()
     }
     
