@@ -20,8 +20,11 @@ class PantryDetail: UIViewController, UITableViewDataSource, UITableViewDelegate
         tableView.dataSource = self
         
         pantryTitle.text = PantriesModel.title
-
-        // Do any additional setup after loading the view.
+        
+        // set tableview border
+        tableView.layer.masksToBounds = true
+        tableView.layer.borderColor = UIColor(red: 124/255, green: 154/255, blue: 114/255, alpha: 1).cgColor
+        tableView.layer.borderWidth = 2.0
     }
 
     override func didReceiveMemoryWarning() {

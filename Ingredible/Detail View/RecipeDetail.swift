@@ -23,6 +23,8 @@ class RecipeDetail: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.view.backgroundColor = UIColor(red: 237/255, green: 243/255, blue: 234/255, alpha: 1)
+
         let quantityString = RecipeModel.quantity.joined(separator: "\n")
         
         recipeTitle.text = RecipeModel.title
