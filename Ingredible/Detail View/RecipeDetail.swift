@@ -18,7 +18,7 @@ class RecipeDetail: UIViewController {
     @IBOutlet var quantityScrollView: UIScrollView!
     @IBOutlet var procedureScrollView: UIScrollView!
     var pressed = false
-
+    var popup:UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,6 +61,18 @@ class RecipeDetail: UIViewController {
             let defaults = UserDefaults.standard
             defaults.set(FavModel.favorites, forKey: "Favorites")
             defaults.synchronize()
+            
+            // Alert view
+            let alert = UIAlertController(title: "Recipe Favorited!", message: "Uncheck the star to remove recipe from favorite screen.", preferredStyle: .alert)
+            self.present(alert, animated: true, completion: nil)
+            
+            // Displays for 3 seconds that dismisses
+            let when = DispatchTime.now() + 3
+            DispatchQueue.main.asyncAfter(deadline: when){
+                // your code with delay
+                alert.dismiss(animated: true, completion: nil)
+            }
+            
         } else {
             favoriteButton.image = UIImage(named: "empty-star")
             pressed = false
@@ -75,6 +87,7 @@ class RecipeDetail: UIViewController {
         }
         
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
