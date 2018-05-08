@@ -10,6 +10,7 @@ import UIKit
 
 class FavoriteDetail: UIViewController {
     
+    @IBOutlet weak var backButton: UIBarButtonItem!
     @IBOutlet var recipeTitle: UILabel!
     @IBOutlet var servings: UILabel!
     @IBOutlet var quantity: UILabel!
@@ -36,6 +37,9 @@ class FavoriteDetail: UIViewController {
         if FavModel.favorites[RecipeModel.title] != nil {
             pressed = true
             favoriteButton.image = UIImage(named: "filled-in-star")        }
+        
+        // set font for back button
+        backButton.setTitleTextAttributes([ NSAttributedStringKey.font: UIFont(name: "Avenir", size: 18)!], for: UIControlState.normal)
         
         // set quantity border
         quantityScrollView.layer.masksToBounds = true

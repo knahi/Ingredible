@@ -52,7 +52,8 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
     // override
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "customcell", for: indexPath) 
+        let cell = tableView.dequeueReusableCell(withIdentifier: "customcell", for: indexPath)
+        cell.textLabel?.font = UIFont(name:"Avenir", size:18)
         let dicTitle = Array(FavModel.favorites.keys).sorted()
         cell.textLabel?.text = dicTitle[indexPath.item]
         cell.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
