@@ -64,10 +64,8 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
         // Find the index of "No pantry" and set it as the default pick
         let defaultRowIndex = Array(PantriesModel.pantries.keys).sorted().index(of: "No pantry")
         pickerView.selectRow(defaultRowIndex!, inComponent: 0, animated: true)
-        
-        // set font size of segmented control segments
-        let font = UIFont.systemFont(ofSize: 12)
-        mealType.setTitleTextAttributes([NSAttributedStringKey.font: font], for: .normal)
+        let attr = NSDictionary(object: UIFont(name: "Avenir", size: 12)!, forKey: NSAttributedStringKey.font as NSCopying)
+        mealType.setTitleTextAttributes(attr as [NSObject : AnyObject], for: .normal)
         
         //Firebase setup
         ref = Database.database().reference()
@@ -135,6 +133,7 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
         view.tintColor = UIColor(red: 124/255, green: 154/255, blue: 114/255, alpha: 1)
         let header = view as! UITableViewHeaderFooterView
         header.textLabel?.textColor = UIColor.white
+        header.textLabel?.font = UIFont(name:"Avenir", size:16)
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -164,6 +163,7 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.font = UIFont(name:"Avenir", size:16)
         cell.tintColor = UIColor(red: 124/255, green: 154/255, blue: 114/255, alpha: 1)
         cell.textLabel?.text = ingredients[indexPath.section][indexPath.row]
         cell.accessoryType = .none
@@ -194,7 +194,17 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
         return keys[row]
     }
     
-
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        var pickerLabel: UILabel? = (view as? UILabel)
+        if pickerLabel == nil {
+            pickerLabel = UILabel()
+            pickerLabel?.font = UIFont(name: "Avenir", size: 20)
+            pickerLabel?.textAlignment = .center
+        }
+        pickerLabel?.text = Array(PantriesModel.pantries.keys).sorted()[row]
+        
+        return pickerLabel!
+    }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         let keys = Array(PantriesModel.pantries.keys).sorted()
@@ -208,7 +218,7 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
         
         //Combine picker and table view ingredients
         allIngredients = selectedIngredients
-        //Protect against unwanted comma before ingredinets
+        //Protect against unwanted comma before ingredients
         if selectedPantry != [""] {
             allIngredients.append(contentsOf: selectedPantry)
         }

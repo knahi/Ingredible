@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dVw-bR-zyL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dVw-bR-zyL">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Book</string>
+            <string>Avenir-BookOblique</string>
+            <string>Avenir-Heavy</string>
+            <string>Avenir-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Home View Controller-->
         <scene sceneID="yVN-q1-XER">
@@ -142,7 +150,7 @@
                                                 </connections>
                                             </segmentedControl>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OAt-Qk-iYf">
-                                                <rect key="frame" x="50" y="452" width="275" height="355"/>
+                                                <rect key="frame" x="50" y="455.5" width="275" height="355"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="355" id="hsq-8i-cgS"/>
@@ -174,7 +182,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QTz-LQ-9eN">
-                                                <rect key="frame" x="17" y="866" width="341" height="136"/>
+                                                <rect key="frame" x="17" y="873.5" width="341" height="128.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJ9-qV-T71">
                                                         <rect key="frame" x="0.0" y="0.0" width="340" height="0.0"/>
@@ -193,15 +201,15 @@
                                                     <constraint firstItem="HJ9-qV-T71" firstAttribute="leading" secondItem="QTz-LQ-9eN" secondAttribute="leading" id="uVE-Av-xFJ"/>
                                                 </constraints>
                                             </scrollView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredient Search" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZMg-3f-VTy">
-                                                <rect key="frame" x="50" y="413" width="225" height="23.5"/>
-                                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredient Search:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZMg-3f-VTy">
+                                                <rect key="frame" x="50" y="413" width="275" height="27.5"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selected Ingredients:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bhb-B3-rGf">
-                                                <rect key="frame" x="17" y="826" width="341" height="23.5"/>
-                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selected Ingredients:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bhb-B3-rGf">
+                                                <rect key="frame" x="17" y="829.5" width="341" height="27.5"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -211,7 +219,7 @@
                                             <constraint firstItem="g5o-pu-eAg" firstAttribute="leading" secondItem="Jyg-Md-mbC" secondAttribute="leading" constant="100" id="0qB-xe-sP1"/>
                                             <constraint firstAttribute="trailing" secondItem="sXK-ED-lXU" secondAttribute="trailing" constant="150" id="2Xc-Rl-CyN"/>
                                             <constraint firstItem="ut6-ER-Dhh" firstAttribute="leading" secondItem="Jyg-Md-mbC" secondAttribute="leading" constant="8" id="5fa-4l-rbk"/>
-                                            <constraint firstAttribute="trailing" secondItem="ZMg-3f-VTy" secondAttribute="trailing" constant="100" id="5wF-W9-lB0"/>
+                                            <constraint firstAttribute="trailing" secondItem="ZMg-3f-VTy" secondAttribute="trailing" constant="50" id="5wF-W9-lB0"/>
                                             <constraint firstItem="OAt-Qk-iYf" firstAttribute="top" secondItem="ZMg-3f-VTy" secondAttribute="bottom" constant="15.5" id="AgD-tP-8h3"/>
                                             <constraint firstAttribute="height" constant="1100" id="BDh-IJ-WVk"/>
                                             <constraint firstItem="NOn-7I-Tjd" firstAttribute="top" secondItem="ut6-ER-Dhh" secondAttribute="bottom" constant="35" id="D6k-nf-lEe"/>
@@ -283,7 +291,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gv5-jr-uma" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1718" y="2166"/>
+            <point key="canvasLocation" x="1717.5999999999999" y="2165.217391304348"/>
         </scene>
         <!--RecipeResults-->
         <scene sceneID="kfJ-yz-cGG">
