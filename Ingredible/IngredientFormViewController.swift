@@ -69,12 +69,15 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
         let defaultRowIndex = Array(PantriesModel.pantries.keys).sorted().index(of: "No pantry")
         pickerView.selectRow(defaultRowIndex!, inComponent: 0, animated: true)
         
-        // set font for meal type segmented control
+        // Set font for meal type segmented control
         let attr = NSDictionary(object: UIFont(name: "Avenir", size: 12)!, forKey: NSAttributedStringKey.font as NSCopying)
         mealType.setTitleTextAttributes(attr as [NSObject : AnyObject], for: .normal)
         
-        // set font for back button
+        // Set font for back button
         backButton.setTitleTextAttributes([ NSAttributedStringKey.font: UIFont(name: "Avenir", size: 18)!], for: UIControlState.normal)
+        
+        // Set label for selected ingredients
+        currentlySelected.text = "No ingredients currently selected."
         
         //Firebase setup
         ref = Database.database().reference()
@@ -168,6 +171,10 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
         //Set label
         let stringText = uniqueIngredients.joined(separator: ", ")
         currentlySelected.text = stringText
+        print(uniqueIngredients)
+        if uniqueIngredients.isEmpty {
+            currentlySelected.text = "No ingredients currently selected."
+        }
         currentlySelected.font = UIFont(name:"Avenir", size: 16.0)
     }
     
@@ -238,6 +245,9 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
         //Set label
         let stringText = uniqueIngredients.joined(separator: ", ")
         currentlySelected.text = stringText
+        if uniqueIngredients.isEmpty {
+            currentlySelected.text = "No ingredients currently selected."
+        }
         currentlySelected.font = UIFont(name:"Avenir", size: 16.0)
         
     }

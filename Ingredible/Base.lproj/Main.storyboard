@@ -1,21 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dVw-bR-zyL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dVw-bR-zyL">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Avenir.ttc">
-            <string>Avenir-Book</string>
-            <string>Avenir-BookOblique</string>
-            <string>Avenir-Heavy</string>
-            <string>Avenir-Medium</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Home View Controller-->
         <scene sceneID="yVN-q1-XER">
@@ -520,8 +512,13 @@
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
                                 </accessibility>
-                                <mutableString key="text">Welcome to Ingredible!Our goal for this project is to create an aesthetically pleasing mobile application that allows users to find recipes from their existing ingredient list. The recipes in our app will be pulled from websites like AllRecipes and FoodNetwork, various cookbooks, and our personal recipe archives. There are a few existing webpages, like SuperCook and FOODWISE, that have very elegantly tackled this application design. However, no mobile application that we have found has successfully implemented this idea. Apps like BigOven, CookPad, and EpiCurious are recipe-related and have achieved good ratings and many positive reviews, but do not offer an ingredient-to-recipe service. 
-We created this app to not only benefit college students on a budget, but also to help all chefs focused on eliminating waste. </mutableString>
+                                <mutableString key="text">Welcome to Ingredible, an ingredient-to-recipe application dedicated to helping you use up all of the ingredients in your kitchen! 
+
+Just getting started? Navigate over to the "Home" screen and click on "Start cooking”. Input your ingredients to begin your recipe search or go to the "Pantries" screen to input your common kitchen ingredients. We've included some starter pantries to help you begin your culinary adventure, but feel free to add your own custom pantries to aid in your recipe search.
+
+Remember to star your favorite recipes. Our "Favorites" screen will keep them all in one place so you can revisit your personal favorites again and again!
+
+And finally, thank you for using Ingredible!</mutableString>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

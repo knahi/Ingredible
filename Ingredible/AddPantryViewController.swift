@@ -18,8 +18,6 @@ class AddPantryViewController: UIViewController, UITableViewDataSource, UITableV
     
     var selectedIndexPathArray = Array<NSIndexPath>()
     var selectedIngredients = Array<String>()
-    var selectedPantry = Array<String>()
-    var allIngredients = Array<String>()
     var uniqueIngredients = Array<String>()
     
     let foodCategories = ["Grains", "Fruits", "Vegetables", "Proteins", "Dairy", "Sweets/Fats", "Seasoning"]
@@ -46,15 +44,18 @@ class AddPantryViewController: UIViewController, UITableViewDataSource, UITableV
         tableView.delegate = self
         tableView.dataSource = self
         
-        // set tableview border
+        // Set tableview border
         tableView.layer.masksToBounds = true
         tableView.layer.borderColor = UIColor(red: 124/255, green: 154/255, blue: 114/255, alpha: 1).cgColor
         tableView.layer.borderWidth = 2.0
         
-        // set font for back button
+        // Set font for back button
         backButton.setTitleTextAttributes([ NSAttributedStringKey.font: UIFont(name: "Avenir", size: 18)!], for: UIControlState.normal)
         
-        //Code to allow tap removal of keyboard
+        // Set selected ingredient label
+        currentlySelected.text = "No ingredients currently selected."
+        
+        // Code to allow tap removal of keyboard
         pantryTitle.delegate = self as? UITextFieldDelegate
     }
     
@@ -93,14 +94,15 @@ class AddPantryViewController: UIViewController, UITableViewDataSource, UITableV
         tableView.reloadData()
 
         //Combine picker and table view ingredients
-        allIngredients = selectedIngredients
-        allIngredients.append(contentsOf: selectedPantry)
-        uniqueIngredients = Array(Set(allIngredients))
+        uniqueIngredients = Array(Set(selectedIngredients))
         uniqueIngredients = uniqueIngredients.sorted()
 
         //Set label
         let stringText = uniqueIngredients.joined(separator: ", ")
         currentlySelected.text = stringText
+        if uniqueIngredients.isEmpty {
+            currentlySelected.text = "No ingredients currently selected."
+        }
         currentlySelected.font = UIFont(name:"Avenir", size: 16.0)
     }
 
