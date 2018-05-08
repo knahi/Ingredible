@@ -77,8 +77,8 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g5o-pu-eAg">
                                                 <rect key="frame" x="100" y="1019" width="175" height="36"/>
                                                 <color key="backgroundColor" red="0.92868542671203613" green="0.95370173454284668" blue="0.91747212409973145" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
-                                                <state key="normal" title="Get results!">
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                                <state key="normal" title="Get Results">
                                                     <color key="titleColor" red="0.34652411937713623" green="0.4295177161693573" blue="0.32102856040000916" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </state>
                                                 <connections>
@@ -120,7 +120,7 @@
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pantry:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sXK-ED-lXU">
                                                 <rect key="frame" x="150" y="210.5" width="75" height="27.5"/>
-                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                                <fontDescription key="fontDescription" name="Avenir-BookOblique" family="Avenir" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -203,13 +203,13 @@
                                             </scrollView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredient Search:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZMg-3f-VTy">
                                                 <rect key="frame" x="50" y="413" width="275" height="27.5"/>
-                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                                <fontDescription key="fontDescription" name="Avenir-BookOblique" family="Avenir" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selected Ingredients:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bhb-B3-rGf">
                                                 <rect key="frame" x="17" y="829.5" width="341" height="27.5"/>
-                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                                <fontDescription key="fontDescription" name="Avenir-BookOblique" family="Avenir" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -279,6 +279,7 @@
                     </navigationItem>
                     <size key="freeformSize" width="375" height="1200"/>
                     <connections>
+                        <outlet property="backButton" destination="1th-4c-fup" id="xvK-1A-u61"/>
                         <outlet property="currentlySelected" destination="HJ9-qV-T71" id="abt-Xn-Rzb"/>
                         <outlet property="mealType" destination="ut6-ER-Dhh" id="mhT-RG-wpU"/>
                         <outlet property="pickerView" destination="L34-a5-ye6" id="Ga7-aQ-3m3"/>
@@ -373,6 +374,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="backButton" destination="Oue-fL-azN" id="PtK-MP-8Bq"/>
                         <outlet property="tableView" destination="LQN-Yw-Y0G" id="GgT-vd-Zwa"/>
                         <segue destination="o78-vM-dd8" kind="presentation" identifier="showRecipeDetail" id="lVK-hD-yPQ"/>
                     </connections>
@@ -485,6 +487,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="backButton" destination="CbH-kI-QhN" id="dcG-oU-a88"/>
                         <outlet property="favoriteButton" destination="jDl-Cf-KaE" id="VkR-sD-Pcg"/>
                         <outlet property="procedure" destination="u6O-lo-SG2" id="Zd9-u6-XRd"/>
                         <outlet property="procedureScrollView" destination="1hj-G7-X86" id="ctA-Hi-9jP"/>
@@ -619,7 +622,7 @@ We created this app to not only benefit college students on a budget, but also t
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xAo-2H-Ud2">
-                                <rect key="frame" x="17" y="249" width="341" height="238"/>
+                                <rect key="frame" x="17" y="253" width="341" height="238"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="238" id="M0F-w0-Msi"/>
@@ -635,9 +638,9 @@ We created this app to not only benefit college students on a budget, but also t
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selected Ingredients" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OgZ-fD-jNL">
-                                <rect key="frame" x="17" y="519" width="341" height="23.5"/>
-                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selected Ingredients:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OgZ-fD-jNL">
+                                <rect key="frame" x="17" y="506" width="341" height="27.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-BookOblique" family="Avenir" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -662,7 +665,7 @@ We created this app to not only benefit college students on a budget, but also t
                                 </subviews>
                             </stackView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HaI-Vt-GAP">
-                                <rect key="frame" x="17" y="552.5" width="341" height="36.5"/>
+                                <rect key="frame" x="17" y="543.5" width="341" height="45.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MXQ-m6-ye6">
                                         <rect key="frame" x="0.0" y="0.0" width="340" height="0.0"/>
@@ -698,9 +701,9 @@ We created this app to not only benefit college students on a budget, but also t
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredient Search" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FN9-L4-a9E">
-                                <rect key="frame" x="17" y="217" width="157" height="23.5"/>
-                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredient Search:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FN9-L4-a9E">
+                                <rect key="frame" x="17" y="217" width="341" height="27.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-BookOblique" family="Avenir" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -708,7 +711,7 @@ We created this app to not only benefit college students on a budget, but also t
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="6Wi-aY-X4F" firstAttribute="trailing" secondItem="FN9-L4-a9E" secondAttribute="trailing" constant="201" id="1hF-Xs-Ic9"/>
+                            <constraint firstItem="6Wi-aY-X4F" firstAttribute="trailing" secondItem="FN9-L4-a9E" secondAttribute="trailing" constant="17" id="1hF-Xs-Ic9"/>
                             <constraint firstItem="HaI-Vt-GAP" firstAttribute="top" secondItem="OgZ-fD-jNL" secondAttribute="bottom" constant="10" id="56e-Be-Hw0"/>
                             <constraint firstItem="6Wi-aY-X4F" firstAttribute="trailing" secondItem="jpX-WY-U0P" secondAttribute="trailing" constant="100" id="8Qt-K4-QGZ"/>
                             <constraint firstItem="jpX-WY-U0P" firstAttribute="leading" secondItem="6Wi-aY-X4F" secondAttribute="leading" constant="100" id="8Zs-y0-dmk"/>
@@ -729,7 +732,7 @@ We created this app to not only benefit college students on a budget, but also t
                             <constraint firstItem="6Wi-aY-X4F" firstAttribute="bottom" secondItem="jpX-WY-U0P" secondAttribute="bottom" constant="25" id="mpe-SD-a85"/>
                             <constraint firstItem="O33-Ug-uyX" firstAttribute="leading" secondItem="6Wi-aY-X4F" secondAttribute="leading" constant="75" id="o3c-6E-egJ"/>
                             <constraint firstItem="jpX-WY-U0P" firstAttribute="top" secondItem="HaI-Vt-GAP" secondAttribute="bottom" constant="17" id="qqE-dd-BIn"/>
-                            <constraint firstItem="OgZ-fD-jNL" firstAttribute="top" secondItem="xAo-2H-Ud2" secondAttribute="bottom" constant="32" id="rAc-av-njI"/>
+                            <constraint firstItem="OgZ-fD-jNL" firstAttribute="top" secondItem="xAo-2H-Ud2" secondAttribute="bottom" constant="15" id="rAc-av-njI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Wi-aY-X4F"/>
                         <connections>
@@ -745,6 +748,7 @@ We created this app to not only benefit college students on a budget, but also t
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="backButton" destination="uQw-pl-oX9" id="ZAo-cP-IzL"/>
                         <outlet property="currentlySelected" destination="MXQ-m6-ye6" id="DoL-RW-Kln"/>
                         <outlet property="pantryTitle" destination="Lh1-GD-LU2" id="UiY-Jt-WRt"/>
                         <outlet property="scroller" destination="HaI-Vt-GAP" id="XPf-n8-ZSq"/>
@@ -784,7 +788,7 @@ We created this app to not only benefit college students on a budget, but also t
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jKi-E2-lKC">
                                 <rect key="frame" x="15" y="86.5" width="345" height="33"/>
-                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="24"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -814,6 +818,7 @@ We created this app to not only benefit college students on a budget, but also t
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="backButton" destination="1Sb-Bm-epb" id="XiB-5O-RpL"/>
                         <outlet property="pantryTitle" destination="jKi-E2-lKC" id="0xf-wq-h2W"/>
                         <outlet property="tableView" destination="uHg-uy-Jw3" id="URW-HG-3wV"/>
                     </connections>

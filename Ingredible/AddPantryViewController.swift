@@ -10,6 +10,7 @@ import UIKit
 
 class AddPantryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
     
+    @IBOutlet weak var backButton: UIBarButtonItem!
     @IBOutlet var tableView: UITableView!
     @IBOutlet var currentlySelected: UILabel!
     @IBOutlet var scroller: UIScrollView!
@@ -50,6 +51,9 @@ class AddPantryViewController: UIViewController, UITableViewDataSource, UITableV
         tableView.layer.borderColor = UIColor(red: 124/255, green: 154/255, blue: 114/255, alpha: 1).cgColor
         tableView.layer.borderWidth = 2.0
         
+        // set font for back button
+        backButton.setTitleTextAttributes([ NSAttributedStringKey.font: UIFont(name: "Avenir", size: 18)!], for: UIControlState.normal)
+        
         //Code to allow tap removal of keyboard
         pantryTitle.delegate = self as? UITextFieldDelegate
     }
@@ -73,6 +77,7 @@ class AddPantryViewController: UIViewController, UITableViewDataSource, UITableV
         view.tintColor = UIColor(red: 124/255, green: 154/255, blue: 114/255, alpha: 1)
         let header = view as! UITableViewHeaderFooterView
         header.textLabel?.textColor = UIColor.white
+        header.textLabel?.font = UIFont(name:"Avenir", size:16)
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -96,11 +101,13 @@ class AddPantryViewController: UIViewController, UITableViewDataSource, UITableV
         //Set label
         let stringText = uniqueIngredients.joined(separator: ", ")
         currentlySelected.text = stringText
+        currentlySelected.font = UIFont(name:"Avenir", size: 16.0)
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.font = UIFont(name:"Avenir", size:16)
         cell.tintColor = UIColor(red: 124/255, green: 154/255, blue: 114/255, alpha: 1)
         cell.textLabel?.text = ingredients[indexPath.section][indexPath.row]
         cell.accessoryType = .none

@@ -11,6 +11,7 @@ import Firebase
 class RecipeResultsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate  {
     
     @IBOutlet var tableView: UITableView!
+    @IBOutlet weak var backButton: UIBarButtonItem!
     
     var ref: DatabaseReference!
     var refHandle: UInt!
@@ -27,6 +28,9 @@ class RecipeResultsViewController: UIViewController, UITableViewDataSource, UITa
         
         self.navigationItem.hidesBackButton = true
         
+        // set font for back button
+        backButton.setTitleTextAttributes([ NSAttributedStringKey.font: UIFont(name: "Avenir", size: 18)!], for: UIControlState.normal)
+        
         fetchRecipes()
     }
     
@@ -34,7 +38,17 @@ class RecipeResultsViewController: UIViewController, UITableViewDataSource, UITa
         // provide an alert if the recipe search did not yield any recipes
         if FavModel.allRecipes.isEmpty {
             let alert = UIAlertController(title: "Your search did not yield any recipes.", message: "Try adding more ingredients to your search. Make sure you include common items like salt and pepper.", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+            
+            let myTitle  = "Your search did not yield any recipes."
+            let myMessage = "Try adding more ingredients to your search. Make sure you include common items like salt and pepper."
+            var myMutableStringTitle = NSMutableAttributedString()
+            var myMutableStringMessage = NSMutableAttributedString()
+            myMutableStringTitle = NSMutableAttributedString(string: myTitle as String, attributes: [NSAttributedStringKey.font:UIFont(name: "Avenir", size: 16.0)!])
+            myMutableStringMessage = NSMutableAttributedString(string: myMessage as String, attributes: [NSAttributedStringKey.font:UIFont(name: "Avenir", size: 13.0)!])
+            alert.setValue(myMutableStringTitle, forKey: "attributedTitle")
+            alert.setValue(myMutableStringMessage, forKey: "attributedMessage")
+            
+            let action = UIAlertAction(title: "OK", style: .default, handler: { action in
                 if self.presentingViewController is UITabBarController{
                     self.dismiss(animated: true, completion: nil)
                 }else if let owningNavController = self.navigationController{
@@ -42,7 +56,9 @@ class RecipeResultsViewController: UIViewController, UITableViewDataSource, UITa
                 }else{
                     fatalError("view is not contained by a navigation controller")
                 }
-            }))
+            })
+            action.setValue(UIColor(red: 124/255, green: 154/255, blue: 114/255, alpha: 1), forKey: "titleTextColor")
+            alert.addAction(action)
             self.present(alert, animated: true)
         }
     }
@@ -122,7 +138,8 @@ class RecipeResultsViewController: UIViewController, UITableViewDataSource, UITa
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "customcell", for: indexPath) 
+        let cell = tableView.dequeueReusableCell(withIdentifier: "customcell", for: indexPath)
+        cell.textLabel?.font = UIFont(name:"Avenir", size:18)
         cell.textLabel?.text = FavModel.allTitles[indexPath.item]
         cell.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
         return cell

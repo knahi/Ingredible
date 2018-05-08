@@ -11,6 +11,7 @@ import Firebase
 
 class IngredientFormViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
     
+    @IBOutlet weak var backButton: UIBarButtonItem!
     @IBOutlet weak var mealType: UISegmentedControl!
     @IBOutlet weak var vegetarian: UISwitch!
     @IBOutlet weak var vegan: UISwitch!
@@ -64,8 +65,13 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
         // Find the index of "No pantry" and set it as the default pick
         let defaultRowIndex = Array(PantriesModel.pantries.keys).sorted().index(of: "No pantry")
         pickerView.selectRow(defaultRowIndex!, inComponent: 0, animated: true)
+        
+        // set font for meal type segmented control
         let attr = NSDictionary(object: UIFont(name: "Avenir", size: 12)!, forKey: NSAttributedStringKey.font as NSCopying)
         mealType.setTitleTextAttributes(attr as [NSObject : AnyObject], for: .normal)
+        
+        // set font for back button
+        backButton.setTitleTextAttributes([ NSAttributedStringKey.font: UIFont(name: "Avenir", size: 18)!], for: UIControlState.normal)
         
         //Firebase setup
         ref = Database.database().reference()
@@ -159,6 +165,7 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
         //Set label
         let stringText = uniqueIngredients.joined(separator: ", ")
         currentlySelected.text = stringText
+        currentlySelected.font = UIFont(name:"Avenir", size: 16.0)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -228,6 +235,7 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
         //Set label
         let stringText = uniqueIngredients.joined(separator: ", ")
         currentlySelected.text = stringText
+        currentlySelected.font = UIFont(name:"Avenir", size: 16.0)
         
     }
     

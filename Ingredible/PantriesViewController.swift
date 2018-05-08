@@ -45,6 +45,7 @@ class PantriesViewController: UIViewController, UITableViewDataSource, UITableVi
         let index = titles.index(of: "No pantry")
         titles.remove(at: index!)
         let cell = tableView.dequeueReusableCell(withIdentifier: "customcell", for: indexPath)
+        cell.textLabel?.font = UIFont(name:"Avenir", size:18)
         cell.textLabel?.text = titles[indexPath.item]
         cell.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
         return cell

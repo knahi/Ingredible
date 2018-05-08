@@ -18,6 +18,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        // set tab bar font
+        let appearance = UITabBarItem.appearance()
+        let attributes = [NSAttributedStringKey.font:UIFont(name: "Avenir", size: 10)]
+        appearance.setTitleTextAttributes(attributes, for: .normal)
+        
         let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
         if !launchedBefore {
             //Add default pantries -- these will populate only when the app is initially downloaded

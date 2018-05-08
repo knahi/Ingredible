@@ -10,6 +10,7 @@ import UIKit
 
 class PantryDetail: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    @IBOutlet weak var backButton: UIBarButtonItem!
     @IBOutlet var pantryTitle: UILabel!
     @IBOutlet var tableView: UITableView!
     
@@ -20,6 +21,9 @@ class PantryDetail: UIViewController, UITableViewDataSource, UITableViewDelegate
         tableView.dataSource = self
         
         pantryTitle.text = PantriesModel.title
+        
+        // set font for back button
+        backButton.setTitleTextAttributes([ NSAttributedStringKey.font: UIFont(name: "Avenir", size: 18)!], for: UIControlState.normal)
         
         // set tableview border
         tableView.layer.masksToBounds = true
@@ -38,8 +42,8 @@ class PantryDetail: UIViewController, UITableViewDataSource, UITableViewDelegate
     
     // override
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "customcell", for: indexPath) 
+        let cell = tableView.dequeueReusableCell(withIdentifier: "customcell", for: indexPath)
+        cell.textLabel?.font = UIFont(name:"Avenir", size:16)
         cell.textLabel?.text = PantriesModel.ingredients[indexPath.item]
         return cell
     }

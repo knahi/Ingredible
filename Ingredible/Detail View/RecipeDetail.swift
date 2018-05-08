@@ -10,6 +10,7 @@ import UIKit
 
 class RecipeDetail: UIViewController {
 
+    @IBOutlet weak var backButton: UIBarButtonItem!
     @IBOutlet var recipeTitle: UILabel!
     @IBOutlet var servings: UILabel!
     @IBOutlet var quantity: UILabel!
@@ -38,6 +39,9 @@ class RecipeDetail: UIViewController {
             favoriteButton.image = UIImage(named: "filled-in-star")
         }
         
+        // set font for back button
+        backButton.setTitleTextAttributes([ NSAttributedStringKey.font: UIFont(name: "Avenir", size: 18)!], for: UIControlState.normal)
+        
         // set quantity border
         quantityScrollView.layer.masksToBounds = true
         quantityScrollView.layer.borderColor = UIColor(red: 124/255, green: 154/255, blue: 114/255, alpha: 1).cgColor
@@ -64,6 +68,16 @@ class RecipeDetail: UIViewController {
             
             // Alert view
             let alert = UIAlertController(title: "Recipe Favorited!", message: "Uncheck the star to remove recipe from favorite screen.", preferredStyle: .alert)
+            
+            // set font for alert
+            let myTitle  = "Recipe Favorited!"
+            let myMessage = "Uncheck the star to remove recipe from favorite screen."
+            var myMutableStringTitle = NSMutableAttributedString()
+            var myMutableStringMessage = NSMutableAttributedString()
+            myMutableStringTitle = NSMutableAttributedString(string: myTitle as String, attributes: [NSAttributedStringKey.font:UIFont(name: "Avenir", size: 16.0)!])
+            myMutableStringMessage = NSMutableAttributedString(string: myMessage as String, attributes: [NSAttributedStringKey.font:UIFont(name: "Avenir", size: 13.0)!])
+            alert.setValue(myMutableStringTitle, forKey: "attributedTitle")
+            alert.setValue(myMutableStringMessage, forKey: "attributedMessage")
             self.present(alert, animated: true, completion: nil)
             
             // Displays for 3 seconds that dismisses
