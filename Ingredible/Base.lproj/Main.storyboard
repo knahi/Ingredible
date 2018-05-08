@@ -111,13 +111,13 @@
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pantry:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sXK-ED-lXU">
-                                                <rect key="frame" x="150" y="210.5" width="75" height="27.5"/>
-                                                <fontDescription key="fontDescription" name="Avenir-BookOblique" family="Avenir" pointSize="20"/>
+                                                <rect key="frame" x="150" y="210.5" width="75" height="23.5"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <pickerView contentMode="scaleToFill" horizontalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="L34-a5-ye6">
-                                                <rect key="frame" x="50" y="238" width="275" height="175"/>
+                                                <rect key="frame" x="50" y="234" width="275" height="175"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="175" id="OWz-53-Xqt"/>
                                                 </constraints>
@@ -142,7 +142,7 @@
                                                 </connections>
                                             </segmentedControl>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OAt-Qk-iYf">
-                                                <rect key="frame" x="50" y="455.5" width="275" height="355"/>
+                                                <rect key="frame" x="50" y="447.5" width="275" height="355"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="355" id="hsq-8i-cgS"/>
@@ -174,9 +174,9 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QTz-LQ-9eN">
-                                                <rect key="frame" x="17" y="873.5" width="341" height="128.5"/>
+                                                <rect key="frame" x="17" y="860" width="341" height="142"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJ9-qV-T71">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJ9-qV-T71">
                                                         <rect key="frame" x="0.0" y="0.0" width="340" height="0.0"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="340" id="aYu-FF-3JE"/>
@@ -194,14 +194,14 @@
                                                 </constraints>
                                             </scrollView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredient Search:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZMg-3f-VTy">
-                                                <rect key="frame" x="50" y="413" width="275" height="27.5"/>
-                                                <fontDescription key="fontDescription" name="Avenir-BookOblique" family="Avenir" pointSize="20"/>
+                                                <rect key="frame" x="50" y="409" width="275" height="23.5"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selected Ingredients:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bhb-B3-rGf">
-                                                <rect key="frame" x="17" y="829.5" width="341" height="27.5"/>
-                                                <fontDescription key="fontDescription" name="Avenir-BookOblique" family="Avenir" pointSize="20"/>
+                                                <rect key="frame" x="17" y="821.5" width="341" height="23.5"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -234,7 +234,7 @@
                                             <constraint firstItem="Bhb-B3-rGf" firstAttribute="top" secondItem="OAt-Qk-iYf" secondAttribute="bottom" constant="19" id="hhT-DV-mmI"/>
                                             <constraint firstItem="sXK-ED-lXU" firstAttribute="leading" secondItem="Jyg-Md-mbC" secondAttribute="leading" constant="150" id="iI6-Fr-cu1"/>
                                             <constraint firstAttribute="trailing" secondItem="QTz-LQ-9eN" secondAttribute="trailing" constant="17" id="jDS-hg-wPI"/>
-                                            <constraint firstItem="QTz-LQ-9eN" firstAttribute="top" secondItem="Bhb-B3-rGf" secondAttribute="bottom" constant="16.5" id="jT0-fJ-faU"/>
+                                            <constraint firstItem="QTz-LQ-9eN" firstAttribute="top" secondItem="Bhb-B3-rGf" secondAttribute="bottom" constant="15" id="jT0-fJ-faU"/>
                                             <constraint firstItem="bmf-uN-ELL" firstAttribute="leading" secondItem="Jyg-Md-mbC" secondAttribute="leading" constant="75" id="otT-JQ-VbT"/>
                                             <constraint firstAttribute="trailing" secondItem="bmf-uN-ELL" secondAttribute="trailing" constant="75" id="puw-oh-Sbt"/>
                                             <constraint firstItem="Bhb-B3-rGf" firstAttribute="leading" secondItem="Jyg-Md-mbC" secondAttribute="leading" constant="17" id="q0Y-e3-AcG"/>
@@ -614,10 +614,10 @@ We created this app to not only benefit college students on a budget, but also t
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xAo-2H-Ud2">
-                                <rect key="frame" x="17" y="253" width="341" height="238"/>
+                                <rect key="frame" x="17" y="249" width="341" height="230"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="238" id="M0F-w0-Msi"/>
+                                    <constraint firstAttribute="height" constant="230" id="M0F-w0-Msi"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="33" id="QIq-0d-HTM">
@@ -630,9 +630,9 @@ We created this app to not only benefit college students on a budget, but also t
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selected Ingredients:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OgZ-fD-jNL">
-                                <rect key="frame" x="17" y="506" width="341" height="27.5"/>
-                                <fontDescription key="fontDescription" name="Avenir-BookOblique" family="Avenir" pointSize="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selected Ingredients:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OgZ-fD-jNL">
+                                <rect key="frame" x="17" y="494" width="341" height="23.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -657,7 +657,7 @@ We created this app to not only benefit college students on a budget, but also t
                                 </subviews>
                             </stackView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HaI-Vt-GAP">
-                                <rect key="frame" x="17" y="543.5" width="341" height="45.5"/>
+                                <rect key="frame" x="17" y="527.5" width="341" height="61.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MXQ-m6-ye6">
                                         <rect key="frame" x="0.0" y="0.0" width="340" height="0.0"/>
@@ -693,9 +693,9 @@ We created this app to not only benefit college students on a budget, but also t
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredient Search:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FN9-L4-a9E">
-                                <rect key="frame" x="17" y="217" width="341" height="27.5"/>
-                                <fontDescription key="fontDescription" name="Avenir-BookOblique" family="Avenir" pointSize="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredient Search:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FN9-L4-a9E">
+                                <rect key="frame" x="17" y="217" width="341" height="23.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
