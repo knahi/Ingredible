@@ -151,7 +151,9 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
         
         //Combine picker and table view ingredients
         allIngredients = selectedIngredients
-        allIngredients.append(contentsOf: selectedPantry)
+        if selectedPantry != [""] {
+            allIngredients.append(contentsOf: selectedPantry)
+        }
         uniqueIngredients = Array(Set(allIngredients))
         uniqueIngredients = uniqueIngredients.sorted()
         
@@ -206,7 +208,10 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
         
         //Combine picker and table view ingredients
         allIngredients = selectedIngredients
-        allIngredients.append(contentsOf: selectedPantry)
+        //Protect against unwanted comma before ingredinets
+        if selectedPantry != [""] {
+            allIngredients.append(contentsOf: selectedPantry)
+        }
         uniqueIngredients = Array(Set(allIngredients))
         uniqueIngredients = uniqueIngredients.sorted()
         
