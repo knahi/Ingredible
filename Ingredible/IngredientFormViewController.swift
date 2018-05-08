@@ -62,6 +62,9 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
         pickerView.delegate = self
         pickerView.dataSource = self
         
+        pickerView.layer.borderColor = UIColor(red: 124/255, green: 154/255, blue: 114/255, alpha: 1).cgColor
+        pickerView.layer.borderWidth = 2.0
+        
         // Find the index of "No pantry" and set it as the default pick
         let defaultRowIndex = Array(PantriesModel.pantries.keys).sorted().index(of: "No pantry")
         pickerView.selectRow(defaultRowIndex!, inComponent: 0, animated: true)
