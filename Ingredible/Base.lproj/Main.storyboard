@@ -923,6 +923,7 @@ We created this app to not only benefit college students on a budget, but also t
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="backButton" destination="Qt7-7d-nrQ" id="5vc-EQ-bAb"/>
                         <outlet property="favoriteButton" destination="ZVC-LP-nez" id="rJK-ec-jCd"/>
                         <outlet property="procedure" destination="zvS-78-BAa" id="GDd-bG-gRe"/>
                         <outlet property="procedureScrollView" destination="0ig-Gq-fT7" id="Rb1-sl-6m5"/>
