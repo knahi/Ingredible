@@ -54,6 +54,13 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
         tableView.delegate = self
         tableView.dataSource = self
         
+        //Reset the Fav Model
+        FavModel.mealType = "All"
+        FavModel.vegetarianSwitch = false
+        FavModel.veganSwitch = false
+        
+        print("here")
+        
         // set tableview border
         tableView.layer.masksToBounds = true
         tableView.layer.borderColor = UIColor(red: 124/255, green: 154/255, blue: 114/255, alpha: 1).cgColor
