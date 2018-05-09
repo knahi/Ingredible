@@ -52,6 +52,7 @@ class FavoriteDetail: UIViewController {
         procedureScrollView.layer.borderWidth = 2.0
     }
     
+    // Favoriting and unfavoriting a recipe
     @IBAction func favorite(_ sender: Any) {
         if !pressed {
             favoriteButton.image = UIImage(named: "filled-in-star")

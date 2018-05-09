@@ -23,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let attributes = [NSAttributedStringKey.font:UIFont(name: "Avenir", size: 10)]
         appearance.setTitleTextAttributes(attributes, for: .normal)
         
+        // load default pantries when app is initially launched
         let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
         if !launchedBefore {
             //Add default pantries -- these will populate only when the app is initially downloaded

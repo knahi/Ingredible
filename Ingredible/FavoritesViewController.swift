@@ -21,6 +21,7 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        // if there are no favorite recipes, then provide user with an alert message
         if FavModel.favorites.isEmpty {
             let alert = UIAlertController(title: "You currently do not have any favorited recipes.", message: "Tap over to the home screen and 'Start cooking' to find and favorite a new recipe.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
@@ -44,23 +45,20 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     // Returns the same number of cells as recipes in our list
-    // override
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return FavModel.favorites.count
     }
     
-    // override
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "customcell", for: indexPath)
         cell.textLabel?.font = UIFont(name:"Avenir", size:18)
         let dicTitle = Array(FavModel.favorites.keys).sorted()
         cell.textLabel?.text = dicTitle[indexPath.item]
         cell.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
         return cell
-
     }
     
+    // if a favorited recipe has been selected, then go to the favorite recipe detail VC
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let dicTitle = Array(FavModel.favorites.keys).sorted()
         let favName = dicTitle[indexPath.row]

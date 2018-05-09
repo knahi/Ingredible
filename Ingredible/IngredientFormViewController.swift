@@ -30,7 +30,9 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
     var refHandle: UInt!
     var count: Int = 0
     
+    // list of food categories
     let foodCategories = ["Grains", "Fruits", "Vegetables", "Proteins", "Dairy", "Sweets/Fats", "Seasoning"]
+    // array of string arrays containing ingredients corresponding to each of the food categories
     let ingredients = [
         // Grains
         ["Barley", "Bread", "Bread crumbs", "Bulgur", "Couscous", "Farro", "Flour", "Oats", "Pasta", "Quinoa", "Rice", "Tortillas"],
@@ -54,7 +56,7 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
         tableView.delegate = self
         tableView.dataSource = self
         
-        //Reset the Fav Model
+        // Reset the Fav Model
         FavModel.mealType = "All"
         FavModel.vegetarianSwitch = false
         FavModel.veganSwitch = false
@@ -69,6 +71,7 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
         pickerView.delegate = self
         pickerView.dataSource = self
         
+        // Setup the pickerview border
         pickerView.layer.borderColor = UIColor(red: 124/255, green: 154/255, blue: 114/255, alpha: 1).cgColor
         pickerView.layer.borderWidth = 2.0
         
@@ -94,6 +97,7 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
         pickerView.reloadAllComponents()
     }
     
+    // The segmented control options
     @IBAction func mealType(_ sender: AnyObject) {
         switch mealType.selectedSegmentIndex
         {
@@ -133,6 +137,7 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
         }
     }
     
+    
     //TableView Set-Up
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -167,7 +172,7 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
         }
         tableView.reloadData()
         
-        //Combine picker and table view ingredients
+        // Combine picker and table view ingredients
         allIngredients = selectedIngredients
         if selectedPantry != [""] {
             allIngredients.append(contentsOf: selectedPantry)
@@ -175,7 +180,7 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
         uniqueIngredients = Array(Set(allIngredients))
         uniqueIngredients = uniqueIngredients.sorted()
         
-        //Set label
+        // Set label of all of the currently selected ingredients
         let stringText = uniqueIngredients.joined(separator: ", ")
         currentlySelected.text = stringText
         print(uniqueIngredients)
@@ -190,6 +195,7 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
         cell.textLabel?.font = UIFont(name:"Avenir", size:16)
         cell.tintColor = UIColor(red: 124/255, green: 154/255, blue: 114/255, alpha: 1)
         cell.textLabel?.text = ingredients[indexPath.section][indexPath.row]
+        // Handle checkmarks
         cell.accessoryType = .none
         for item in selectedIndexPathArray {
             if indexPath == item as IndexPath  {
@@ -200,6 +206,7 @@ class IngredientFormViewController: UIViewController, UITableViewDataSource, UIT
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        // Handle checkmarks
         tableView.cellForRow(at: indexPath)?.accessoryType = .none
     }
     

@@ -20,7 +20,9 @@ class AddPantryViewController: UIViewController, UITableViewDataSource, UITableV
     var selectedIngredients = Array<String>()
     var uniqueIngredients = Array<String>()
     
+    // list of food categories
     let foodCategories = ["Grains", "Fruits", "Vegetables", "Proteins", "Dairy", "Sweets/Fats", "Seasoning"]
+    // array of string arrays containing ingredients corresponding to each of the food categories
     let ingredients = [
         // Grains
         ["Barley", "Bread", "Bread crumbs", "Bulgur", "Couscous", "Farro", "Flour", "Oats", "Pasta", "Quinoa", "Rice", "Tortillas"],
@@ -112,6 +114,7 @@ class AddPantryViewController: UIViewController, UITableViewDataSource, UITableV
         cell.textLabel?.font = UIFont(name:"Avenir", size:16)
         cell.tintColor = UIColor(red: 124/255, green: 154/255, blue: 114/255, alpha: 1)
         cell.textLabel?.text = ingredients[indexPath.section][indexPath.row]
+        // Handle checkmarks
         cell.accessoryType = .none
         for item in selectedIndexPathArray {
             if indexPath == item as IndexPath  {
@@ -122,6 +125,7 @@ class AddPantryViewController: UIViewController, UITableViewDataSource, UITableV
     }
 
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        // Handle checkmarks
         tableView.cellForRow(at: indexPath)?.accessoryType = .none
     }
     

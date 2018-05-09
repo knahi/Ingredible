@@ -8,33 +8,34 @@
 
 import Foundation
 
+// holds information related to favorited recipes and the user ingredient search specifications
 class FavModel {
     
-    //currently selected recipe
+    // A string containing the currently selected recipe
     static var currentSelection:String = ""
     
-    //list of favorited recipes
+    // A list of favorited recipes
     static var favorites = [String : [String : Any]]()
     
-    //list of favorited titles
+    // A list of favorited titles
     static var favTitles = [String]()
     
-    //list of all recipes displayed
+    // A list of all recipes displayed
     static var allRecipes = [NSDictionary]()
     
-    //list of all matched recipe titles
+    // A list of all matched recipe titles
     static var allTitles = [String]()
     
-    //list of selected ingredients
+    // A list of selected ingredients
     static var selectedIng = [String]()
 
-    //the state of the meal type segmented control
+    // A string containing the state of the meal type segmented control
     static var mealType = String()
     
-    //the state of the vegetarian switch (on or off)
+    // A boolean related to the state of the vegetarian switch (on or off)
     static var vegetarianSwitch = Bool()
     
-    //the state of the vegan switch (on or off)
+    // A boolean related to the state of the vegan switch (on or off)
     static var veganSwitch = Bool()
 
 }

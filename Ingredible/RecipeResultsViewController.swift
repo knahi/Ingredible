@@ -63,6 +63,7 @@ class RecipeResultsViewController: UIViewController, UITableViewDataSource, UITa
         }
     }
     
+    // fetches the recipes that satisfy the current list of selected ingredients
     func fetchRecipes(){
         self.count = 0
         FavModel.allRecipes = [NSDictionary]()
@@ -82,7 +83,6 @@ class RecipeResultsViewController: UIViewController, UITableViewDataSource, UITa
                     
                     let vegan = recipe?["Vegan"] as! Bool
                     let vegetarian = recipe?["Vegetarian"] as! Bool
-                    
                     
                     let selectedIngredientsNSSet = NSSet(array: FavModel.selectedIng)
                     let ingredientsNSSet = NSSet(array: ingredients as! [Any])
@@ -119,6 +119,7 @@ class RecipeResultsViewController: UIViewController, UITableViewDataSource, UITa
                         itemSelected = false
                     }
                     
+                    // if the recipe matches, include it
                     if itemSelected{
                         self.count += 1
                         FavModel.allRecipes.append(recipe!)
@@ -137,6 +138,7 @@ class RecipeResultsViewController: UIViewController, UITableViewDataSource, UITa
         return FavModel.allTitles.count
     }
 
+    // Populate TV with recipe titles
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "customcell", for: indexPath)
         cell.textLabel?.font = UIFont(name:"Avenir", size:18)
@@ -145,6 +147,7 @@ class RecipeResultsViewController: UIViewController, UITableViewDataSource, UITa
         return cell
     }
     
+    // If a recipe is selected, then go to the recipe detail VC
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let value = FavModel.allRecipes[indexPath.row]
         
